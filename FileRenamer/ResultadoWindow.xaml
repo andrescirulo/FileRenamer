@@ -1,0 +1,14 @@
+﻿<Window x:Class="ResultadoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileRenamer"
+        mc:Ignorable="d"
+        Title="ResultadoWindow" Height="435" Width="413" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFD4D0C8">
+        <ListBox Height="304" HorizontalAlignment="Left" Margin="12,36,0,0" Name="lst_vista_previa" VerticalAlignment="Top" Width="367" />
+        <Button Content="Renombrar" Height="29" HorizontalAlignment="Left" Margin="269,355,0,0" Name="btn_renombrar" VerticalAlignment="Top" Width="110" />
+        <Label Content="Vista previa del resultado" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="Label1" VerticalAlignment="Top" Width="367" />
+    </Grid>
+</Window>
