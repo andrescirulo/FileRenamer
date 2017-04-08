@@ -9,7 +9,7 @@
         Return "Eliminar texto entre """ & inicio & """ y """ & fin & """"
     End Function
 
-    Public Overrides Sub acomodarFormulario(ByRef form As MainWindow)
+    Public Overrides Sub AcomodarFormulario(ByRef form As RenombrarPage)
         form.lbl_op1.Visibility = Visibility.Visible
         form.lbl_op2.Visibility = Visibility.Visible
         form.lbl_op1.Content = "Entre"
@@ -18,12 +18,12 @@
         form.txt_dest_reemp.Visibility = Visibility.Visible
     End Sub
 
-    Public Overrides Sub armar(ByRef form As MainWindow)
+    Public Overrides Sub Armar(ByRef form As RenombrarPage)
         inicio = form.txt_src_reemp.Text
         fin = form.txt_dest_reemp.Text
     End Sub
 
-    Public Overrides Function operar(path As String) As String
+    Public Overrides Function Operar(path As String) As String
         Dim pathTemp As String = path
 
         Dim posInicio As Integer

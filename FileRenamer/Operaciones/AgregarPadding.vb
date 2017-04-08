@@ -5,7 +5,7 @@
     Dim caracter As String
     Dim cantidad As Integer
 
-    Public Overrides Sub acomodarFormulario(ByRef form As MainWindow)
+    Public Overrides Sub AcomodarFormulario(ByRef form As RenombrarPage)
         form.lbl_op1.Visibility = Visibility.Visible
         form.lbl_op2.Visibility = Visibility.Visible
         form.lbl_op1.Content = "Caracter:"
@@ -14,12 +14,12 @@
         form.txt_dest_reemp.Visibility = Visibility.Visible
     End Sub
 
-    Public Overrides Sub armar(ByRef form As MainWindow)
+    Public Overrides Sub Armar(ByRef form As RenombrarPage)
         caracter = form.txt_src_reemp.Text
         cantidad = form.txt_dest_reemp.Text
     End Sub
 
-    Public Overrides Function operar(path As String) As String
+    Public Overrides Function Operar(path As String) As String
         Dim index As Integer = path.LastIndexOf(".")
         Dim res As String = ""
         If index > 0 Then
@@ -36,7 +36,7 @@
             End While
         End If
         Return res
-        
+
     End Function
 
     Public Overrides Function ToString() As String

@@ -9,12 +9,12 @@
         Return "Reemplazar """ & origen & """" & " por """ & destino & """"
     End Function
 
-    Public Overrides Sub armar(ByRef form As MainWindow)
+    Public Overrides Sub Armar(ByRef form As RenombrarPage)
         origen = form.txt_src_reemp.Text
         destino = form.txt_dest_reemp.Text
     End Sub
 
-    Public Overrides Function operar(ByVal path As String) As String
+    Public Overrides Function Operar(ByVal path As String) As String
         Dim index As Integer = path.LastIndexOf(".")
         If index > 0 Then
             Dim nombre As String = path.Substring(0, index)
@@ -26,7 +26,7 @@
     End Function
 
 
-    Public Overrides Sub acomodarFormulario(ByRef form As MainWindow)
+    Public Overrides Sub AcomodarFormulario(ByRef form As RenombrarPage)
         form.lbl_op1.Visibility = Visibility.Visible
         form.lbl_op2.Visibility = Visibility.Visible
         form.lbl_op1.Content = "Reemplazar"

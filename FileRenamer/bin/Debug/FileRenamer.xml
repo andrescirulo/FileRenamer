@@ -54,6 +54,26 @@ FileRenamer
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="T:FileRenamer.RenombrarPage">
+<summary>
+RenombrarPage
+</summary>
+</member>
+<member name="M:FileRenamer.RenombrarPage.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:FileRenamer.SubtitulosPage">
+<summary>
+SubtitulosPage
+</summary>
+</member>
+<member name="M:FileRenamer.SubtitulosPage.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
 <member name="T:FileRenamer.ResultadoWindow">
 <summary>
 ResultadoWindow
@@ -87,6 +107,36 @@ MainWindow
 <member name="M:FileRenamer.MainWindow.InitializeComponent">
 <summary>
 InitializeComponent
+</summary>
+</member>
+<member name="T:FileRenamer.XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+<summary>
+GeneratedInternalTypeHelper
+</summary>
+</member>
+<member name="M:FileRenamer.XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+<summary>
+CreateInstance
+</summary>
+</member>
+<member name="M:FileRenamer.XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+<summary>
+GetPropertyValue
+</summary>
+</member>
+<member name="M:FileRenamer.XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+<summary>
+SetPropertyValue
+</summary>
+</member>
+<member name="M:FileRenamer.XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+<summary>
+CreateDelegate
+</summary>
+</member>
+<member name="M:FileRenamer.XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+<summary>
+AddEventHandler
 </summary>
 </member>
 </members>

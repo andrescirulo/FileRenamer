@@ -16,3 +16,9 @@ d:\andres\mis documentos\visual studio 2017\Projects\FileRenamer\FileRenamer\obj
 d:\andres\mis documentos\visual studio 2017\Projects\FileRenamer\FileRenamer\obj\Debug\FileRenamer.exe
 d:\andres\mis documentos\visual studio 2017\Projects\FileRenamer\FileRenamer\obj\Debug\FileRenamer.xml
 d:\andres\mis documentos\visual studio 2017\Projects\FileRenamer\FileRenamer\obj\Debug\FileRenamer.pdb
+d:\andres\mis documentos\visual studio 2017\Projects\FileRenamer\FileRenamer\obj\Debug\Paginas\RenombrarPage.baml
+d:\andres\mis documentos\visual studio 2017\Projects\FileRenamer\FileRenamer\obj\Debug\Paginas\RenombrarPage.g.vb
+d:\andres\mis documentos\visual studio 2017\Projects\FileRenamer\FileRenamer\obj\Debug\GeneratedInternalTypeHelper.g.vb
+d:\andres\mis documentos\visual studio 2017\Projects\FileRenamer\FileRenamer\obj\Debug\FileRenamer.vbprojResolveAssemblyReference.cache
+d:\andres\mis documentos\visual studio 2017\Projects\FileRenamer\FileRenamer\obj\Debug\Paginas\SubtitulosPage.g.vb
+d:\andres\mis documentos\visual studio 2017\Projects\FileRenamer\FileRenamer\obj\Debug\Paginas\SubtitulosPage.baml
