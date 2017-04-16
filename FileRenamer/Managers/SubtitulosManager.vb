@@ -1,5 +1,4 @@
 ﻿Imports System.Text.RegularExpressions
-Imports FileRenamer
 
 Public Class SubtitulosManager
 
@@ -28,6 +27,7 @@ Public Class SubtitulosManager
             video.Subtitulo = subtitulo
             If Not (video.Subtitulo Is Nothing) Then
                 listaFinal.Add(video)
+                listaSubtitulos.Remove(video.Subtitulo)
             End If
         Next
         Return listaFinal
@@ -40,7 +40,7 @@ Public Class SubtitulosManager
         Dim nombre As String = video.NombreFiltrado
         Dim match As Match = capituloRegEx.Match(nombre)
         'SI ES UN CAPITULO DE UNA SERIE
-        If (Not match Is Nothing) Then
+        If (match.Success) Then
 
             Dim nombrePrincipal As String = nombre.Substring(0, match.Index).Trim
             For Each subt In listaSubtitulos
