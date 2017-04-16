@@ -1,7 +1,4 @@
-﻿Imports System.Text.RegularExpressions
-Imports System.Windows.Forms
-Imports FileRenamer
-Imports Microsoft.Win32
+﻿Imports System.Windows.Forms
 
 Public Class SubtitulosPage
 
@@ -36,23 +33,6 @@ Public Class SubtitulosPage
                 lbl_carpeta.Content = lbl_carpeta.Content & "\"
             End If
 
-            'listaSubtitulos = New List(Of Subtitulo)
-            'Dim listaTmp As New List(Of String)
-            'listaTmp.AddRange(My.Computer.FileSystem.GetFiles(lbl_carpeta.Content, FileIO.SearchOption.SearchTopLevelOnly, EXTENSIONES_SUBTITULOS))
-            'listaSubtitulos.AddRange(ArmarSubtitulos(listaTmp))
-
-            'listaVideos = New List(Of Video)
-            'listaTmp = New List(Of String)
-            'listaTmp.AddRange(My.Computer.FileSystem.GetFiles(lbl_carpeta.Content, FileIO.SearchOption.SearchTopLevelOnly, EXTENSIONES_VIDEOS))
-            'listaVideos.AddRange(ArmarVideos(listaTmp))
-
-            'For Each video In listaVideos
-            '    Dim subtitulo As Archivo = BuscarMejorMatch(video, listaSubtitulos)
-            '    video.Subtitulo = subtitulo
-            '    If Not (video.Subtitulo Is Nothing) Then
-            '        lstVideos.Items.Add(video)
-            '    End If
-            'Next
             Dim listaVideos As List(Of Video) = SubtitulosManager.AnalizarSubtitulos(lbl_carpeta.Content)
             lstVideos.Items.Clear()
             For Each elem In listaVideos
@@ -72,14 +52,6 @@ Public Class SubtitulosPage
     End Sub
 
     Private Sub btnRenombrar_Click(sender As Object, e As RoutedEventArgs) Handles btnRenombrar.Click
-        'Dim elem As Video
-        'For Each elem In lstVideos.SelectedItems
-        '    Dim pathActual As String = elem.Subtitulo.Path
-        '    Dim pathNuevo As String = pathActual.Replace(elem.Subtitulo.Nombre, elem.Nombre)
-        '    If pathActual <> pathNuevo Then
-        '        My.Computer.FileSystem.RenameFile(pathActual, NombreCorto(pathNuevo))
-        '    End If
-        'Next
         SubtitulosManager.RenombrarSubtitulos(lstVideos.SelectedItems)
         MsgBox("Listo!")
     End Sub
