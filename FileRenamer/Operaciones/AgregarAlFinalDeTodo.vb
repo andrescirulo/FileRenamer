@@ -1,4 +1,6 @@
-﻿Public Class AgregarAlFinalDeTodo
+﻿Imports FileRenamer
+
+Public Class AgregarAlFinalDeTodo
     Inherits Operacion
 
     Public Overrides Property Nombre As String = "Agregar al final de todo"
@@ -26,5 +28,9 @@
 
     Public Overrides Function GetDescripcion() As String
         Return ""
+    End Function
+
+    Public Overrides Function GetNewInstance() As Operacion
+        Return New AgregarAlFinalDeTodo
     End Function
 End Class

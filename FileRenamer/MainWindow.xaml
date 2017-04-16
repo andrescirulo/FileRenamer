@@ -14,6 +14,9 @@
             <TabItem Header="Renombrar Subtitulos" Name="RenombrarSubtitulosTab">
                 <local:SubtitulosPage></local:SubtitulosPage>
             </TabItem>
+            <TabItem Header="Configuración" Name="ConfiguracionTab">
+                <local:ConfiguracionPage></local:ConfiguracionPage>
+            </TabItem>
         </TabControl> 
     </Grid>
 </Window>

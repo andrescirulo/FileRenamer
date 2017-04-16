@@ -70,7 +70,7 @@ Class RenombrarPage
 
     Private Sub btn_agregar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_agregar.Click
 
-        Dim op As Operacion = cmb_operacion.SelectedItem
+        Dim op As Operacion = cmb_operacion.SelectedItem.GetNewInstance()
         op.Armar(Me)
 
         lst_reemplazos.Items.Add(op)
@@ -133,6 +133,26 @@ Class RenombrarPage
     Private Sub btn_quitar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_quitar.Click
         If (lst_reemplazos.SelectedIndex >= 0) Then
             lst_reemplazos.Items.Remove(lst_reemplazos.SelectedItem)
+        End If
+    End Sub
+
+    Private Sub btn_subir_Click(sender As Object, e As RoutedEventArgs) Handles btn_subir.Click
+        If (lst_reemplazos.SelectedIndex >= 1) Then
+            Dim idx = lst_reemplazos.SelectedIndex
+            Dim tmp = lst_reemplazos.Items(idx - 1)
+            lst_reemplazos.Items.RemoveAt(idx - 1)
+            lst_reemplazos.Items.Insert(idx, tmp)
+            lst_reemplazos.SelectedIndex = idx - 1
+        End If
+    End Sub
+
+    Private Sub btn_bajar_Click(sender As Object, e As RoutedEventArgs) Handles btn_bajar.Click
+        If (lst_reemplazos.SelectedIndex >= 0 And lst_reemplazos.SelectedIndex < (lst_reemplazos.Items.Count - 1)) Then
+            Dim idx = lst_reemplazos.SelectedIndex
+            Dim tmp = lst_reemplazos.Items(idx)
+            lst_reemplazos.Items.RemoveAt(idx)
+            lst_reemplazos.Items.Insert(idx + 1, tmp)
+            lst_reemplazos.SelectedIndex = idx + 1
         End If
     End Sub
 

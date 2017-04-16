@@ -70,8 +70,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Archivo.vb" />
+    <Compile Include="Domain\Archivo.vb" />
+    <Compile Include="Domain\EstadoMenuContextual.vb" />
+    <Compile Include="Domain\Subtitulo.vb" />
+    <Compile Include="Domain\Video.vb" />
     <Compile Include="Funciones.vb" />
+    <Compile Include="Managers\MenuContextualManager.vb" />
+    <Compile Include="Managers\SubtitulosManager.vb" />
     <Compile Include="Operaciones\AgregarAlFinalDelNombre.vb" />
     <Compile Include="Operaciones\AgregarAlFinalDeTodo.vb" />
     <Compile Include="Operaciones\AgregarAlPrincipio.vb" />
@@ -81,6 +86,9 @@
     <Compile Include="Operaciones\Reemplazo.vb" />
     <Compile Include="Operaciones\ReemplazoEnNombre.vb" />
     <Compile Include="Operaciones\SoloEntreCaracteres.vb" />
+    <Compile Include="Paginas\ConfiguracionPage.xaml.vb">
+      <DependentUpon>ConfiguracionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\RenombrarPage.xaml.vb">
       <DependentUpon>RenombrarPage.xaml</DependentUpon>
     </Compile>
@@ -102,6 +110,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Paginas\ConfiguracionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Paginas\RenombrarPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -1,4 +1,4 @@
-﻿Public Class Archivo
+﻿Public MustInherit Class Archivo
     Public Path As String
     Public Nombre As String
     Public Extension As String

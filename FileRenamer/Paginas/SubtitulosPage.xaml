@@ -8,7 +8,11 @@
              d:DesignHeight="300" d:DesignWidth="500">
     <Grid>
         <Button Content="Elegir Carpeta..." Height="23" HorizontalAlignment="Left" Margin="6,43,0,0" x:Name="btn_carpeta" VerticalAlignment="Top" Width="120" />
-        <Label Content="Sin Seleccionar" Height="27" HorizontalAlignment="Left" Margin="6,72,-187,0" x:Name="lbl_carpeta" VerticalAlignment="Top" Width="481" />
+        <Label Content="Sin Seleccionar" Height="27" HorizontalAlignment="Stretch"  Margin="15,75,0,0" x:Name="lbl_carpeta" VerticalAlignment="Top" />
+        <Button x:Name="btnRenombrar" Content="Renombrar Seleccionados" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="bottom" Width="150" Height="30"/>
+        <ListBox x:Name="lstVideos" HorizontalAlignment="Stretch"  Margin="20,150,20,50" VerticalAlignment="Stretch" SelectionMode="Extended" />
+        <Button x:Name="btnMarcar" Content="Marcar Todos" HorizontalAlignment="Left" Margin="20,125,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnDesmarcar" Content="Desmarcar Todos" HorizontalAlignment="Left" Margin="150,125,0,0" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </UserControl>

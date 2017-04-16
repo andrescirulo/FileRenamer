@@ -46,4 +46,8 @@
     Public Overrides Function GetDescripcion() As String
         Return ""
     End Function
+
+    Public Overrides Function GetNewInstance() As Operacion
+        Return New AgregarPadding
+    End Function
 End Class

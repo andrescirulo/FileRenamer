@@ -35,4 +35,8 @@
     Public Overrides Function GetDescripcion() As String
         Return ""
     End Function
+
+    Public Overrides Function GetNewInstance() As Operacion
+        Return New AgregarAlFinalDelNombre
+    End Function
 End Class

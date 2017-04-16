@@ -55,4 +55,8 @@
     Public Overrides Function GetDescripcion() As String
         Return ""
     End Function
+
+    Public Overrides Function GetNewInstance() As Operacion
+        Return New EliminarEntreCaracteres
+    End Function
 End Class

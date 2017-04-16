@@ -5,5 +5,6 @@
     Public MustOverride Function Operar(ByVal path As String) As String
     Public MustOverride Property Nombre As String
     Public MustOverride Function GetDescripcion() As String
+    Public MustOverride Function GetNewInstance() As Operacion
 
 End Class
