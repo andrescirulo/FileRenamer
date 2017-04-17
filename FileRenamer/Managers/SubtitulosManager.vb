@@ -87,7 +87,7 @@ Public Class SubtitulosManager
                 End If
             Next
         Next
-        If ((coincidencia * 1.0) / palsVideo.Count) > 0.7 Then
+        If ((coincidencia * 1.0) / palsVideo.Count) > 0.65 Then
             Return True
         End If
         Return False
