@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileRenamer"
         mc:Ignorable="d"
-        Title="FileManager" Height="765" Width="525" Background="#FFD4D0C8" WindowStartupLocation="CenterScreen">
+        Title="FileManager" Height="765" Width="525" Background="#FFD4D0C8" WindowStartupLocation="CenterScreen" Icon="Main.ico">
     <Grid>
         <TabControl HorizontalAlignment="Stretch" Margin="0" Name="TabControl1" VerticalAlignment="Stretch">
             <TabItem Header="Renombrar" Name="RenombrarTab">
