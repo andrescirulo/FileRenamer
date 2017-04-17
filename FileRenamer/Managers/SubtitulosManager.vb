@@ -2,24 +2,17 @@
 
 Public Class SubtitulosManager
 
-    Shared EXTENSIONES_SUBTITULOS() As String = {"*.srt", "*.sub"}
-    Shared EXTENSIONES_VIDEOS() As String = {"*.avi", "*.mkv", "*.mp4"}
-
-    Private Shared listaSubtitulos As List(Of Subtitulo)
-    Private Shared listaVideos As List(Of Video)
-
-
     Public Shared Function AnalizarSubtitulos(srcFolder As String) As List(Of Video)
         Dim listaFinal As New List(Of Video)
 
-        listaSubtitulos = New List(Of Subtitulo)
+        Dim listaSubtitulos As New List(Of Subtitulo)
         Dim listaTmp As New List(Of String)
-        listaTmp.AddRange(My.Computer.FileSystem.GetFiles(srcFolder, FileIO.SearchOption.SearchTopLevelOnly, EXTENSIONES_SUBTITULOS))
+        listaTmp.AddRange(My.Computer.FileSystem.GetFiles(srcFolder, FileIO.SearchOption.SearchTopLevelOnly, CONFIG.ExtensionesSubtitulos.ToArray))
         listaSubtitulos.AddRange(ArmarSubtitulos(listaTmp))
 
-        listaVideos = New List(Of Video)
+        Dim listaVideos As New List(Of Video)
         listaTmp = New List(Of String)
-        listaTmp.AddRange(My.Computer.FileSystem.GetFiles(srcFolder, FileIO.SearchOption.SearchTopLevelOnly, EXTENSIONES_VIDEOS))
+        listaTmp.AddRange(My.Computer.FileSystem.GetFiles(srcFolder, FileIO.SearchOption.SearchTopLevelOnly, CONFIG.ExtensionesVideos.ToArray))
         listaVideos.AddRange(ArmarVideos(listaTmp))
 
         For Each video In listaVideos
@@ -34,8 +27,8 @@ Public Class SubtitulosManager
     End Function
 
 
-    Private Shared Function BuscarMejorMatch(video As Archivo, listaSubtitulos As List(Of Subtitulo)) As Archivo
-
+    Private Shared Function BuscarMejorMatch(video As Archivo, listaSubtitulos As List(Of Subtitulo)) As Subtitulo
+        Dim listaPosibles As New List(Of ResultadoComparacion)
         Dim capituloRegEx As New Regex("s(?:\d){1,2}e(?:\d){1,2}")
         Dim nombre As String = video.NombreFiltrado
         Dim match As Match = capituloRegEx.Match(nombre)
@@ -44,21 +37,25 @@ Public Class SubtitulosManager
 
             Dim nombrePrincipal As String = nombre.Substring(0, match.Index).Trim
             For Each subt In listaSubtitulos
-                If (CompararCapitulo(video, subt)) Then
-                    Return subt
-                End If
+                Dim similitud As Double = CompararCapitulo(video, subt)
+                listaPosibles.Add(New ResultadoComparacion(subt, similitud))
             Next
         Else
             For Each subt In listaSubtitulos
-                If (CompararOtro(video, subt)) Then
-                    Return subt
-                End If
+                Dim similitud As Double = CompararOtro(video, subt)
+                listaPosibles.Add(New ResultadoComparacion(subt, similitud))
             Next
+        End If
+        If (listaPosibles.Count > 0) Then
+            Dim resu As ResultadoComparacion = listaPosibles.OrderByDescending(Function(res) res.Similitud).ToList(0)
+            If (resu.Similitud > 0.65) Then
+                Return resu.Subtitulo
+            End If
         End If
         Return Nothing
     End Function
 
-    Private Shared Function CompararCapitulo(video As Archivo, subtitulo As Archivo) As Boolean
+    Private Shared Function CompararCapitulo(video As Archivo, subtitulo As Archivo) As Double
         Dim capituloRegEx As New Regex("s(?:\d){1,2}e(?:\d){1,2}")
         Dim matchVideo As Match = capituloRegEx.Match(video.NombreFiltrado)
         Dim matchSubtitulo As Match = capituloRegEx.Match(subtitulo.NombreFiltrado)
@@ -69,14 +66,14 @@ Public Class SubtitulosManager
             Dim nombreSubtitulo As String = subtitulo.NombreFiltrado.Substring(0, matchSubtitulo.Index).Trim
             Dim capituloSubtitulo As String = matchSubtitulo.Value
 
-            If (capituloVideo = capituloSubtitulo And EsSimilar(nombreVideo, nombreSubtitulo)) Then
-                Return True
+            If (capituloVideo = capituloSubtitulo) Then
+                Return EsSimilar(nombreVideo, nombreSubtitulo)
             End If
         End If
-        Return False
+        Return 0
     End Function
 
-    Private Shared Function EsSimilar(nombreVideo As String, nombreSubtitulo As String) As Boolean
+    Private Shared Function EsSimilar(nombreVideo As String, nombreSubtitulo As String) As Double
         Dim palsVideo() As String = nombreVideo.Split(" ")
         Dim palsSubt() As String = nombreSubtitulo.Split(" ")
         Dim coincidencia As Integer = 0
@@ -87,13 +84,10 @@ Public Class SubtitulosManager
                 End If
             Next
         Next
-        If ((coincidencia * 1.0) / palsVideo.Count) > 0.65 Then
-            Return True
-        End If
-        Return False
+        Return ((coincidencia * 1.0) / palsVideo.Count)
     End Function
 
-    Private Shared Function CompararOtro(video As Archivo, subtitulo As Archivo) As Boolean
+    Private Shared Function CompararOtro(video As Archivo, subtitulo As Archivo) As Double
         Return EsSimilar(video.NombreFiltrado, subtitulo.NombreFiltrado)
     End Function
 
