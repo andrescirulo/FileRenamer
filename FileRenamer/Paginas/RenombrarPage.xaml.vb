@@ -123,8 +123,11 @@ Class RenombrarPage
 
     Private Sub btn_renombrar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_renombrar.Click
         Dim elegidos As New List(Of String)
-        For Each elem In lst_files.SelectedItems
-            elegidos.Add(elem)
+        Dim elem As FolderCheckElem
+        For Each elem In lst_files.Items
+            If (elem.IsChecked) Then
+                elegidos.Add(elem.Name)
+            End If
         Next
         Dim op As Operacion
         Dim formRes As New ResultadoWindow

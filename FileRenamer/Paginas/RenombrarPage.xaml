@@ -36,7 +36,7 @@
 
         </TreeView>
         <CheckBox Height="17" HorizontalAlignment="Left" Margin="20,60,0,0" Name="chk_subcarpetas" VerticalAlignment="Top" Width="120" Content="Incluir subcarpetas" Grid.Column="1"></CheckBox>
-        <ListBox Height="200" HorizontalAlignment="Stretch" Margin="10,100,10,0" Name="lst_files" VerticalAlignment="Top" SelectionMode="Multiple" Grid.Column="1" >
+        <ListBox Height="200" HorizontalAlignment="Stretch" Margin="10,100,10,0" Name="lst_files" VerticalAlignment="Top" SelectionMode="Single" Grid.Column="1" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <CheckBox IsChecked="{Binding IsChecked}" Content="{Binding Path=Name}" />
