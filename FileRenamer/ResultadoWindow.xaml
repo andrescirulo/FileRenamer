@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileRenamer"
         mc:Ignorable="d"
-        Title="ResultadoWindow" Height="435" Width="413" WindowStartupLocation="CenterScreen">
+        Title="FileRenamer - Vista Previa" Height="435" Width="413" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Main.ico">
     <Grid Background="#FFD4D0C8">
         <ListBox Height="304" HorizontalAlignment="Left" Margin="12,36,0,0" Name="lst_vista_previa" VerticalAlignment="Top" Width="367" />
         <Button Content="Renombrar" Height="29" HorizontalAlignment="Left" Margin="269,355,0,0" Name="btn_renombrar" VerticalAlignment="Top" Width="110" />
