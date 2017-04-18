@@ -1,9 +1,9 @@
 ﻿Imports System.Collections.ObjectModel
-Imports System.Windows.Forms
+Imports System.IO
 
 Class RenombrarPage
-    Dim oFileD As OpenFileDialog
-    Dim oFolderD As FolderBrowserDialog
+    'Dim oFileD As OpenFileDialog
+    'Dim oFolderD As FolderBrowserDialog
 
     Dim OPERACIONES As List(Of Operacion)
 
@@ -22,10 +22,12 @@ Class RenombrarPage
         Return OPERACIONES
     End Function
 
+    Dim dummyNode As Object = Nothing
+
     Private Sub RenombrarPage_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
-        oFileD = New OpenFileDialog
-        oFileD.Multiselect = True
-        oFolderD = New FolderBrowserDialog
+        'oFileD = New OpenFileDialog
+        'oFileD.Multiselect = True
+        'oFolderD = New FolderBrowserDialog
 
         Dim carpetaInicial As String = Environment.GetFolderPath(Environment.SpecialFolder.Personal)
         carpetaInicial = carpetaInicial.Replace("Mis Documentos", "Descargas")
@@ -34,18 +36,52 @@ Class RenombrarPage
         If Not My.Computer.FileSystem.DirectoryExists(carpetaInicial) Then
             carpetaInicial = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
         End If
-        oFolderD.SelectedPath = carpetaInicial
+        'oFolderD.SelectedPath = carpetaInicial
 
         For Each oper In GetOperaciones()
             cmb_operacion.Items.Add(oper)
         Next
         cmb_operacion.SelectedIndex = 0
+
+        For Each drive In Directory.GetLogicalDrives()
+            Dim item As New TreeViewItem()
+            item.Header = drive
+            item.Tag = drive
+            item.FontWeight = FontWeights.Normal
+            item.Items.Add(dummyNode)
+            AddHandler item.Expanded, AddressOf OnFolderExpanded
+            tree_carpetas.Items.Add(item)
+        Next
+
     End Sub
 
-    Private Sub btn_carpeta_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_carpeta.Click
-        If (oFolderD.ShowDialog() = Forms.DialogResult.OK) Then
-            lbl_carpeta.Content = oFolderD.SelectedPath
+    Private Sub OnFolderExpanded(sender As Object, e As RoutedEventArgs)
+        Dim item As TreeViewItem = sender
+        If (item.Items.Count = 1 AndAlso item.Items(0) = dummyNode) Then
+            item.Items.Clear()
+            Try
+                For Each dire In Directory.GetDirectories(item.Tag.ToString())
+                    Dim subitem As New TreeViewItem()
+                    subitem.Header = NombreCorto(dire)
+                    subitem.Tag = dire
+                    subitem.FontWeight = FontWeights.Normal
+                    subitem.Items.Add(dummyNode)
+                    AddHandler subitem.Expanded, AddressOf OnFolderExpanded
+                    item.Items.Add(subitem)
+                Next
+            Catch ex As Exception
+            End Try
+        End If
+    End Sub
 
+    Private Sub tree_carpetas_SelectedItemChanged(sender As Object, e As RoutedPropertyChangedEventArgs(Of Object)) Handles tree_carpetas.SelectedItemChanged
+        Try
+            Dim tree As System.Windows.Controls.TreeView = tree_carpetas
+            If (tree.SelectedItem Is Nothing) Then
+                Return
+            End If
+
+            lbl_carpeta.Content = tree.SelectedItem.Tag
             If Not (lbl_carpeta.Content.EndsWith("\")) Then
                 lbl_carpeta.Content = lbl_carpeta.Content & "\"
             End If
@@ -60,12 +96,18 @@ Class RenombrarPage
 
             For Each arch In archs
                 Dim elem As String = arch.Replace(lbl_carpeta.Content, "")
-
-                lst_files.Items.Add(elem)
+                Dim fcheck As New FolderCheckElem
+                fcheck.Name = elem
+                lst_files.Items.Add(fcheck)
             Next
-            lst_files.SelectAll()
+        Catch ex As IOException
 
-        End If
+        End Try
+
+    End Sub
+
+    Private Sub chk_subcarpetas_Checked(sender As Object, e As RoutedEventArgs) Handles chk_subcarpetas.Checked, chk_subcarpetas.Unchecked
+        tree_carpetas_SelectedItemChanged(Nothing, Nothing)
     End Sub
 
     Private Sub btn_agregar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_agregar.Click
@@ -122,8 +164,6 @@ Class RenombrarPage
 
     End Sub
 
-
-
     Private Sub cmb_operacion_SelectionChanged(ByVal sender As System.Object, ByVal e As System.Windows.Controls.SelectionChangedEventArgs) Handles cmb_operacion.SelectionChanged
         If (cmb_operacion.SelectedIndex >= 0) Then
             cmb_operacion.SelectedItem.AcomodarFormulario(Me)
@@ -160,6 +200,5 @@ Class RenombrarPage
     Private Function quitarExtension(arch As String) As String
         Return arch.Substring(0, arch.LastIndexOf("."))
     End Function
-
 
 End Class

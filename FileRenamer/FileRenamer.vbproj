@@ -76,10 +76,12 @@
     <Compile Include="Domain\Archivo.vb" />
     <Compile Include="Domain\Configuracion.vb" />
     <Compile Include="Domain\EstadoMenuContextual.vb" />
+    <Compile Include="Domain\FolderCheckElem.vb" />
     <Compile Include="Domain\ResultadoComparacion.vb" />
     <Compile Include="Domain\Subtitulo.vb" />
     <Compile Include="Domain\Video.vb" />
     <Compile Include="Funciones.vb" />
+    <Compile Include="Managers\HeaderToImageConverter.vb" />
     <Compile Include="Managers\MenuContextualManager.vb" />
     <Compile Include="Managers\SubtitulosManager.vb" />
     <Compile Include="Operaciones\AgregarAlFinalDelNombre.vb" />
@@ -185,6 +187,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Main.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="diskdrive.png" />
+    <Resource Include="folder.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
