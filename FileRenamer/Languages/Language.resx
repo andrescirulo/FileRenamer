@@ -150,6 +150,12 @@
   <data name="renombrar_bajar" xml:space="preserve">
     <value>Bajar</value>
   </data>
+  <data name="renombrar_error_archivos" xml:space="preserve">
+    <value>Debes elegir al menos un archivo</value>
+  </data>
+  <data name="renombrar_error_operaciones" xml:space="preserve">
+    <value>Debes agregar al menos una operación</value>
+  </data>
   <data name="renombrar_incluir_subcarpetas" xml:space="preserve">
     <value>Incluir subcarpetas</value>
   </data>
@@ -179,5 +185,14 @@
   </data>
   <data name="resultado_vista_previa" xml:space="preserve">
     <value>Vista previa del resultado</value>
+  </data>
+  <data name="tab_configuracion" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="tab_renombrar_archivos" xml:space="preserve">
+    <value>Renombrar Archivos</value>
+  </data>
+  <data name="tab_renombrar_subtitulos" xml:space="preserve">
+    <value>Renombrar Subtitulos</value>
   </data>
 </root>

@@ -129,6 +129,17 @@ Class RenombrarPage
                 elegidos.Add(elem.Name)
             End If
         Next
+
+        'HAGO VALIDACIONES
+        If (elegidos.Count = 0) Then
+            MsgBox(FileRenamer.Language.renombrar_error_archivos)
+            Return
+        End If
+        If (lst_reemplazos.Items.Count = 0) Then
+            MsgBox(FileRenamer.Language.renombrar_error_operaciones)
+            Return
+        End If
+
         Dim op As Operacion
         Dim formRes As New ResultadoWindow
 

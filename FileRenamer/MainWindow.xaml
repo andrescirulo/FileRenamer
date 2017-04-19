@@ -8,13 +8,13 @@
         Title="FileManager" Height="765" Width="795" Background="#FFD4D0C8" WindowStartupLocation="CenterScreen" Icon="Main.ico">
     <Grid>
         <TabControl HorizontalAlignment="Stretch" Margin="0" Name="TabControl1" VerticalAlignment="Stretch">
-            <TabItem Header="Renombrar" Name="RenombrarTab">
+            <TabItem Header="{x:Static local:Language.tab_renombrar_archivos}" Name="RenombrarTab">
                 <local:RenombrarPage></local:RenombrarPage>
             </TabItem>
-            <TabItem Header="Renombrar Subtitulos" Name="RenombrarSubtitulosTab">
+            <TabItem Header="{x:Static local:Language.tab_renombrar_subtitulos}" Name="RenombrarSubtitulosTab">
                 <local:SubtitulosPage></local:SubtitulosPage>
             </TabItem>
-            <TabItem Header="Configuración" Name="ConfiguracionTab">
+            <TabItem Header="{x:Static local:Language.tab_configuracion}" Name="ConfiguracionTab">
                 <local:ConfiguracionPage></local:ConfiguracionPage>
             </TabItem>
         </TabControl> 

@@ -163,6 +163,24 @@ Public Class Language
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Debes elegir al menos un archivo.
+    '''</summary>
+    Public Shared ReadOnly Property renombrar_error_archivos() As String
+        Get
+            Return ResourceManager.GetString("renombrar_error_archivos", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Debes agregar al menos una operación.
+    '''</summary>
+    Public Shared ReadOnly Property renombrar_error_operaciones() As String
+        Get
+            Return ResourceManager.GetString("renombrar_error_operaciones", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Incluir subcarpetas.
     '''</summary>
     Public Shared ReadOnly Property renombrar_incluir_subcarpetas() As String
@@ -249,6 +267,33 @@ Public Class Language
     Public Shared ReadOnly Property resultado_vista_previa() As String
         Get
             Return ResourceManager.GetString("resultado_vista_previa", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Configuración.
+    '''</summary>
+    Public Shared ReadOnly Property tab_configuracion() As String
+        Get
+            Return ResourceManager.GetString("tab_configuracion", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Renombrar Archivos.
+    '''</summary>
+    Public Shared ReadOnly Property tab_renombrar_archivos() As String
+        Get
+            Return ResourceManager.GetString("tab_renombrar_archivos", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Renombrar Subtitulos.
+    '''</summary>
+    Public Shared ReadOnly Property tab_renombrar_subtitulos() As String
+        Get
+            Return ResourceManager.GetString("tab_renombrar_subtitulos", resourceCulture)
         End Get
     End Property
 End Class
