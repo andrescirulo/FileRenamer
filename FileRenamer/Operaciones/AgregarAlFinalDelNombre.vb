@@ -3,10 +3,12 @@
 
     Public texto As String
 
-    Public Overrides Property Nombre As String = "Agregar al final del nombre"
+    Public Overrides Property Nombre As String = Operaciones.AgregarAlFinalDelNombre_Nombre
 
     Public Overrides Function ToString() As String
-        Return "Agregar """ & texto & """ al final del nombre"
+        Dim txt = Operaciones.AgregarAlFinalDelNombre_ToString
+        txt = txt.Replace("{1}", texto)
+        Return txt
     End Function
     Public Overrides Sub Armar(ByRef form As RenombrarPage)
         texto = form.txt_src_reemp.Text
@@ -26,7 +28,7 @@
     Public Overrides Sub AcomodarFormulario(ByRef form As RenombrarPage)
         form.lbl_op1.Visibility = Visibility.Visible
         form.lbl_op2.Visibility = Visibility.Hidden
-        form.lbl_op1.Content = "Agregar"
+        form.lbl_op1.Content = Language.renombrar_agregar
         form.txt_src_reemp.Visibility = Visibility.Visible
         form.txt_dest_reemp.Visibility = Visibility.Hidden
     End Sub

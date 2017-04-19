@@ -7,23 +7,23 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="450">
     <Grid>
-        <GroupBox Header="Menu Contextual de Subtitulos" HorizontalAlignment="Stretch" Height="250" Margin="10,10,0,0" VerticalAlignment="Top">
+        <GroupBox Header="{x:Static local:Language.config_menu_contextual}" HorizontalAlignment="Stretch" Height="250" Margin="10,10,0,0" VerticalAlignment="Top">
             <StackPanel>
-                <CheckBox Content="Habilitar menu contextual en el explorador de Windows" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Name="chkHabilitar"/>
-                <GroupBox Name="groupDonde" Header="Donde Aparecer" HorizontalAlignment="Stretch" Height="80" Margin="10,10,10,0" VerticalAlignment="Top">
+                <CheckBox Content="{x:Static local:Language.config_menu_contextual_habilitar}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Name="chkHabilitar"/>
+                <GroupBox Name="groupDonde" Header="{x:Static local:Language.config_donde_titulo}" HorizontalAlignment="Stretch" Height="80" Margin="10,10,10,0" VerticalAlignment="Top">
                     <StackPanel>
-                        <RadioButton GroupName="radDonde"  Name="radNombre" Margin="5,10,10,0" Content="Al hacer click derecho sobre el nombre de una carpeta"></RadioButton>
-                        <RadioButton GroupName="radDonde" Name="radFondo" Margin="5,10,10,0" Content="Al hacer click derecho en el fondo de una carpeta" IsChecked="true"></RadioButton>
+                        <RadioButton GroupName="radDonde"  Name="radNombre" Margin="5,10,10,0" Content="{x:Static local:Language.config_donde_carpeta}"></RadioButton>
+                        <RadioButton GroupName="radDonde" Name="radFondo" Margin="5,10,10,0" Content="{x:Static local:Language.config_donde_fondo}" IsChecked="true"></RadioButton>
                     </StackPanel>
                 </GroupBox>
-                <GroupBox Name="groupCuando" Header="Cuando Aparecer" HorizontalAlignment="Stretch" Height="80" Margin="10,10,10,0" VerticalAlignment="Top">
+                <GroupBox Name="groupCuando" Header="{x:Static local:Language.config_cuando_titulo}" HorizontalAlignment="Stretch" Height="80" Margin="10,10,10,0" VerticalAlignment="Top">
                     <StackPanel>
-                        <RadioButton GroupName="radCuando" Name="radNormal" Margin="5,10,10,0" Content="Al hacer click derecho"></RadioButton>
-                        <RadioButton GroupName="radCuando" Name="radExtendido" Margin="5,10,10,0" Content="Al hacer click derecho mientras se presiona la tecla Mayúsculas" IsChecked="true"></RadioButton>
+                        <RadioButton GroupName="radCuando" Name="radNormal" Margin="5,10,10,0" Content="{x:Static local:Language.config_cuando_normal}"></RadioButton>
+                        <RadioButton GroupName="radCuando" Name="radExtendido" Margin="5,10,10,0" Content="{x:Static local:Language.config_cuando_extendido}" IsChecked="true"></RadioButton>
                     </StackPanel>
                 </GroupBox>
             </StackPanel>
         </GroupBox>
-        <Button Name="btnGuardar" Content="Guardar" HorizontalAlignment="Right" Margin="0,270,10,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="btnGuardar" Content="{x:Static local:Language.config_guardar}" HorizontalAlignment="Right" Margin="0,270,10,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </UserControl>

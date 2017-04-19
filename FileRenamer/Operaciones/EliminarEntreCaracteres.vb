@@ -1,19 +1,22 @@
 ﻿Public Class EliminarEntreCaracteres
     Inherits Operacion
 
-    Public Overrides Property Nombre As String = "Eliminar entre caracteres (sin incluir la extension)"
+    Public Overrides Property Nombre As String = Operaciones.EliminarEntreCaracteres_Nombre
     Public inicio As String
     Public fin As String
 
     Public Overrides Function ToString() As String
-        Return "Eliminar texto entre """ & inicio & """ y """ & fin & """"
+        Dim txt As String = Operaciones.EliminarEntreCaracteres_ToString
+        txt = txt.Replace("{1}", inicio)
+        txt = txt.Replace("{2}", fin)
+        Return txt
     End Function
 
     Public Overrides Sub AcomodarFormulario(ByRef form As RenombrarPage)
         form.lbl_op1.Visibility = Visibility.Visible
         form.lbl_op2.Visibility = Visibility.Visible
-        form.lbl_op1.Content = "Entre"
-        form.lbl_op2.Content = "y"
+        form.lbl_op1.Content = Operaciones.Operacion_Entre
+        form.lbl_op2.Content = Operaciones.Operacion_Y
         form.txt_src_reemp.Visibility = Visibility.Visible
         form.txt_dest_reemp.Visibility = Visibility.Visible
     End Sub

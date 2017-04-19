@@ -1,15 +1,15 @@
 ﻿Public Class AgregarPadding
     Inherits Operacion
 
-    Public Overrides Property Nombre As String = "Agregar padding"
+    Public Overrides Property Nombre As String = Operaciones.AgregarPadding_Nombre
     Dim caracter As String
     Dim cantidad As Integer
 
     Public Overrides Sub AcomodarFormulario(ByRef form As RenombrarPage)
         form.lbl_op1.Visibility = Visibility.Visible
         form.lbl_op2.Visibility = Visibility.Visible
-        form.lbl_op1.Content = "Caracter:"
-        form.lbl_op2.Content = "Cant.:"
+        form.lbl_op1.Content = Operaciones.AgregarPadding_Caracter
+        form.lbl_op2.Content = Operaciones.AgregarPadding_Cantidad
         form.txt_src_reemp.Visibility = Visibility.Visible
         form.txt_dest_reemp.Visibility = Visibility.Visible
     End Sub
@@ -40,7 +40,10 @@
     End Function
 
     Public Overrides Function ToString() As String
-        Return "Agregar """ & caracter & """ hasta llegar a " & cantidad & " caracteres"
+        Dim txt As String = Operaciones.AgregarAlPrincipio_ToString
+        txt = txt.Replace("{1}", caracter)
+        txt = txt.Replace("{2}", cantidad)
+        Return txt
     End Function
 
     Public Overrides Function GetDescripcion() As String

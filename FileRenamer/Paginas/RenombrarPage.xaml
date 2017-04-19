@@ -35,7 +35,9 @@
             </TreeView.Resources>
 
         </TreeView>
-        <CheckBox Height="17" HorizontalAlignment="Left" Margin="20,60,0,0" Name="chk_subcarpetas" VerticalAlignment="Top" Width="120" Content="Incluir subcarpetas" Grid.Column="1"></CheckBox>
+
+        <Label Content="{x:Static local:Language.renombrar_sin_seleccionar}" Height="27" HorizontalAlignment="Left" Margin="6,30,0,0" Name="lbl_carpeta" VerticalAlignment="Top" Width="481" Grid.Column="1"  />
+        <CheckBox Height="17" HorizontalAlignment="Left" Margin="20,60,0,0" Name="chk_subcarpetas" VerticalAlignment="Top" Width="120" Content="{x:Static local:Language.renombrar_incluir_subcarpetas}" Grid.Column="1"></CheckBox>
         <ListBox Height="200" HorizontalAlignment="Stretch" Margin="10,100,10,0" Name="lst_files" VerticalAlignment="Top" SelectionMode="Single" Grid.Column="1" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -43,15 +45,8 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Label Content="Sin Seleccionar" Height="27" HorizontalAlignment="Left" Margin="6,30,0,0" Name="lbl_carpeta" VerticalAlignment="Top" Width="481" Grid.Column="1"  />
-        <Label Content="Reemplazar" Height="27" HorizontalAlignment="Left" Margin="10,365,0,0" Name="lbl_op1" VerticalAlignment="Top" Width="75" Grid.Column="1" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="90,365,0,0" Name="txt_src_reemp" VerticalAlignment="Top" Width="120" Grid.Column="1"  />
-        <Label Content="por" Height="27" HorizontalAlignment="Left" Margin="220,365,0,0" Name="lbl_op2" VerticalAlignment="Top" Width="36" Grid.Column="1" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="260,365,0,0" Name="txt_dest_reemp" VerticalAlignment="Top" Width="120" Grid.Column="1" />
-        <Button Content="Agregar" Height="23" HorizontalAlignment="Left" Margin="400,365,0,0" Name="btn_agregar" VerticalAlignment="Top" Width="110" Grid.Column="1" />
-        <ListBox Height="165" HorizontalAlignment="Stretch" Margin="40,400,100,0" Name="lst_reemplazos" VerticalAlignment="Top" Grid.Column="1" />
-        <Button Content="Vista Previa" Height="37" HorizontalAlignment="Right" Margin="0,590,40,0" Name="btn_renombrar" VerticalAlignment="Top" Width="142" Grid.Column="1" />
-        <Label Content="Operacion" Height="27" HorizontalAlignment="Left" Margin="10,329,0,0" Name="Label3" VerticalAlignment="Top" Width="72" Grid.Column="1" />
+
+        <Label Content="{x:Static local:Language.renombrar_operacion}" Height="27" HorizontalAlignment="Left" Margin="10,329,0,0" Name="Label3" VerticalAlignment="Top" Width="72" Grid.Column="1" />
         <ComboBox Height="23" HorizontalAlignment="Left" Margin="90,333,0,0" Name="cmb_operacion" VerticalAlignment="Top" Width="290" Grid.Column="1"  >
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -59,8 +54,19 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <Button Content="Subir" Height="23" HorizontalAlignment="Right"  Margin="0,420,10,0" Name="btn_subir" VerticalAlignment="Top" Width="80" Grid.Column="1" />
-        <Button Content="Bajar" Height="23" HorizontalAlignment="Right"  Margin="0,450,10,0" Name="btn_bajar" VerticalAlignment="Top" Width="80" Grid.Column="1" />
-        <Button Content="Quitar" Height="23" HorizontalAlignment="Right"  Margin="0,480,10,0" Name="btn_quitar" VerticalAlignment="Top" Width="80" Grid.Column="1" />
+
+
+        <Label Content="{x:Static local:Language.renombrar_reemplazar}" Height="27" HorizontalAlignment="Left" Margin="10,365,0,0" Name="lbl_op1" VerticalAlignment="Top" Width="75" Grid.Column="1" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="90,365,0,0" Name="txt_src_reemp" VerticalAlignment="Top" Width="120" Grid.Column="1"  />
+        <Label Content="{x:Static local:Language.renombrar_por}" Height="27" HorizontalAlignment="Left" Margin="220,365,0,0" Name="lbl_op2" VerticalAlignment="Top" Width="36" Grid.Column="1" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="260,365,0,0" Name="txt_dest_reemp" VerticalAlignment="Top" Width="120" Grid.Column="1" />
+        <Button Content="{x:Static local:Language.renombrar_agregar}" Height="23" HorizontalAlignment="Left" Margin="400,365,0,0" Name="btn_agregar" VerticalAlignment="Top" Width="110" Grid.Column="1" />
+        <ListBox Height="165" HorizontalAlignment="Stretch" Margin="40,400,100,0" Name="lst_reemplazos" VerticalAlignment="Top" Grid.Column="1" />
+
+        <Button Content="{x:Static local:Language.renombrar_subir}" Height="23" HorizontalAlignment="Right"  Margin="0,420,10,0" Name="btn_subir" VerticalAlignment="Top" Width="80" Grid.Column="1" />
+        <Button Content="{x:Static local:Language.renombrar_bajar}" Height="23" HorizontalAlignment="Right"  Margin="0,450,10,0" Name="btn_bajar" VerticalAlignment="Top" Width="80" Grid.Column="1" />
+        <Button Content="{x:Static local:Language.renombrar_quitar}" Height="23" HorizontalAlignment="Right"  Margin="0,480,10,0" Name="btn_quitar" VerticalAlignment="Top" Width="80" Grid.Column="1" />
+
+        <Button Content="{x:Static local:Language.renombrar_vista_previa}" Height="37" HorizontalAlignment="Right" Margin="0,590,40,0" Name="btn_renombrar" VerticalAlignment="Top" Width="142" Grid.Column="1" />
     </Grid>
 </UserControl>
