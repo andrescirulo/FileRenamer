@@ -1,9 +1,6 @@
-﻿Imports System.Collections.ObjectModel
-Imports System.IO
+﻿Imports System.IO
 
 Class RenombrarPage
-    'Dim oFileD As OpenFileDialog
-    'Dim oFolderD As FolderBrowserDialog
 
     Dim OPERACIONES As List(Of Operacion)
 
@@ -25,9 +22,6 @@ Class RenombrarPage
     Dim dummyNode As Object = Nothing
 
     Private Sub RenombrarPage_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
-        'oFileD = New OpenFileDialog
-        'oFileD.Multiselect = True
-        'oFolderD = New FolderBrowserDialog
 
         Dim carpetaInicial As String = Environment.GetFolderPath(Environment.SpecialFolder.Personal)
         carpetaInicial = carpetaInicial.Replace("Mis Documentos", "Descargas")
@@ -36,7 +30,6 @@ Class RenombrarPage
         If Not My.Computer.FileSystem.DirectoryExists(carpetaInicial) Then
             carpetaInicial = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
         End If
-        'oFolderD.SelectedPath = carpetaInicial
 
         For Each oper In GetOperaciones()
             cmb_operacion.Items.Add(oper)
@@ -44,8 +37,6 @@ Class RenombrarPage
         cmb_operacion.SelectedIndex = 0
 
         tree_carpetas.Items.Clear()
-
-
         For Each drive In ObtenerUnidades()
             Dim item As New TreeViewItem()
             item.Header = drive.RootDirectory.FullName
@@ -95,7 +86,6 @@ Class RenombrarPage
             lst_files.Items.Clear()
             Dim archs As List(Of String)
             If (chk_subcarpetas.IsChecked) Then
-                'archs = My.Computer.FileSystem.GetFiles(lbl_carpeta.Content, FileIO.SearchOption.SearchAllSubDirectories)
                 archs = ObtenerArchivos(lbl_carpeta.Content, SearchOption.AllDirectories, "*")
             Else
                 archs = ObtenerArchivos(lbl_carpeta.Content, SearchOption.TopDirectoryOnly, "*")
