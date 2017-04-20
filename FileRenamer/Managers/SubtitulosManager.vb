@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Text.RegularExpressions
+Imports FileRenamer
 
 Public Class SubtitulosManager
 
@@ -22,7 +23,7 @@ Public Class SubtitulosManager
         For Each video In listaVideos
             Dim subtitulo As Archivo = BuscarMejorMatch(video, listaSubtitulos)
             video.Subtitulo = subtitulo
-            If Not (video.Subtitulo Is Nothing) Then
+            If Not (video.Subtitulo Is Nothing) AndAlso Not SubtituloNombreCorrecto(video) Then
                 listaFinal.Add(video)
                 listaSubtitulos.Remove(video.Subtitulo)
             End If
@@ -30,6 +31,9 @@ Public Class SubtitulosManager
         Return listaFinal
     End Function
 
+    Private Shared Function SubtituloNombreCorrecto(video As Video) As Boolean
+        Return video.Nombre.ToLower.Equals(video.Subtitulo.Nombre.ToLower)
+    End Function
 
     Private Shared Function BuscarMejorMatch(video As Archivo, listaSubtitulos As List(Of Subtitulo)) As Subtitulo
         Dim listaPosibles As New List(Of ResultadoComparacion)

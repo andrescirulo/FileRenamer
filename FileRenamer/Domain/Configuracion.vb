@@ -1,4 +1,4 @@
 ﻿Public Class Configuracion
-    Public ExtensionesSubtitulos As List(Of String) = {"*.srt", "*.sub"}.ToList
-    Public ExtensionesVideos As List(Of String) = {"*.avi", "*.mkv", "*.mp4"}.ToList
+    Public ExtensionesSubtitulos As List(Of String)
+    Public ExtensionesVideos As List(Of String)
 End Class
