@@ -43,10 +43,16 @@ Class RenombrarPage
         Next
         cmb_operacion.SelectedIndex = 0
 
-        For Each drive In Directory.GetLogicalDrives()
+        tree_carpetas.Items.Clear()
+
+
+        For Each drive In ObtenerUnidades()
             Dim item As New TreeViewItem()
-            item.Header = drive
-            item.Tag = drive
+            item.Header = drive.RootDirectory.FullName
+            If ((Not drive.VolumeLabel Is Nothing) AndAlso drive.VolumeLabel <> "") Then
+                item.Header = item.Header & " - " & drive.VolumeLabel
+            End If
+            item.Tag = drive.RootDirectory.FullName
             item.FontWeight = FontWeights.Normal
             item.Items.Add(dummyNode)
             AddHandler item.Expanded, AddressOf OnFolderExpanded
@@ -60,10 +66,10 @@ Class RenombrarPage
         If (item.Items.Count = 1 AndAlso item.Items(0) = dummyNode) Then
             item.Items.Clear()
             Try
-                For Each dire In Directory.GetDirectories(item.Tag.ToString())
+                For Each dire In ObtenerDirectorios(item.Tag.ToString())
                     Dim subitem As New TreeViewItem()
-                    subitem.Header = NombreCorto(dire)
-                    subitem.Tag = dire
+                    subitem.Header = NombreCorto(dire.FullName)
+                    subitem.Tag = dire.FullName
                     subitem.FontWeight = FontWeights.Normal
                     subitem.Items.Add(dummyNode)
                     AddHandler subitem.Expanded, AddressOf OnFolderExpanded
@@ -87,11 +93,12 @@ Class RenombrarPage
             End If
 
             lst_files.Items.Clear()
-            Dim archs As ReadOnlyCollection(Of String)
+            Dim archs As List(Of String)
             If (chk_subcarpetas.IsChecked) Then
-                archs = My.Computer.FileSystem.GetFiles(lbl_carpeta.Content, FileIO.SearchOption.SearchAllSubDirectories)
+                'archs = My.Computer.FileSystem.GetFiles(lbl_carpeta.Content, FileIO.SearchOption.SearchAllSubDirectories)
+                archs = ObtenerArchivos(lbl_carpeta.Content, SearchOption.AllDirectories, "*")
             Else
-                archs = My.Computer.FileSystem.GetFiles(lbl_carpeta.Content)
+                archs = ObtenerArchivos(lbl_carpeta.Content, SearchOption.TopDirectoryOnly, "*")
             End If
 
             For Each arch In archs

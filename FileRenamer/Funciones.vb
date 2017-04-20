@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports CodeProject
 Imports Newtonsoft.Json
 
 Module Funciones
@@ -48,4 +49,48 @@ Module Funciones
             MsgBox("No se pudo guardar la configuración. " & vbCrLf & "Compruebe que posee permisos suficientes o ejecute la aplicación como Administrador")
         End Try
     End Sub
+
+
+    Public Function ObtenerArchivos(Path As String, searchOption As SearchOption, extensiones() As String) As List(Of String)
+        Dim lista As New List(Of String)
+        For Each ext In extensiones
+            lista.AddRange(ObtenerArchivos(Path, searchOption, ext))
+        Next
+        Return lista
+    End Function
+    Public Function ObtenerArchivos(Path As String, searchOption As SearchOption) As List(Of String)
+        Return ObtenerArchivos(Path, searchOption, "*")
+    End Function
+
+    Public Function ObtenerArchivos(Path As String, searchOption As SearchOption, filtro As String) As List(Of String)
+        Dim lista As New List(Of String)
+        Dim files() As FileData = FastDirectoryEnumerator.GetFiles(Path, filtro, searchOption)
+        For Each elem In files
+            If Not elem.Attributes.HasFlag(FileAttributes.System) And Not elem.Attributes.HasFlag(FileAttributes.Hidden) Then
+                lista.Add(elem.Path)
+            End If
+        Next
+        Return lista
+    End Function
+
+    Public Function ObtenerUnidades() As List(Of DriveInfo)
+        Dim lista As New List(Of DriveInfo)
+        For Each drive In DriveInfo.GetDrives
+            If drive.IsReady Then
+                lista.Add(drive)
+            End If
+        Next
+        Return lista
+    End Function
+
+    Public Function ObtenerDirectorios(path As String) As List(Of DirectoryInfo)
+        Dim lista As New List(Of DirectoryInfo)
+        Dim parentDir As New DirectoryInfo(path)
+        For Each dire In parentDir.GetDirectories()
+            If Not dire.Attributes.HasFlag(FileAttributes.System) And Not dire.Attributes.HasFlag(FileAttributes.Hidden) Then
+                lista.Add(dire)
+            End If
+        Next
+        Return lista
+    End Function
 End Module

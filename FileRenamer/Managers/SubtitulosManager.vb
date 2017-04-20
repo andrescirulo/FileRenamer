@@ -1,18 +1,22 @@
-﻿Imports System.Text.RegularExpressions
+﻿Imports System.IO
+Imports System.Text.RegularExpressions
 
 Public Class SubtitulosManager
 
     Public Shared Function AnalizarSubtitulos(srcFolder As String) As List(Of Video)
+        If CONFIG Is Nothing Then
+            Inicializar()
+        End If
         Dim listaFinal As New List(Of Video)
 
         Dim listaSubtitulos As New List(Of Subtitulo)
         Dim listaTmp As New List(Of String)
-        listaTmp.AddRange(My.Computer.FileSystem.GetFiles(srcFolder, FileIO.SearchOption.SearchTopLevelOnly, CONFIG.ExtensionesSubtitulos.ToArray))
+        listaTmp.AddRange(ObtenerArchivos(srcFolder, SearchOption.TopDirectoryOnly, CONFIG.ExtensionesSubtitulos.ToArray))
         listaSubtitulos.AddRange(ArmarSubtitulos(listaTmp))
 
         Dim listaVideos As New List(Of Video)
         listaTmp = New List(Of String)
-        listaTmp.AddRange(My.Computer.FileSystem.GetFiles(srcFolder, FileIO.SearchOption.SearchTopLevelOnly, CONFIG.ExtensionesVideos.ToArray))
+        listaTmp.AddRange(ObtenerArchivos(srcFolder, SearchOption.TopDirectoryOnly, CONFIG.ExtensionesVideos.ToArray))
         listaVideos.AddRange(ArmarVideos(listaTmp))
 
         For Each video In listaVideos

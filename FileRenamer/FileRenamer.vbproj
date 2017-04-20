@@ -210,6 +210,11 @@
     <Resource Include="diskdrive.png" />
     <Resource Include="folder.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FastDirectoryEnumerator\FastDirectoryEnumerator.csproj">
+      <Project>{B178092B-06CF-4FCF-9D20-69E14650136F}</Project>
+      <Name>FastDirectoryEnumerator</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

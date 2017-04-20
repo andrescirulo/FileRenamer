@@ -5,14 +5,42 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FileRenamer"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="500">
+             d:DesignHeight="300" d:DesignWidth="600">
     <Grid>
-        <Button Content="Elegir Carpeta..." Height="23" HorizontalAlignment="Left" Margin="6,43,0,0" x:Name="btn_carpeta" VerticalAlignment="Top" Width="120" />
-        <Label Content="Sin Seleccionar" Height="27" HorizontalAlignment="Stretch"  Margin="15,75,0,0" x:Name="lbl_carpeta" VerticalAlignment="Top" />
-        <Button x:Name="btnRenombrar" Content="Renombrar Seleccionados" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="bottom" Width="150" Height="30"/>
-        <ListBox x:Name="lstVideos" HorizontalAlignment="Stretch"  Margin="20,150,20,50" VerticalAlignment="Stretch" SelectionMode="Extended" />
-        <Button x:Name="btnMarcar" Content="Marcar Todos" HorizontalAlignment="Left" Margin="20,125,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnDesmarcar" Content="Desmarcar Todos" HorizontalAlignment="Left" Margin="150,125,0,0" VerticalAlignment="Top" Width="120"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+        <TreeView Name="tree_carpetas" Grid.Column="0" Margin="10,10,10,10">
+            <TreeView.Resources>
+                <Style TargetType="{x:Type TreeViewItem}">
+                    <Setter Property="HeaderTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Name="img"  Width="20" Height="20" Stretch="Fill" 
+                                       Source="{Binding 
+                                       RelativeSource={RelativeSource 
+                                       Mode=FindAncestor, 
+                                       AncestorType={x:Type TreeViewItem}}, 
+                                       Path=Header, 
+                                       Converter={x:Static local:HeaderToImageConverter.Instance}}"       
+                                       />
+                                    <TextBlock Text="{Binding}" Margin="5,0" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TreeView.Resources>
+
+        </TreeView>
+        <Label Content="Sin Seleccionar" Height="27" HorizontalAlignment="Stretch"  Margin="15,40,0,0" x:Name="lbl_carpeta" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button x:Name="btnMarcar" Content="Marcar Todos" HorizontalAlignment="Left" Margin="20,75,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Button x:Name="btnDesmarcar" Content="Desmarcar Todos" HorizontalAlignment="Left" Margin="150,75,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <ListBox x:Name="lstVideos" HorizontalAlignment="Stretch"  Margin="20,100,20,50" VerticalAlignment="Stretch" SelectionMode="Extended" Grid.Column="1"/>
+        <Button x:Name="btnRenombrar" Content="Renombrar Seleccionados" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="bottom" Width="150" Height="30" Grid.Column="1"/>
+        
     </Grid>
 </UserControl>
