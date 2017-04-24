@@ -47,7 +47,7 @@
     End Function
 
     Public Overrides Function GetDescripcion() As String
-        Return ""
+        Return "Agrega el caracter especificado la cantidad de veces especificada al inicio del nombre del archivo"
     End Function
 
     Public Overrides Function GetNewInstance() As Operacion

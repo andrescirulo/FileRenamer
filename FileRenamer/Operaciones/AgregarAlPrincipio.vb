@@ -26,7 +26,7 @@
     End Sub
 
     Public Overrides Function GetDescripcion() As String
-        Return ""
+        Return "Agrega el texto especificado al inicio del nombre del archivo"
     End Function
 
     Public Overrides Function GetNewInstance() As Operacion

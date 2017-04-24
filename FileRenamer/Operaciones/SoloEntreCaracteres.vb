@@ -60,7 +60,7 @@
     End Function
 
     Public Overrides Function GetDescripcion() As String
-        Return ""
+        Return "Conserva solo el texto entre los caracteres especificados, sin incluír los caracteres límite"
     End Function
 
     Public Overrides Function GetNewInstance() As Operacion

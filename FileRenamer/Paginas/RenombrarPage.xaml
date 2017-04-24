@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FileRenamer"  
       mc:Ignorable="d" 
-      d:DesignHeight="650" d:DesignWidth="775">
+      d:DesignHeight="670" d:DesignWidth="775">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
@@ -31,19 +31,22 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-
+        
+        <TextBlock x:Name="lblDescripcion" VerticalAlignment="Top" Grid.Column="1" Margin="95,360,150,0" TextWrapping="Wrap"  ></TextBlock>
         <WrapPanel Grid.Column="1">
-            <Label Content="{x:Static local:Language.renombrar_reemplazar}" Height="27" HorizontalAlignment="Left" Margin="10,365,0,0" Name="lbl_op1" VerticalAlignment="Top" Grid.Column="1" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="10,365,0,0" Name="txt_src_reemp" VerticalAlignment="Top" Width="120" Grid.Column="1"  />
-            <Label Content="{x:Static local:Language.renombrar_por}" Height="27" HorizontalAlignment="Left" Margin="10,365,0,0" Name="lbl_op2" VerticalAlignment="Top" Grid.Column="1" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="10,365,0,0" Name="txt_dest_reemp" VerticalAlignment="Top" Width="120" Grid.Column="1" />
+            <Label Content="{x:Static local:Language.renombrar_reemplazar}" Height="27" HorizontalAlignment="Left" Margin="10,400,0,0" Name="lbl_op1" VerticalAlignment="Top" Grid.Column="1" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="10,400,0,0" Name="txt_src_reemp" VerticalAlignment="Top" Width="120" Grid.Column="1"  />
+            <Label Content="{x:Static local:Language.renombrar_por}" Height="27" HorizontalAlignment="Left" Margin="10,400,0,0" Name="lbl_op2" VerticalAlignment="Top" Grid.Column="1" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="10,400,0,0" Name="txt_dest_reemp" VerticalAlignment="Top" Width="120" Grid.Column="1" />
         </WrapPanel>
-        <Button Content="{x:Static local:Language.renombrar_agregar}" Height="23" HorizontalAlignment="Left" Margin="400,365,0,0" Name="btn_agregar" VerticalAlignment="Top" Width="110" Grid.Column="1" />
-        <ListBox Height="165" HorizontalAlignment="Stretch" Margin="40,400,100,0" Name="lst_reemplazos" VerticalAlignment="Top" Grid.Column="1" />
-
-        <Button Content="{x:Static local:Language.renombrar_subir}" Height="23" HorizontalAlignment="Right"  Margin="0,420,10,0" Name="btn_subir" VerticalAlignment="Top" Width="80" Grid.Column="1" />
-        <Button Content="{x:Static local:Language.renombrar_bajar}" Height="23" HorizontalAlignment="Right"  Margin="0,450,10,0" Name="btn_bajar" VerticalAlignment="Top" Width="80" Grid.Column="1" />
-        <Button Content="{x:Static local:Language.renombrar_quitar}" Height="23" HorizontalAlignment="Right"  Margin="0,480,10,0" Name="btn_quitar" VerticalAlignment="Top" Width="80" Grid.Column="1" />
+        <Button Content="{x:Static local:Language.renombrar_agregar}" Height="23" HorizontalAlignment="Left" Margin="400,400,0,0" Name="btn_agregar" VerticalAlignment="Top" Width="110" Grid.Column="1" />
+        
+        
+        <ListBox Height="145" HorizontalAlignment="Stretch" Margin="40,440,100,0" Name="lst_reemplazos" VerticalAlignment="Top" Grid.Column="1" />
+        
+        <Button Content="{x:Static local:Language.renombrar_subir}" Height="23" HorizontalAlignment="Right"  Margin="0,440,10,0" Name="btn_subir" VerticalAlignment="Top" Width="80" Grid.Column="1" />
+        <Button Content="{x:Static local:Language.renombrar_bajar}" Height="23" HorizontalAlignment="Right"  Margin="0,470,10,0" Name="btn_bajar" VerticalAlignment="Top" Width="80" Grid.Column="1" />
+        <Button Content="{x:Static local:Language.renombrar_quitar}" Height="23" HorizontalAlignment="Right"  Margin="0,500,10,0" Name="btn_quitar" VerticalAlignment="Top" Width="80" Grid.Column="1" />
 
         <Button Content="{x:Static local:Language.renombrar_vista_previa}" Height="40" HorizontalAlignment="Right" Margin="0,0,40,10" Name="btn_renombrar" VerticalAlignment="Bottom" Width="150" Grid.Column="1" />
     </Grid>

@@ -29,7 +29,7 @@ Public Class AgregarAlFinalDeTodo
     End Sub
 
     Public Overrides Function GetDescripcion() As String
-        Return ""
+        Return "Agrega el texto especificado al final del nombre del archivo, luego de su extensión"
     End Function
 
     Public Overrides Function GetNewInstance() As Operacion

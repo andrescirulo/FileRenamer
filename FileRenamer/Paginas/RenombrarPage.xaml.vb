@@ -155,6 +155,7 @@ Class RenombrarPage
     Private Sub cmb_operacion_SelectionChanged(ByVal sender As System.Object, ByVal e As System.Windows.Controls.SelectionChangedEventArgs) Handles cmb_operacion.SelectionChanged
         If (cmb_operacion.SelectedIndex >= 0) Then
             cmb_operacion.SelectedItem.AcomodarFormulario(Me)
+            lblDescripcion.Text = cmb_operacion.SelectedItem.GetDescripcion()
         End If
     End Sub
 

@@ -42,7 +42,7 @@
     End Function
 
     Public Overrides Function GetDescripcion() As String
-        Return ""
+        Return "Convierte el texto a mayúsculas y minúsculas separando por palabra"
     End Function
 
     Public Overrides Function GetNewInstance() As Operacion

@@ -22,7 +22,7 @@
     End Function
 
     Public Overrides Function GetDescripcion() As String
-        Return ""
+        Return "Convierte todo el nombre del archivo a minúsculas"
     End Function
 
     Public Overrides Function GetNewInstance() As Operacion

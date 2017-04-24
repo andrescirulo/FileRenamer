@@ -56,7 +56,7 @@
     End Function
 
     Public Overrides Function GetDescripcion() As String
-        Return ""
+        Return "Elimina todo el texto entre los caracteres especificados, inclusive los caracteres límite"
     End Function
 
     Public Overrides Function GetNewInstance() As Operacion
