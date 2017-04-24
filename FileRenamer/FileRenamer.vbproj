@@ -115,8 +115,14 @@
     <Compile Include="Operaciones\Reemplazo.vb" />
     <Compile Include="Operaciones\ReemplazoEnNombre.vb" />
     <Compile Include="Operaciones\SoloEntreCaracteres.vb" />
+    <Compile Include="Operaciones\MayusculasYMinusculas.vb" />
+    <Compile Include="Operaciones\TodoAMinusculas.vb" />
+    <Compile Include="Operaciones\TodoAMayusculas.vb" />
     <Compile Include="Paginas\ConfiguracionPage.xaml.vb">
       <DependentUpon>ConfiguracionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\InicioPage.xaml.vb">
+      <DependentUpon>InicioPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Paginas\RenombrarPage.xaml.vb">
       <DependentUpon>RenombrarPage.xaml</DependentUpon>
@@ -148,6 +154,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Paginas\ConfiguracionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginas\InicioPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -177,4 +177,22 @@
   <data name="SoloEntreCaracteres_ToString" xml:space="preserve">
     <value>Solo texto entre "{1}" y "{2}"</value>
   </data>
+  <data name="MayusculasYMinusculas_Nombre" xml:space="preserve">
+    <value>Mayúsculas y Minúsculas</value>
+  </data>
+  <data name="MayusculasYMinusculas_ToString" xml:space="preserve">
+    <value>Colocar Mayúsculas y Minúsculas</value>
+  </data>
+  <data name="TodoAMayusculas_Nombre" xml:space="preserve">
+    <value>Convertir todo a Mayúsculas</value>
+  </data>
+  <data name="TodoAMayusculas_ToString" xml:space="preserve">
+    <value>Convertir todo a Mayúsculas</value>
+  </data>
+  <data name="TodoAMinusculas_Nombre" xml:space="preserve">
+    <value>Convertir todo a Minúsculas</value>
+  </data>
+  <data name="TodoAMinusculas_ToString" xml:space="preserve">
+    <value>Convertir todo a Minúsculas</value>
+  </data>
 </root>

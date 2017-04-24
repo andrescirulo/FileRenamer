@@ -172,6 +172,24 @@ Public Class Operaciones
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Mayúsculas y Minúsculas.
+    '''</summary>
+    Public Shared ReadOnly Property MayusculasYMinusculas_Nombre() As String
+        Get
+            Return ResourceManager.GetString("MayusculasYMinusculas_Nombre", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Colocar Mayúsculas y Minúsculas.
+    '''</summary>
+    Public Shared ReadOnly Property MayusculasYMinusculas_ToString() As String
+        Get
+            Return ResourceManager.GetString("MayusculasYMinusculas_ToString", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Entre.
     '''</summary>
     Public Shared ReadOnly Property Operacion_Entre() As String
@@ -240,6 +258,42 @@ Public Class Operaciones
     Public Shared ReadOnly Property SoloEntreCaracteres_ToString() As String
         Get
             Return ResourceManager.GetString("SoloEntreCaracteres_ToString", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Convertir todo a Mayúsculas.
+    '''</summary>
+    Public Shared ReadOnly Property TodoAMayusculas_Nombre() As String
+        Get
+            Return ResourceManager.GetString("TodoAMayusculas_Nombre", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Convertir todo a Mayúsculas.
+    '''</summary>
+    Public Shared ReadOnly Property TodoAMayusculas_ToString() As String
+        Get
+            Return ResourceManager.GetString("TodoAMayusculas_ToString", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Convertir todo a Minúsculas.
+    '''</summary>
+    Public Shared ReadOnly Property TodoAMinusculas_Nombre() As String
+        Get
+            Return ResourceManager.GetString("TodoAMinusculas_Nombre", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Convertir todo a Minúsculas.
+    '''</summary>
+    Public Shared ReadOnly Property TodoAMinusculas_ToString() As String
+        Get
+            Return ResourceManager.GetString("TodoAMinusculas_ToString", resourceCulture)
         End Get
     End Property
 End Class

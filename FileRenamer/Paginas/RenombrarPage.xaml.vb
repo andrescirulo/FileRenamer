@@ -16,6 +16,9 @@ Class RenombrarPage
             OPERACIONES.Add(New EliminarEntreCaracteres)
             OPERACIONES.Add(New SoloEntreCaracteres)
             OPERACIONES.Add(New AgregarPadding)
+            OPERACIONES.Add(New TodoAMayusculas)
+            OPERACIONES.Add(New TodoAMinusculas)
+            OPERACIONES.Add(New MayusculasYMinusculas)
         End If
         Return OPERACIONES
     End Function

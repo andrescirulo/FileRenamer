@@ -1,0 +1,3 @@
+﻿Class InicioPage
+
+End Class
