@@ -50,7 +50,7 @@
     End Sub
 
     Private Sub tree_carpetas_SelectedItemChanged(sender As Object, e As RoutedPropertyChangedEventArgs(Of Object)) Handles tree_carpetas.SelectedItemChanged
-        Dim tree As System.Windows.Controls.TreeView = tree_carpetas
+        Dim tree As TreeView = tree_carpetas
         If (tree.SelectedItem Is Nothing) Then
             Return
         End If
@@ -61,28 +61,42 @@
             lbl_carpeta.Content = lbl_carpeta.Content & "\"
         End If
 
+        CargarListaVideos(lbl_carpeta.Content)
+    End Sub
+
+    Private Sub CargarListaVideos(carpeta As String)
         Dim listaVideos As List(Of Video) = SubtitulosManager.AnalizarSubtitulos(lbl_carpeta.Content)
         lstVideos.Items.Clear()
         For Each elem In listaVideos
-            lstVideos.Items.Add(elem)
+            lstVideos.Items.Add(New FilaSubtitulo(elem))
         Next
     End Sub
 
     Private Sub btnMarcar_Click(sender As Object, e As RoutedEventArgs) Handles btnMarcar.Click
-        lstVideos.SelectAll()
+        Dim elem As FilaSubtitulo
+        For Each elem In lstVideos.Items
+            elem.SetSelected(True)
+        Next
     End Sub
 
     Private Sub btnDesmarcar_Click(sender As Object, e As RoutedEventArgs) Handles btnDesmarcar.Click
-        lstVideos.UnselectAll()
+        Dim elem As FilaSubtitulo
+        For Each elem In lstVideos.Items
+            elem.SetSelected(False)
+        Next
     End Sub
 
     Private Sub btnRenombrar_Click(sender As Object, e As RoutedEventArgs) Handles btnRenombrar.Click
         Dim vids As New List(Of Video)
-        For Each elem In lstVideos.SelectedItems
-            vids.Add(elem)
+        Dim elem As FilaSubtitulo
+        For Each elem In lstVideos.Items
+            If (elem.IsSelected) Then
+                vids.Add(elem.video)
+            End If
         Next
         SubtitulosManager.RenombrarSubtitulos(vids)
-        MsgBox("Listo!")
+        MsgBox(vids.Count & " Subtitulos Renombrados!")
+        CargarListaVideos(lbl_carpeta.Content)
     End Sub
 
 End Class

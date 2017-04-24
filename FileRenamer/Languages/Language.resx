@@ -186,6 +186,18 @@
   <data name="resultado_vista_previa" xml:space="preserve">
     <value>Vista previa del resultado</value>
   </data>
+  <data name="subtitulos_desmarcar_todos" xml:space="preserve">
+    <value>Desmarcar Todos</value>
+  </data>
+  <data name="subtitulos_marcar_todos" xml:space="preserve">
+    <value>Marcar Todos</value>
+  </data>
+  <data name="subtitulos_renombrar" xml:space="preserve">
+    <value>Renombrar Seleccionados</value>
+  </data>
+  <data name="subtitulos_sin_seleccionar" xml:space="preserve">
+    <value>Sin Seleccionar</value>
+  </data>
   <data name="tab_configuracion" xml:space="preserve">
     <value>Configuración</value>
   </data>

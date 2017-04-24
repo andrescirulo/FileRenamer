@@ -271,6 +271,42 @@ Public Class Language
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Desmarcar Todos.
+    '''</summary>
+    Public Shared ReadOnly Property subtitulos_desmarcar_todos() As String
+        Get
+            Return ResourceManager.GetString("subtitulos_desmarcar_todos", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Marcar Todos.
+    '''</summary>
+    Public Shared ReadOnly Property subtitulos_marcar_todos() As String
+        Get
+            Return ResourceManager.GetString("subtitulos_marcar_todos", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Renombrar Seleccionados.
+    '''</summary>
+    Public Shared ReadOnly Property subtitulos_renombrar() As String
+        Get
+            Return ResourceManager.GetString("subtitulos_renombrar", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Sin Seleccionar.
+    '''</summary>
+    Public Shared ReadOnly Property subtitulos_sin_seleccionar() As String
+        Get
+            Return ResourceManager.GetString("subtitulos_sin_seleccionar", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Configuración.
     '''</summary>
     Public Shared ReadOnly Property tab_configuracion() As String
