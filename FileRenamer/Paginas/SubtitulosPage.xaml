@@ -36,11 +36,11 @@
             </TreeView.Resources>
 
         </TreeView>
-        <Label Content="Sin Seleccionar" Height="27" HorizontalAlignment="Stretch"  Margin="15,40,0,0" x:Name="lbl_carpeta" VerticalAlignment="Top" Grid.Column="1"/>
-        <Button x:Name="btnMarcar" Content="Marcar Todos" HorizontalAlignment="Left" Margin="20,75,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <Button x:Name="btnDesmarcar" Content="Desmarcar Todos" HorizontalAlignment="Left" Margin="150,75,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Label Content="{x:Static local:Language.subtitulos_sin_seleccionar}" Height="27" HorizontalAlignment="Stretch"  Margin="15,40,0,0" x:Name="lbl_carpeta" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button x:Name="btnMarcar" Content="{x:Static local:Language.subtitulos_marcar_todos}" HorizontalAlignment="Left" Margin="20,75,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Button x:Name="btnDesmarcar" Content="{x:Static local:Language.subtitulos_desmarcar_todos}" HorizontalAlignment="Left" Margin="150,75,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <ListBox x:Name="lstVideos" HorizontalAlignment="Stretch"  Margin="20,100,20,50" VerticalAlignment="Stretch" SelectionMode="Extended" Grid.Column="1"/>
-        <Button x:Name="btnRenombrar" Content="Renombrar Seleccionados" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="bottom" Width="150" Height="30" Grid.Column="1"/>
+        <Button x:Name="btnRenombrar" Content="{x:Static local:Language.subtitulos_renombrar}" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="bottom" Width="150" Height="30" Grid.Column="1"/>
         
     </Grid>
 </UserControl>

@@ -73,6 +73,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controles\FilaSubtitulo.xaml.vb">
+      <DependentUpon>FilaSubtitulo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Domain\Archivo.vb" />
     <Compile Include="Domain\Configuracion.vb" />
     <Compile Include="Domain\EstadoMenuContextual.vb" />
@@ -115,6 +118,10 @@
     <Compile Include="ResultadoWindow.xaml.vb">
       <DependentUpon>ResultadoWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controles\FilaSubtitulo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

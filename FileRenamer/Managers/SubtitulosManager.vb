@@ -1,6 +1,5 @@
 ﻿Imports System.IO
 Imports System.Text.RegularExpressions
-Imports FileRenamer
 
 Public Class SubtitulosManager
 
