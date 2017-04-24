@@ -9,6 +9,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SubtituloContextApp", "Subt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastDirectoryEnumerator", "FastDirectoryEnumerator\FastDirectoryEnumerator.csproj", "{B178092B-06CF-4FCF-9D20-69E14650136F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FileRenamerSetup", "FileRenamerSetup\FileRenamerSetup.vdproj", "{B7B805E0-D5D1-42A6-B034-8C4EE96D487D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,8 @@ Global
 		{B178092B-06CF-4FCF-9D20-69E14650136F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B178092B-06CF-4FCF-9D20-69E14650136F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B178092B-06CF-4FCF-9D20-69E14650136F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7B805E0-D5D1-42A6-B034-8C4EE96D487D}.Debug|Any CPU.ActiveCfg = Debug
+		{B7B805E0-D5D1-42A6-B034-8C4EE96D487D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
