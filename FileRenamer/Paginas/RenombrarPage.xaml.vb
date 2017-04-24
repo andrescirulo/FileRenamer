@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 
 Class RenombrarPage
+    Implements FoldersTreeViewListener
 
     Dim OPERACIONES As List(Of Operacion)
 
@@ -31,54 +32,28 @@ Class RenombrarPage
             carpetaInicial = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
         End If
 
+        cmb_operacion.Items.Clear()
         For Each oper In GetOperaciones()
             cmb_operacion.Items.Add(oper)
         Next
         cmb_operacion.SelectedIndex = 0
 
-        tree_carpetas.Items.Clear()
-        For Each drive In ObtenerUnidades()
-            Dim item As New TreeViewItem()
-            item.Header = drive.RootDirectory.FullName
-            If ((Not drive.VolumeLabel Is Nothing) AndAlso drive.VolumeLabel <> "") Then
-                item.Header = item.Header & " - " & drive.VolumeLabel
-            End If
-            item.Tag = drive.RootDirectory.FullName
-            item.FontWeight = FontWeights.Normal
-            item.Items.Add(dummyNode)
-            AddHandler item.Expanded, AddressOf OnFolderExpanded
-            tree_carpetas.Items.Add(item)
-        Next
+        lbl_carpeta.Content = FileRenamer.Language.renombrar_sin_seleccionar
+        chk_subcarpetas.IsChecked = False
+        lst_files.Items.Clear()
+        lst_reemplazos.Items.Clear()
+        txt_dest_reemp.Text = ""
+        txt_src_reemp.Text = ""
+
+
+        tree_carpetas.AddListener(Me)
+        tree_carpetas.NavegarA(carpetaInicial)
 
     End Sub
 
-    Private Sub OnFolderExpanded(sender As Object, e As RoutedEventArgs)
-        Dim item As TreeViewItem = sender
-        If (item.Items.Count = 1 AndAlso item.Items(0) = dummyNode) Then
-            item.Items.Clear()
-            Try
-                For Each dire In ObtenerDirectorios(item.Tag.ToString())
-                    Dim subitem As New TreeViewItem()
-                    subitem.Header = NombreCorto(dire.FullName)
-                    subitem.Tag = dire.FullName
-                    subitem.FontWeight = FontWeights.Normal
-                    subitem.Items.Add(dummyNode)
-                    AddHandler subitem.Expanded, AddressOf OnFolderExpanded
-                    item.Items.Add(subitem)
-                Next
-            Catch ex As Exception
-            End Try
-        End If
-    End Sub
-
-    Private Sub tree_carpetas_SelectedItemChanged(sender As Object, e As RoutedPropertyChangedEventArgs(Of Object)) Handles tree_carpetas.SelectedItemChanged
+    Public Sub OnSelectedItemChanged(FilePath As String) Implements FoldersTreeViewListener.OnSelectedItemChanged
         Try
-            Dim tree As System.Windows.Controls.TreeView = tree_carpetas
-            If (tree.SelectedItem Is Nothing) Then
-                Return
-            End If
-
-            lbl_carpeta.Content = tree.SelectedItem.Tag
+            lbl_carpeta.Content = FilePath
             If Not (lbl_carpeta.Content.EndsWith("\")) Then
                 lbl_carpeta.Content = lbl_carpeta.Content & "\"
             End If
@@ -100,11 +75,10 @@ Class RenombrarPage
         Catch ex As IOException
 
         End Try
-
     End Sub
 
     Private Sub chk_subcarpetas_Checked(sender As Object, e As RoutedEventArgs) Handles chk_subcarpetas.Checked, chk_subcarpetas.Unchecked
-        tree_carpetas_SelectedItemChanged(Nothing, Nothing)
+        OnSelectedItemChanged(lbl_carpeta.Content)
     End Sub
 
     Private Sub btn_agregar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_agregar.Click
@@ -167,7 +141,7 @@ Class RenombrarPage
                 End If
             Next
 
-            lbl_carpeta.Content = "Sin Seleccionar"
+            lbl_carpeta.Content = FileRenamer.Language.renombrar_sin_seleccionar
             lst_files.Items.Clear()
             lst_reemplazos.Items.Clear()
             MsgBox("Archivos Renombrados Correctamente!!")
@@ -211,5 +185,6 @@ Class RenombrarPage
     Private Function quitarExtension(arch As String) As String
         Return arch.Substring(0, arch.LastIndexOf("."))
     End Function
+
 
 End Class

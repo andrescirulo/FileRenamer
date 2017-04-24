@@ -118,99 +118,99 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="config_cuando_extendido" xml:space="preserve">
-    <value>Al hacer click derecho mientras se presiona la tecla Mayúsculas</value>
+    <value>Right Click while pressing Shift key</value>
   </data>
   <data name="config_cuando_normal" xml:space="preserve">
-    <value>Al hacer click derecho</value>
+    <value>Right Click</value>
   </data>
   <data name="config_cuando_titulo" xml:space="preserve">
-    <value>Cuando Aparecer</value>
+    <value>Show When</value>
   </data>
   <data name="config_donde_carpeta" xml:space="preserve">
-    <value>Al hacer click derecho sobre el nombre de una carpeta</value>
+    <value>Folder Name Right Click</value>
   </data>
   <data name="config_donde_fondo" xml:space="preserve">
-    <value>Al hacer click derecho en el fondo de una carpeta</value>
+    <value>Folder Background Right Click</value>
   </data>
   <data name="config_donde_titulo" xml:space="preserve">
-    <value>Donde Aparecer</value>
+    <value>Show At</value>
   </data>
   <data name="config_guardar" xml:space="preserve">
-    <value>Guardar</value>
+    <value>Save</value>
   </data>
   <data name="config_menu_contextual" xml:space="preserve">
-    <value>Menu Contextual de Subtitulos</value>
+    <value>Subtitles Context Menu</value>
   </data>
   <data name="config_menu_contextual_habilitar" xml:space="preserve">
-    <value>Habilitar menu contextual en el explorador de Windows</value>
+    <value>Enable Windows Explorer Context Menu</value>
   </data>
   <data name="renombrar_agregar" xml:space="preserve">
-    <value>Agregar</value>
+    <value>Add</value>
   </data>
   <data name="renombrar_bajar" xml:space="preserve">
-    <value>Bajar</value>
+    <value>Down</value>
   </data>
   <data name="renombrar_error_archivos" xml:space="preserve">
-    <value>Debes elegir al menos un archivo</value>
+    <value>You must choose at least one file</value>
   </data>
   <data name="renombrar_error_operaciones" xml:space="preserve">
-    <value>Debes agregar al menos una operación</value>
+    <value>You must choose at least one operation</value>
   </data>
   <data name="renombrar_incluir_subcarpetas" xml:space="preserve">
-    <value>Incluir subcarpetas</value>
+    <value>Include Subfolders</value>
   </data>
   <data name="renombrar_operacion" xml:space="preserve">
-    <value>Operacion</value>
+    <value>Operation</value>
   </data>
   <data name="renombrar_por" xml:space="preserve">
-    <value>por</value>
+    <value>for</value>
   </data>
   <data name="renombrar_quitar" xml:space="preserve">
-    <value>Quitar</value>
+    <value>Remove</value>
   </data>
   <data name="renombrar_reemplazar" xml:space="preserve">
-    <value>Reemplazar</value>
+    <value>Replace</value>
   </data>
   <data name="renombrar_sin_seleccionar" xml:space="preserve">
-    <value>Carpeta No Seleccionada</value>
+    <value>No Folder Selected</value>
   </data>
   <data name="renombrar_subir" xml:space="preserve">
-    <value>Subir</value>
+    <value>Up</value>
   </data>
   <data name="renombrar_vista_previa" xml:space="preserve">
-    <value>Vista Previa</value>
+    <value>Preview</value>
   </data>
   <data name="resultado_renombrar" xml:space="preserve">
-    <value>Renombrar</value>
+    <value>Rename</value>
   </data>
   <data name="resultado_titulo" xml:space="preserve">
-    <value>FileRenamer - Vista Previa</value>
+    <value>FileRenamer - Preview</value>
   </data>
   <data name="resultado_vista_previa" xml:space="preserve">
-    <value>Vista previa del resultado</value>
+    <value>Result preview</value>
   </data>
   <data name="subtitulos_desmarcar_todos" xml:space="preserve">
-    <value>Desmarcar Todos</value>
+    <value>Unselect All</value>
   </data>
   <data name="subtitulos_error_archivos" xml:space="preserve">
-    <value>Debes elegir al menos un archivo</value>
+    <value>You must choose at least one file</value>
   </data>
   <data name="subtitulos_marcar_todos" xml:space="preserve">
-    <value>Marcar Todos</value>
+    <value>Select All</value>
   </data>
   <data name="subtitulos_renombrar" xml:space="preserve">
-    <value>Renombrar Seleccionados</value>
+    <value>Rename Selected</value>
   </data>
   <data name="subtitulos_sin_seleccionar" xml:space="preserve">
-    <value>Carpeta No Seleccionada</value>
+    <value>No Folder Selected</value>
   </data>
   <data name="tab_configuracion" xml:space="preserve">
-    <value>Configuración</value>
+    <value>Configuration</value>
   </data>
   <data name="tab_renombrar_archivos" xml:space="preserve">
-    <value>Renombrar Archivos</value>
+    <value>Rename Files</value>
   </data>
   <data name="tab_renombrar_subtitulos" xml:space="preserve">
-    <value>Renombrar Subtitulos</value>
+    <value>Rename Subtitles</value>
   </data>
 </root>

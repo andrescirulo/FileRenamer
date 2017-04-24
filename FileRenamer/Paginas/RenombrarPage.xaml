@@ -5,36 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FileRenamer"  
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="775">
+      d:DesignHeight="650" d:DesignWidth="775">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="525*"/>
         </Grid.ColumnDefinitions>
-        <TreeView Name="tree_carpetas" Grid.Column="0" Margin="10,10,10,10">
-            <TreeView.Resources>
-                <Style TargetType="{x:Type TreeViewItem}">
-                    <Setter Property="HeaderTemplate">
-                        <Setter.Value>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Name="img"  Width="20" Height="20" Stretch="Fill" 
-                                       Source="{Binding 
-                                       RelativeSource={RelativeSource 
-                                       Mode=FindAncestor, 
-                                       AncestorType={x:Type TreeViewItem}}, 
-                                       Path=Header, 
-                                       Converter={x:Static local:HeaderToImageConverter.Instance}}"       
-                                       />
-                                    <TextBlock Text="{Binding}" Margin="5,0" />
-                                </StackPanel>
-                            </DataTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </TreeView.Resources>
-
-        </TreeView>
+        <local:FoldersTreeView x:Name="tree_carpetas" Grid.Column="0" Margin="10,10,10,10"></local:FoldersTreeView>
 
         <Label Content="{x:Static local:Language.renombrar_sin_seleccionar}" Height="27" HorizontalAlignment="Left" Margin="6,30,0,0" Name="lbl_carpeta" VerticalAlignment="Top" Width="481" Grid.Column="1"  />
         <CheckBox Height="17" HorizontalAlignment="Left" Margin="20,60,0,0" Name="chk_subcarpetas" VerticalAlignment="Top" Width="120" Content="{x:Static local:Language.renombrar_incluir_subcarpetas}" Grid.Column="1"></CheckBox>
@@ -68,6 +45,6 @@
         <Button Content="{x:Static local:Language.renombrar_bajar}" Height="23" HorizontalAlignment="Right"  Margin="0,450,10,0" Name="btn_bajar" VerticalAlignment="Top" Width="80" Grid.Column="1" />
         <Button Content="{x:Static local:Language.renombrar_quitar}" Height="23" HorizontalAlignment="Right"  Margin="0,480,10,0" Name="btn_quitar" VerticalAlignment="Top" Width="80" Grid.Column="1" />
 
-        <Button Content="{x:Static local:Language.renombrar_vista_previa}" Height="37" HorizontalAlignment="Right" Margin="0,590,40,0" Name="btn_renombrar" VerticalAlignment="Top" Width="142" Grid.Column="1" />
+        <Button Content="{x:Static local:Language.renombrar_vista_previa}" Height="40" HorizontalAlignment="Right" Margin="0,0,40,10" Name="btn_renombrar" VerticalAlignment="Bottom" Width="150" Grid.Column="1" />
     </Grid>
 </UserControl>

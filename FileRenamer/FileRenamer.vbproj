@@ -76,6 +76,10 @@
     <Compile Include="Controles\FilaSubtitulo.xaml.vb">
       <DependentUpon>FilaSubtitulo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controles\FoldersTreeView.xaml.vb">
+      <DependentUpon>FoldersTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\FoldersTreeViewListener.vb" />
     <Compile Include="Domain\Archivo.vb" />
     <Compile Include="Domain\Configuracion.vb" />
     <Compile Include="Domain\EstadoMenuContextual.vb" />
@@ -84,6 +88,11 @@
     <Compile Include="Domain\Subtitulo.vb" />
     <Compile Include="Domain\Video.vb" />
     <Compile Include="Funciones.vb" />
+    <Compile Include="Languages\Language.en.Designer.vb">
+      <DependentUpon>Language.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Languages\Operaciones.Designer.vb">
       <DependentUpon>Operaciones.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -119,6 +128,10 @@
       <DependentUpon>ResultadoWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Controles\FilaSubtitulo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\FoldersTreeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -188,6 +201,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Languages\Language.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.en.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Languages\Operaciones.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Operaciones.Designer.vb</LastGenOutput>
@@ -214,8 +231,12 @@
     <Resource Include="Main.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="diskdrive.png" />
-    <Resource Include="folder.png" />
+    <Resource Include="diskdrive.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="folder.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FastDirectoryEnumerator\FastDirectoryEnumerator.csproj">

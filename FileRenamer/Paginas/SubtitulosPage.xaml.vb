@@ -1,4 +1,8 @@
-﻿Public Class SubtitulosPage
+﻿Imports FileRenamer
+
+Public Class SubtitulosPage
+    Implements FoldersTreeViewListener
+
     Dim listaVideos As List(Of Video)
     Dim listaSubtitulos As List(Of Subtitulo)
 
@@ -8,54 +12,20 @@
 
         Dim carpetaInicial As String = Environment.GetFolderPath(Environment.SpecialFolder.Personal)
         carpetaInicial = carpetaInicial.Replace("Mis Documentos", "Descargas")
-        carpetaInicial = carpetaInicial.Replace("My Documents", "Descargas")
+        carpetaInicial = carpetaInicial.Replace("My Documents", "Downloads")
 
         If Not My.Computer.FileSystem.DirectoryExists(carpetaInicial) Then
             carpetaInicial = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
         End If
 
-        tree_carpetas.Items.Clear()
-        For Each drive In ObtenerUnidades()
-            Dim item As New TreeViewItem()
-            item.Header = drive.RootDirectory.FullName
-            If ((Not drive.VolumeLabel Is Nothing) AndAlso drive.VolumeLabel <> "") Then
-                item.Header = item.Header & " - " & drive.VolumeLabel
-            End If
-            item.Tag = drive.RootDirectory.FullName
-            item.FontWeight = FontWeights.Normal
-            item.Items.Add(dummyNode)
-            AddHandler item.Expanded, AddressOf OnFolderExpanded
-            tree_carpetas.Items.Add(item)
-        Next
+        lbl_carpeta.Content = FileRenamer.Language.renombrar_sin_seleccionar
+        lstVideos.Items.Clear()
 
+        tree_carpetas.AddListener(Me)
     End Sub
 
-    Private Sub OnFolderExpanded(sender As Object, e As RoutedEventArgs)
-        Dim item As TreeViewItem = sender
-        If (item.Items.Count = 1 AndAlso item.Items(0) = dummyNode) Then
-            item.Items.Clear()
-            Try
-                For Each dire In ObtenerDirectorios(item.Tag.ToString())
-                    Dim subitem As New TreeViewItem()
-                    subitem.Header = NombreCorto(dire.FullName)
-                    subitem.Tag = dire.FullName
-                    subitem.FontWeight = FontWeights.Normal
-                    subitem.Items.Add(dummyNode)
-                    AddHandler subitem.Expanded, AddressOf OnFolderExpanded
-                    item.Items.Add(subitem)
-                Next
-            Catch ex As Exception
-            End Try
-        End If
-    End Sub
-
-    Private Sub tree_carpetas_SelectedItemChanged(sender As Object, e As RoutedPropertyChangedEventArgs(Of Object)) Handles tree_carpetas.SelectedItemChanged
-        Dim tree As TreeView = tree_carpetas
-        If (tree.SelectedItem Is Nothing) Then
-            Return
-        End If
-
-        lbl_carpeta.Content = tree.SelectedItem.Tag
+    Public Sub OnSelectedItemChanged(FilePath As String) Implements FoldersTreeViewListener.OnSelectedItemChanged
+        lbl_carpeta.Content = FilePath
 
         If Not (lbl_carpeta.Content.EndsWith("\")) Then
             lbl_carpeta.Content = lbl_carpeta.Content & "\"
@@ -91,9 +61,15 @@
         Dim elem As FilaSubtitulo
         For Each elem In lstVideos.Items
             If (elem.IsSelected) Then
-                vids.Add(elem.video)
+                vids.Add(elem.Video)
             End If
         Next
+        'HAGO VALIDACIONES
+        If (vids.Count = 0) Then
+            MsgBox(FileRenamer.Language.subtitulos_error_archivos)
+            Return
+        End If
+
         SubtitulosManager.RenombrarSubtitulos(vids)
         MsgBox(vids.Count & " Subtitulos Renombrados!")
         CargarListaVideos(lbl_carpeta.Content)

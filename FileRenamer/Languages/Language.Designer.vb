@@ -226,7 +226,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Sin Seleccionar.
+    '''  Busca una cadena traducida similar a Carpeta No Seleccionada.
     '''</summary>
     Public Shared ReadOnly Property renombrar_sin_seleccionar() As String
         Get
@@ -262,6 +262,15 @@ Public Class Language
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a FileRenamer - Vista Previa.
+    '''</summary>
+    Public Shared ReadOnly Property resultado_titulo() As String
+        Get
+            Return ResourceManager.GetString("resultado_titulo", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Vista previa del resultado.
     '''</summary>
     Public Shared ReadOnly Property resultado_vista_previa() As String
@@ -276,6 +285,15 @@ Public Class Language
     Public Shared ReadOnly Property subtitulos_desmarcar_todos() As String
         Get
             Return ResourceManager.GetString("subtitulos_desmarcar_todos", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Debes elegir al menos un archivo.
+    '''</summary>
+    Public Shared ReadOnly Property subtitulos_error_archivos() As String
+        Get
+            Return ResourceManager.GetString("subtitulos_error_archivos", resourceCulture)
         End Get
     End Property
     
@@ -298,7 +316,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Sin Seleccionar.
+    '''  Busca una cadena traducida similar a Carpeta No Seleccionada.
     '''</summary>
     Public Shared ReadOnly Property subtitulos_sin_seleccionar() As String
         Get

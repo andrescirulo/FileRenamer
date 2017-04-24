@@ -25,6 +25,7 @@ Module Funciones
             CONFIG = New Configuracion
             CONFIG.ExtensionesSubtitulos = {"*.srt", "*.sub"}.ToList
             CONFIG.ExtensionesVideos = {"*.avi", "*.mkv", "*.mp4"}.ToList
+            CONFIG.CarpetaInicial = ObtenerCarpetaDescargas()
             If Not My.Computer.FileSystem.DirectoryExists(CONFIG_DIR) Then
                 My.Computer.FileSystem.CreateDirectory(CONFIG_DIR)
             End If
@@ -50,6 +51,13 @@ Module Funciones
         End Try
     End Sub
 
+    Private Function ObtenerCarpetaDescargas() As String
+        Dim carpetaInicial As String = Environment.GetFolderPath(Environment.SpecialFolder.Personal)
+        carpetaInicial = carpetaInicial.Replace("Mis Documentos", "Descargas")
+        carpetaInicial = carpetaInicial.Replace("My Documents", "Downloads")
+
+        Return carpetaInicial
+    End Function
 
     Public Function ObtenerArchivos(Path As String, searchOption As SearchOption, extensiones() As String) As List(Of String)
         Dim lista As New List(Of String)
