@@ -39,7 +39,7 @@
     End Sub
 
     Public Overrides Function GetDescripcion() As String
-        Return "Reemplaza un texto por otro en el nombre del archivo, sin incluír la extension"
+        Return Operaciones.ReemplazoEnNombre_Descripcion
     End Function
 
     Public Overrides Function GetNewInstance() As Operacion

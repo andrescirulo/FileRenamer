@@ -195,4 +195,37 @@
   <data name="TodoAMinusculas_ToString" xml:space="preserve">
     <value>Convertir todo a Minúsculas</value>
   </data>
+  <data name="AgregarAlFinalDelNombre_Descripcion" xml:space="preserve">
+    <value>Agrega el texto especificado al final del nombre del archivo, antes de su extensión</value>
+  </data>
+  <data name="AgregarAlFinalDeTodo_Descripcion" xml:space="preserve">
+    <value>Agrega el texto especificado al final del nombre del archivo, luego de su extensión</value>
+  </data>
+  <data name="AgregarAlPrincipio_Descripcion" xml:space="preserve">
+    <value>Agrega el texto especificado al inicio del nombre del archivo</value>
+  </data>
+  <data name="AgregarPadding_Descripcion" xml:space="preserve">
+    <value>Agrega el caracter especificado la cantidad de veces especificada al inicio del nombre del archivo</value>
+  </data>
+  <data name="EliminarEntreCaracteres_Descripcion" xml:space="preserve">
+    <value>Elimina todo el texto entre los caracteres especificados, inclusive los caracteres límite</value>
+  </data>
+  <data name="MayusculasYMinusculas_Descripcion" xml:space="preserve">
+    <value>Convierte el texto a mayúsculas y minúsculas separando por palabra</value>
+  </data>
+  <data name="ReemplazoEnNombre_Descripcion" xml:space="preserve">
+    <value>Reemplaza un texto por otro en el nombre del archivo, sin incluír la extension</value>
+  </data>
+  <data name="Reemplazo_Descripcion" xml:space="preserve">
+    <value>Reemplaza un texto por otro en el nombre del archivo, incluyendo la extension</value>
+  </data>
+  <data name="SoloEntreCaracteres_Descripcion" xml:space="preserve">
+    <value>Conserva solo el texto entre los caracteres especificados, sin incluír los caracteres límite</value>
+  </data>
+  <data name="TodoAMayusculas_Descripcion" xml:space="preserve">
+    <value>Convierte todo el nombre del archivo a mayúsculas</value>
+  </data>
+  <data name="TodoAMinusculas_Descripcion" xml:space="preserve">
+    <value>Convierte todo el nombre del archivo a minúsculas</value>
+  </data>
 </root>

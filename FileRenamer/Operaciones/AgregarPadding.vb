@@ -47,7 +47,7 @@
     End Function
 
     Public Overrides Function GetDescripcion() As String
-        Return "Agrega el caracter especificado la cantidad de veces especificada al inicio del nombre del archivo"
+        Return Operaciones.AgregarPadding_Descripcion
     End Function
 
     Public Overrides Function GetNewInstance() As Operacion

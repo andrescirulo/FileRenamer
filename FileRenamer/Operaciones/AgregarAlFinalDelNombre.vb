@@ -35,7 +35,7 @@
 
 
     Public Overrides Function GetDescripcion() As String
-        Return "Agrega el texto especificado al final del nombre del archivo, antes de su extensión"
+        Return Operaciones.AgregarAlFinalDelNombre_Descripcion
     End Function
 
     Public Overrides Function GetNewInstance() As Operacion

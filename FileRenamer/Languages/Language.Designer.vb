@@ -64,6 +64,69 @@ Public Class Language
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Hay una versión nueva disponible.
+    '''</summary>
+    Public Shared ReadOnly Property acerca_de_actualizaciones() As String
+        Get
+            Return ResourceManager.GetString("acerca_de_actualizaciones", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a No se pudieron obtener los cambios de la nueva version.
+    '''</summary>
+    Public Shared ReadOnly Property acerca_de_cambios_error() As String
+        Get
+            Return ResourceManager.GetString("acerca_de_cambios_error", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Por cualquier duda, sugerencia o error que desees reportar, escribe a andres.cirulo@gmail.com.
+    '''</summary>
+    Public Shared ReadOnly Property acerca_de_contacto() As String
+        Get
+            Return ResourceManager.GetString("acerca_de_contacto", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Descargando....
+    '''</summary>
+    Public Shared ReadOnly Property acerca_de_descargando() As String
+        Get
+            Return ResourceManager.GetString("acerca_de_descargando", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Detalles de la versión.
+    '''</summary>
+    Public Shared ReadOnly Property acerca_de_detalles() As String
+        Get
+            Return ResourceManager.GetString("acerca_de_detalles", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Instalar.
+    '''</summary>
+    Public Shared ReadOnly Property acerca_de_instalar() As String
+        Get
+            Return ResourceManager.GetString("acerca_de_instalar", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Tienes la versión más reciente.
+    '''</summary>
+    Public Shared ReadOnly Property acerca_de_no_actualizaciones() As String
+        Get
+            Return ResourceManager.GetString("acerca_de_no_actualizaciones", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Al hacer click derecho mientras se presiona la tecla Mayúsculas.
     '''</summary>
     Public Shared ReadOnly Property config_cuando_extendido() As String
@@ -325,6 +388,15 @@ Public Class Language
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Acerca de.
+    '''</summary>
+    Public Shared ReadOnly Property tab_acerca_de() As String
+        Get
+            Return ResourceManager.GetString("tab_acerca_de", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Configuración.
     '''</summary>
     Public Shared ReadOnly Property tab_configuracion() As String
@@ -348,6 +420,15 @@ Public Class Language
     Public Shared ReadOnly Property tab_renombrar_subtitulos() As String
         Get
             Return ResourceManager.GetString("tab_renombrar_subtitulos", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Hay una nueva actualización disponible, haz click aquí.
+    '''</summary>
+    Public Shared ReadOnly Property toolbar_actualizacion() As String
+        Get
+            Return ResourceManager.GetString("toolbar_actualizacion", resourceCulture)
         End Get
     End Property
 End Class

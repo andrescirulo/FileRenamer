@@ -17,6 +17,12 @@
             <TabItem Header="{x:Static local:Language.tab_configuracion}" Name="ConfiguracionTab">
                 <local:ConfiguracionPage></local:ConfiguracionPage>
             </TabItem>
-        </TabControl> 
+            <TabItem Header="{x:Static local:Language.tab_acerca_de}" Name="AcercaDeTab">
+                <local:AcercaDePage></local:AcercaDePage>
+            </TabItem>
+        </TabControl>
+        <ToolBar Name="toolbarUpdate" BorderBrush="DarkGray" BorderThickness="1" Height="35" VerticalAlignment="bottom" Visibility="Collapsed" >
+            <Label Name="lblUpdate">{x:Static local:Language.toolbar_actualizacion}</Label>
+        </ToolBar>
     </Grid>
 </Window>

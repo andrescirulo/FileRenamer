@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="acerca_de_actualizaciones" xml:space="preserve">
+    <value>There is a new version available</value>
+  </data>
+  <data name="acerca_de_contacto" xml:space="preserve">
+    <value>For any doubt, suggestion or error you want to report send a mail to andres.cirulo@gmail.com</value>
+  </data>
+  <data name="acerca_de_descargando" xml:space="preserve">
+    <value>Downloading...</value>
+  </data>
+  <data name="acerca_de_detalles" xml:space="preserve">
+    <value>Version Details</value>
+  </data>
+  <data name="acerca_de_instalar" xml:space="preserve">
+    <value>Install</value>
+  </data>
+  <data name="acerca_de_no_actualizaciones" xml:space="preserve">
+    <value>You have the most recent version</value>
+  </data>
   <data name="config_cuando_extendido" xml:space="preserve">
     <value>Right Click while pressing Shift key</value>
   </data>
@@ -204,6 +222,9 @@
   <data name="subtitulos_sin_seleccionar" xml:space="preserve">
     <value>No Folder Selected</value>
   </data>
+  <data name="tab_acerca_de" xml:space="preserve">
+    <value>About</value>
+  </data>
   <data name="tab_configuracion" xml:space="preserve">
     <value>Configuration</value>
   </data>
@@ -212,5 +233,8 @@
   </data>
   <data name="tab_renombrar_subtitulos" xml:space="preserve">
     <value>Rename Subtitles</value>
+  </data>
+  <data name="toolbar_actualizacion" xml:space="preserve">
+    <value>There is a new version available, click here</value>
   </data>
 </root>

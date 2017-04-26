@@ -35,11 +35,9 @@
         posInicio = InStr(pathTemp, inicio) + inicio.Length
         posFinal = InStr(posInicio, pathTemp, fin)
 
-        'Dim stringRes As String
         While posInicio > 0
             If (posInicio < posFinal) Then
                 pathTemp = pathTemp.Substring(posInicio - 1, (posFinal - posInicio))
-                'pathTemp = pathTemp.Replace(stringRes, "")
             End If
 
             posInicio = InStr(pathTemp, inicio)
@@ -60,7 +58,7 @@
     End Function
 
     Public Overrides Function GetDescripcion() As String
-        Return "Conserva solo el texto entre los caracteres especificados, sin incluír los caracteres límite"
+        Return Operaciones.SoloEntreCaracteres_Descripcion
     End Function
 
     Public Overrides Function GetNewInstance() As Operacion

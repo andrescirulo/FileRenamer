@@ -117,6 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="acerca_de_actualizaciones" xml:space="preserve">
+    <value>Hay una versión nueva disponible</value>
+  </data>
+  <data name="acerca_de_cambios_error" xml:space="preserve">
+    <value>No se pudieron obtener los cambios de la nueva version</value>
+  </data>
+  <data name="acerca_de_contacto" xml:space="preserve">
+    <value>Por cualquier duda, sugerencia o error que desees reportar, escribe a andres.cirulo@gmail.com</value>
+  </data>
+  <data name="acerca_de_descargando" xml:space="preserve">
+    <value>Descargando...</value>
+  </data>
+  <data name="acerca_de_detalles" xml:space="preserve">
+    <value>Detalles de la versión</value>
+  </data>
+  <data name="acerca_de_instalar" xml:space="preserve">
+    <value>Instalar</value>
+  </data>
+  <data name="acerca_de_no_actualizaciones" xml:space="preserve">
+    <value>Tienes la versión más reciente</value>
+  </data>
   <data name="config_cuando_extendido" xml:space="preserve">
     <value>Al hacer click derecho mientras se presiona la tecla Mayúsculas</value>
   </data>
@@ -204,6 +225,9 @@
   <data name="subtitulos_sin_seleccionar" xml:space="preserve">
     <value>Carpeta No Seleccionada</value>
   </data>
+  <data name="tab_acerca_de" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
   <data name="tab_configuracion" xml:space="preserve">
     <value>Configuración</value>
   </data>
@@ -212,5 +236,8 @@
   </data>
   <data name="tab_renombrar_subtitulos" xml:space="preserve">
     <value>Renombrar Subtitulos</value>
+  </data>
+  <data name="toolbar_actualizacion" xml:space="preserve">
+    <value>Hay una nueva actualización disponible, haz click aquí</value>
   </data>
 </root>

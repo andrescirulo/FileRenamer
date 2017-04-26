@@ -64,6 +64,15 @@ Public Class Operaciones
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Agrega el texto especificado al final del nombre del archivo, antes de su extensión.
+    '''</summary>
+    Public Shared ReadOnly Property AgregarAlFinalDelNombre_Descripcion() As String
+        Get
+            Return ResourceManager.GetString("AgregarAlFinalDelNombre_Descripcion", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Agregar al final del nombre.
     '''</summary>
     Public Shared ReadOnly Property AgregarAlFinalDelNombre_Nombre() As String
@@ -82,6 +91,15 @@ Public Class Operaciones
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Agrega el texto especificado al final del nombre del archivo, luego de su extensión.
+    '''</summary>
+    Public Shared ReadOnly Property AgregarAlFinalDeTodo_Descripcion() As String
+        Get
+            Return ResourceManager.GetString("AgregarAlFinalDeTodo_Descripcion", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Agregar al final de todo.
     '''</summary>
     Public Shared ReadOnly Property AgregarAlFinalDeTodo_Nombre() As String
@@ -96,6 +114,15 @@ Public Class Operaciones
     Public Shared ReadOnly Property AgregarAlFinalDeTodo_ToString() As String
         Get
             Return ResourceManager.GetString("AgregarAlFinalDeTodo_ToString", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Agrega el texto especificado al inicio del nombre del archivo.
+    '''</summary>
+    Public Shared ReadOnly Property AgregarAlPrincipio_Descripcion() As String
+        Get
+            Return ResourceManager.GetString("AgregarAlPrincipio_Descripcion", resourceCulture)
         End Get
     End Property
     
@@ -136,6 +163,15 @@ Public Class Operaciones
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Agrega el caracter especificado la cantidad de veces especificada al inicio del nombre del archivo.
+    '''</summary>
+    Public Shared ReadOnly Property AgregarPadding_Descripcion() As String
+        Get
+            Return ResourceManager.GetString("AgregarPadding_Descripcion", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Agregar padding.
     '''</summary>
     Public Shared ReadOnly Property AgregarPadding_Nombre() As String
@@ -154,6 +190,15 @@ Public Class Operaciones
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Elimina todo el texto entre los caracteres especificados, inclusive los caracteres límite.
+    '''</summary>
+    Public Shared ReadOnly Property EliminarEntreCaracteres_Descripcion() As String
+        Get
+            Return ResourceManager.GetString("EliminarEntreCaracteres_Descripcion", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Eliminar entre caracteres (sin incluir la extension).
     '''</summary>
     Public Shared ReadOnly Property EliminarEntreCaracteres_Nombre() As String
@@ -168,6 +213,15 @@ Public Class Operaciones
     Public Shared ReadOnly Property EliminarEntreCaracteres_ToString() As String
         Get
             Return ResourceManager.GetString("EliminarEntreCaracteres_ToString", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Convierte el texto a mayúsculas y minúsculas separando por palabra.
+    '''</summary>
+    Public Shared ReadOnly Property MayusculasYMinusculas_Descripcion() As String
+        Get
+            Return ResourceManager.GetString("MayusculasYMinusculas_Descripcion", resourceCulture)
         End Get
     End Property
     
@@ -208,6 +262,15 @@ Public Class Operaciones
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Reemplaza un texto por otro en el nombre del archivo, incluyendo la extension.
+    '''</summary>
+    Public Shared ReadOnly Property Reemplazo_Descripcion() As String
+        Get
+            Return ResourceManager.GetString("Reemplazo_Descripcion", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Reemplazar (inclusive en la extension).
     '''</summary>
     Public Shared ReadOnly Property Reemplazo_Nombre() As String
@@ -222,6 +285,15 @@ Public Class Operaciones
     Public Shared ReadOnly Property Reemplazo_ToString() As String
         Get
             Return ResourceManager.GetString("Reemplazo_ToString", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Reemplaza un texto por otro en el nombre del archivo, sin incluír la extension.
+    '''</summary>
+    Public Shared ReadOnly Property ReemplazoEnNombre_Descripcion() As String
+        Get
+            Return ResourceManager.GetString("ReemplazoEnNombre_Descripcion", resourceCulture)
         End Get
     End Property
     
@@ -244,6 +316,15 @@ Public Class Operaciones
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Conserva solo el texto entre los caracteres especificados, sin incluír los caracteres límite.
+    '''</summary>
+    Public Shared ReadOnly Property SoloEntreCaracteres_Descripcion() As String
+        Get
+            Return ResourceManager.GetString("SoloEntreCaracteres_Descripcion", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Solo entre caracteres (sin incluir la extension).
     '''</summary>
     Public Shared ReadOnly Property SoloEntreCaracteres_Nombre() As String
@@ -262,6 +343,15 @@ Public Class Operaciones
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Convierte todo el nombre del archivo a mayúsculas.
+    '''</summary>
+    Public Shared ReadOnly Property TodoAMayusculas_Descripcion() As String
+        Get
+            Return ResourceManager.GetString("TodoAMayusculas_Descripcion", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Convertir todo a Mayúsculas.
     '''</summary>
     Public Shared ReadOnly Property TodoAMayusculas_Nombre() As String
@@ -276,6 +366,15 @@ Public Class Operaciones
     Public Shared ReadOnly Property TodoAMayusculas_ToString() As String
         Get
             Return ResourceManager.GetString("TodoAMayusculas_ToString", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Convierte todo el nombre del archivo a minúsculas.
+    '''</summary>
+    Public Shared ReadOnly Property TodoAMinusculas_Descripcion() As String
+        Get
+            Return ResourceManager.GetString("TodoAMinusculas_Descripcion", resourceCulture)
         End Get
     End Property
     

@@ -1,10 +1,11 @@
 ﻿Imports System.IO
+Imports System.Net
 Imports CodeProject
 Imports Newtonsoft.Json
 
 Module Funciones
 
-    Private CONFIG_DIR As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\FileRenamer\"
+    Public CONFIG_DIR As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\FileRenamer\"
     Private CONFIG_FILE As String = CONFIG_DIR & "config.json"
     Public CONFIG As Configuracion
 
@@ -100,5 +101,15 @@ Module Funciones
             End If
         Next
         Return lista
+    End Function
+
+    Public Function GetRawByUrl(url As String) As String
+        Dim wrGETURL As WebRequest = WebRequest.Create(url)
+        Dim response As WebResponse = wrGETURL.GetResponse
+        Dim reader As New StreamReader(response.GetResponseStream)
+        Dim resultado As String = reader.ReadToEnd
+        reader.Close()
+
+        Return resultado
     End Function
 End Module

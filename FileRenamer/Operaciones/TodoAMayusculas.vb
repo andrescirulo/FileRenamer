@@ -22,7 +22,7 @@
     End Function
 
     Public Overrides Function GetDescripcion() As String
-        Return "Convierte todo el nombre del archivo a mayúsculas"
+        Return Operaciones.TodoAMayusculas_Descripcion
     End Function
 
     Public Overrides Function GetNewInstance() As Operacion

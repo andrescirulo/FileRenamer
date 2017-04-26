@@ -84,6 +84,7 @@
     <Compile Include="Domain\Configuracion.vb" />
     <Compile Include="Domain\EstadoMenuContextual.vb" />
     <Compile Include="Domain\FolderCheckElem.vb" />
+    <Compile Include="Domain\GitHubRelease.vb" />
     <Compile Include="Domain\ResultadoComparacion.vb" />
     <Compile Include="Domain\Subtitulo.vb" />
     <Compile Include="Domain\Video.vb" />
@@ -103,6 +104,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Language.resx</DependentUpon>
     </Compile>
+    <Compile Include="Managers\ActualizacionesManager.vb" />
     <Compile Include="Managers\HeaderToImageConverter.vb" />
     <Compile Include="Managers\MenuContextualManager.vb" />
     <Compile Include="Managers\SubtitulosManager.vb" />
@@ -118,6 +120,9 @@
     <Compile Include="Operaciones\MayusculasYMinusculas.vb" />
     <Compile Include="Operaciones\TodoAMinusculas.vb" />
     <Compile Include="Operaciones\TodoAMayusculas.vb" />
+    <Compile Include="Paginas\AcercaDePage.xaml.vb">
+      <DependentUpon>AcercaDePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\ConfiguracionPage.xaml.vb">
       <DependentUpon>ConfiguracionPage.xaml</DependentUpon>
     </Compile>
@@ -153,6 +158,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Paginas\AcercaDePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Paginas\ConfiguracionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -252,6 +261,10 @@
     <ProjectReference Include="..\FastDirectoryEnumerator\FastDirectoryEnumerator.csproj">
       <Project>{B178092B-06CF-4FCF-9D20-69E14650136F}</Project>
       <Name>FastDirectoryEnumerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Markdown.Xaml\Markdown.Xaml.csproj">
+      <Project>{34186C3B-C308-4CAE-B462-DB7B5F5E378C}</Project>
+      <Name>Markdown.Xaml</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
