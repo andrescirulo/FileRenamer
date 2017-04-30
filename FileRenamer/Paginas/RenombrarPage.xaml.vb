@@ -84,7 +84,7 @@ Class RenombrarPage
         OnSelectedItemChanged(lbl_carpeta.Content)
     End Sub
 
-    Private Sub btn_agregar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_agregar.Click
+    Private Sub btn_agregar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_agregar.InnerButtonClick
 
         Dim op As Operacion = cmb_operacion.SelectedItem.GetNewInstance()
         op.Armar(Me)
@@ -95,7 +95,7 @@ Class RenombrarPage
         txt_dest_reemp.Text = ""
     End Sub
 
-    Private Sub btn_renombrar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_renombrar.Click
+    Private Sub btn_renombrar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_renombrar.InnerButtonClick
         Dim elegidos As New List(Of String)
         Dim elem As FolderCheckElem
         For Each elem In lst_files.Items
@@ -159,13 +159,13 @@ Class RenombrarPage
         End If
     End Sub
 
-    Private Sub btn_quitar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_quitar.Click
+    Private Sub btn_quitar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_quitar.InnerButtonClick
         If (lst_reemplazos.SelectedIndex >= 0) Then
             lst_reemplazos.Items.Remove(lst_reemplazos.SelectedItem)
         End If
     End Sub
 
-    Private Sub btn_subir_Click(sender As Object, e As RoutedEventArgs) Handles btn_subir.Click
+    Private Sub btn_subir_Click(sender As Object, e As RoutedEventArgs) Handles btn_subir.InnerButtonClick
         If (lst_reemplazos.SelectedIndex >= 1) Then
             Dim idx = lst_reemplazos.SelectedIndex
             Dim tmp = lst_reemplazos.Items(idx - 1)
@@ -175,7 +175,7 @@ Class RenombrarPage
         End If
     End Sub
 
-    Private Sub btn_bajar_Click(sender As Object, e As RoutedEventArgs) Handles btn_bajar.Click
+    Private Sub btn_bajar_Click(sender As Object, e As RoutedEventArgs) Handles btn_bajar.InnerButtonClick
         If (lst_reemplazos.SelectedIndex >= 0 And lst_reemplazos.SelectedIndex < (lst_reemplazos.Items.Count - 1)) Then
             Dim idx = lst_reemplazos.SelectedIndex
             Dim tmp = lst_reemplazos.Items(idx)
@@ -189,6 +189,5 @@ Class RenombrarPage
     Private Function quitarExtension(arch As String) As String
         Return arch.Substring(0, arch.LastIndexOf("."))
     End Function
-
 
 End Class

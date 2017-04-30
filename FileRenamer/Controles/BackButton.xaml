@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="BackButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FileRenamer"
+             mc:Ignorable="d" 
+             xmlns:fa="clr-namespace:FontAwesome.Net;assembly=FontAwesome.Net"
+             VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+    <Grid>
+        <local:FAButton x:Name="btnAtras" Height="25" Width="90" FAIcon="{x:Static fa:FontAwesome.fa_arrow_left}" ButtonText="{x:Static local:Language.btn_atras}" ></local:FAButton>
+        <!--<Button Name="btnAtras" Height="25" Width="120" Margin="0">
+            <WrapPanel>
+                <TextBlock FontFamily="{StaticResource FontAwesome}"
+                   Margin="0,0,10,0"
+                   FontSize="16"
+                   Text="{x:Static fa:FontAwesome.fa_arrow_left}" />
+                <TextBlock
+                   Text="{x:Static local:Language.btn_atras}" />
+            </WrapPanel>
+        </Button>-->
+    </Grid>
+</UserControl>

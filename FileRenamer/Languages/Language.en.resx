@@ -135,6 +135,9 @@
   <data name="acerca_de_no_actualizaciones" xml:space="preserve">
     <value>You have the most recent version</value>
   </data>
+  <data name="btn_atras" xml:space="preserve">
+    <value>Back</value>
+  </data>
   <data name="config_cuando_extendido" xml:space="preserve">
     <value>Right Click while pressing Shift key</value>
   </data>

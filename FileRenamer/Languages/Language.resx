@@ -138,6 +138,9 @@
   <data name="acerca_de_no_actualizaciones" xml:space="preserve">
     <value>Tienes la versión más reciente</value>
   </data>
+  <data name="btn_atras" xml:space="preserve">
+    <value>Atras</value>
+  </data>
   <data name="config_cuando_extendido" xml:space="preserve">
     <value>Al hacer click derecho mientras se presiona la tecla Mayúsculas</value>
   </data>

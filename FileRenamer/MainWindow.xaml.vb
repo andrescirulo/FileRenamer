@@ -4,11 +4,15 @@
 
     Private Sub MainWindow_Initialized(sender As Object, e As EventArgs) Handles Me.Initialized
         INSTANCE = Me
+        PaginasManager.Init(PanelPrincipal)
         Inicializar()
+
+        PaginasManager.IrA(PaginasManager.PAGINA_INICIO)
     End Sub
 
     Private Sub toolbarUpdate_MouseUp(sender As Object, e As MouseButtonEventArgs) Handles toolbarUpdate.MouseUp
-        TabControl1.SelectedIndex = 3
+        'TabControl1.SelectedIndex = 3
+        PaginasManager.IrA(PaginasManager.PAGINA_ACERCA_DE)
         toolbarUpdate.Visibility = Visibility.Collapsed
     End Sub
 

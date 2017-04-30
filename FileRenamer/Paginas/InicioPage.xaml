@@ -5,23 +5,31 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FileRenamer"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="450">
+      xmlns:fa="clr-namespace:FontAwesome.Net;assembly=FontAwesome.Net"
+      d:DesignHeight="300" d:DesignWidth="450" VerticalAlignment="Center"  HorizontalAlignment="Center">
     <Grid>
 
         <StackPanel HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Center">
             <WrapPanel>
-                <Button Content="{x:Static local:Language.tab_renombrar_archivos }" HorizontalAlignment="Left"  Margin="0,0,0,0" VerticalAlignment="Top" Width="150" Height="40"/>
+                <local:FAButton x:Name="btnRenombrar" ButtonText="{x:Static local:Language.tab_renombrar_archivos }" FAIcon="{x:Static fa:FontAwesome.fa_pencil}"
+                                HorizontalAlignment="Left"  Margin="0,0,0,0" VerticalAlignment="Top" Width="170" Height="40"/>
                 <TextBlock Margin="10,0,0,0" Width="270" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Text="Renombra archivos de acuerdo a un conjunto de operaciones que establezcas" />
             </WrapPanel>
             <WrapPanel>
-                <Button Content="{x:Static local:Language.tab_renombrar_subtitulos }" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="150" Height="40"/>
+                <local:FAButton x:Name="btnSubtitulos" ButtonText="{x:Static local:Language.tab_renombrar_subtitulos }" FAIcon="{x:Static fa:FontAwesome.fa_file_video_o}"
+                                HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="170" Height="40"/>
                 <TextBlock Margin="10,5,0,0" Width="270" HorizontalAlignment="Left"  VerticalAlignment="Center" TextWrapping="Wrap" Text="Renombra archivos de Subtitulo para que tengan el mismo nombre que sus archivos de Video"/>
             </WrapPanel>
             <WrapPanel>
-                <Button Content="{x:Static local:Language.tab_configuracion }" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="150" Height="40"/>
+                <local:FAButton x:Name="btnConfiguracion" ButtonText="{x:Static local:Language.tab_configuracion }" FAIcon="{x:Static fa:FontAwesome.fa_cog}"
+                                HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="170" Height="40"/>
                 <TextBlock Margin="10,5,0,0" Width="270" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Text="Configuración de la Aplicación"  />
             </WrapPanel>
-            
+            <WrapPanel>
+                <local:FAButton x:Name="btnAcercaDe" ButtonText="{x:Static local:Language.tab_acerca_de }" FAIcon="{x:Static fa:FontAwesome.fa_info}"
+                                HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="170" Height="40"/>
+                <TextBlock Margin="10,5,0,0" Width="270" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Text="Información de la Aplicación y Actualizaciones"  />
+            </WrapPanel>
         </StackPanel>
     </Grid>
 </UserControl>

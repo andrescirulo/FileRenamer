@@ -49,6 +49,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Net, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesomeDotNet.1.1.1\lib\FontAwesome.Net.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -73,6 +76,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controles\BackButton.xaml.vb">
+      <DependentUpon>BackButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\FAButton.xaml.vb">
+      <DependentUpon>FAButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controles\FilaSubtitulo.xaml.vb">
       <DependentUpon>FilaSubtitulo.xaml</DependentUpon>
     </Compile>
@@ -107,6 +116,7 @@
     <Compile Include="Managers\ActualizacionesManager.vb" />
     <Compile Include="Managers\HeaderToImageConverter.vb" />
     <Compile Include="Managers\MenuContextualManager.vb" />
+    <Compile Include="Managers\PaginasManager.vb" />
     <Compile Include="Managers\SubtitulosManager.vb" />
     <Compile Include="Operaciones\AgregarAlFinalDelNombre.vb" />
     <Compile Include="Operaciones\AgregarAlFinalDeTodo.vb" />
@@ -138,6 +148,14 @@
     <Compile Include="ResultadoWindow.xaml.vb">
       <DependentUpon>ResultadoWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controles\BackButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\FAButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controles\FilaSubtitulo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

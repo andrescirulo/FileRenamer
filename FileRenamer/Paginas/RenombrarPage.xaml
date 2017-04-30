@@ -5,13 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FileRenamer"  
       mc:Ignorable="d" 
+      xmlns:fa="clr-namespace:FontAwesome.Net;assembly=FontAwesome.Net"
       d:DesignHeight="670" d:DesignWidth="775">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="525*"/>
         </Grid.ColumnDefinitions>
-        <local:FoldersTreeView x:Name="tree_carpetas" Grid.Column="0" Margin="10,10,10,10"></local:FoldersTreeView>
+        <local:BackButton x:Name="btnAtras" VerticalAlignment="top" HorizontalAlignment="Left" Margin="10,10,10,10" Grid.Column="0"></local:BackButton>
+        <local:FoldersTreeView x:Name="tree_carpetas" Grid.Column="0" Margin="10,50,10,10"></local:FoldersTreeView>
 
         <Label Content="{x:Static local:Language.renombrar_sin_seleccionar}" Height="27" HorizontalAlignment="Left" Margin="6,30,0,0" Name="lbl_carpeta" VerticalAlignment="Top" Width="481" Grid.Column="1"  />
         <CheckBox Height="17" HorizontalAlignment="Left" Margin="20,60,0,0" Name="chk_subcarpetas" VerticalAlignment="Top" Width="120" Content="{x:Static local:Language.renombrar_incluir_subcarpetas}" Grid.Column="1"></CheckBox>
@@ -39,15 +41,20 @@
             <Label Content="{x:Static local:Language.renombrar_por}" Height="27" HorizontalAlignment="Left" Margin="10,400,0,0" Name="lbl_op2" VerticalAlignment="Top" Grid.Column="1" />
             <TextBox Height="23" HorizontalAlignment="Left" Margin="10,400,0,0" Name="txt_dest_reemp" VerticalAlignment="Top" Width="120" Grid.Column="1" />
         </WrapPanel>
-        <Button Content="{x:Static local:Language.renombrar_agregar}" Height="23" HorizontalAlignment="Left" Margin="400,400,0,0" Name="btn_agregar" VerticalAlignment="Top" Width="110" Grid.Column="1" />
+        <local:FAButton x:Name="btn_agregar" ButtonText="{x:Static local:Language.renombrar_agregar }" FAIcon="{x:Static fa:FontAwesome.fa_plus}"
+            Height="23" HorizontalAlignment="Left" Margin="400,400,0,0" VerticalAlignment="Top" Width="110" Grid.Column="1" />
         
         
         <ListBox Height="145" HorizontalAlignment="Stretch" Margin="40,440,100,0" Name="lst_reemplazos" VerticalAlignment="Top" Grid.Column="1" />
-        
-        <Button Content="{x:Static local:Language.renombrar_subir}" Height="23" HorizontalAlignment="Right"  Margin="0,440,10,0" Name="btn_subir" VerticalAlignment="Top" Width="80" Grid.Column="1" />
-        <Button Content="{x:Static local:Language.renombrar_bajar}" Height="23" HorizontalAlignment="Right"  Margin="0,470,10,0" Name="btn_bajar" VerticalAlignment="Top" Width="80" Grid.Column="1" />
-        <Button Content="{x:Static local:Language.renombrar_quitar}" Height="23" HorizontalAlignment="Right"  Margin="0,500,10,0" Name="btn_quitar" VerticalAlignment="Top" Width="80" Grid.Column="1" />
 
-        <Button Content="{x:Static local:Language.renombrar_vista_previa}" Height="40" HorizontalAlignment="Right" Margin="0,0,40,10" Name="btn_renombrar" VerticalAlignment="Bottom" Width="150" Grid.Column="1" />
+        <local:FAButton x:Name="btn_subir" ButtonText="{x:Static local:Language.renombrar_subir }" FAIcon="{x:Static fa:FontAwesome.fa_arrow_up}"
+            Height="23" HorizontalAlignment="Right"  Margin="0,440,10,0" VerticalAlignment="Top" Width="80" Grid.Column="1" />
+        <local:FAButton x:Name="btn_bajar" ButtonText="{x:Static local:Language.renombrar_bajar }" FAIcon="{x:Static fa:FontAwesome.fa_arrow_down}"
+            Height="23" HorizontalAlignment="Right"  Margin="0,470,10,0" VerticalAlignment="Top" Width="80" Grid.Column="1" />
+        <local:FAButton x:Name="btn_quitar" ButtonText="{x:Static local:Language.renombrar_quitar }" FAIcon="{x:Static fa:FontAwesome.fa_times}"
+            Height="23" HorizontalAlignment="Right"  Margin="0,500,10,0" VerticalAlignment="Top" Width="80" Grid.Column="1" />
+
+        <local:FAButton x:Name="btn_renombrar" ButtonText="{x:Static local:Language.renombrar_vista_previa }" FAIcon="{x:Static fa:FontAwesome.fa_search}"
+            Height="40" HorizontalAlignment="Right" Margin="0,0,40,10" VerticalAlignment="Bottom" Width="150" Grid.Column="1" />
     </Grid>
 </UserControl>

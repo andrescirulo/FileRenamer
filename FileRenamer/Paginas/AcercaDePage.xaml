@@ -8,6 +8,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <StackPanel>
+            <local:BackButton x:Name="btnAtras" VerticalAlignment="top" HorizontalAlignment="Left" Margin="10,10,10,10" Grid.Column="0"></local:BackButton>
             <TextBlock x:Name="txtTitulo" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="FileRenamer" VerticalAlignment="Top" FontSize="18"/>
             <WrapPanel Height="35">
                 <TextBlock x:Name="txtVersion" HorizontalAlignment="Left" Margin="20,10,0,0" TextWrapping="Wrap" Text="Version:" VerticalAlignment="Top"/>

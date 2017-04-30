@@ -42,21 +42,21 @@ Public Class SubtitulosPage
         Next
     End Sub
 
-    Private Sub btnMarcar_Click(sender As Object, e As RoutedEventArgs) Handles btnMarcar.Click
+    Private Sub btnMarcar_Click(sender As Object, e As RoutedEventArgs) Handles btnMarcar.InnerButtonClick
         Dim elem As FilaSubtitulo
         For Each elem In lstVideos.Items
             elem.SetSelected(True)
         Next
     End Sub
 
-    Private Sub btnDesmarcar_Click(sender As Object, e As RoutedEventArgs) Handles btnDesmarcar.Click
+    Private Sub btnDesmarcar_Click(sender As Object, e As RoutedEventArgs) Handles btnDesmarcar.InnerButtonClick
         Dim elem As FilaSubtitulo
         For Each elem In lstVideos.Items
             elem.SetSelected(False)
         Next
     End Sub
 
-    Private Sub btnRenombrar_Click(sender As Object, e As RoutedEventArgs) Handles btnRenombrar.Click
+    Private Sub btnRenombrar_Click(sender As Object, e As RoutedEventArgs) Handles btnRenombrar.InnerButtonClick
         Dim vids As New List(Of Video)
         Dim elem As FilaSubtitulo
         For Each elem In lstVideos.Items

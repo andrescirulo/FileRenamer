@@ -127,6 +127,15 @@ Public Class Language
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Atras.
+    '''</summary>
+    Public Shared ReadOnly Property btn_atras() As String
+        Get
+            Return ResourceManager.GetString("btn_atras", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Al hacer click derecho mientras se presiona la tecla Mayúsculas.
     '''</summary>
     Public Shared ReadOnly Property config_cuando_extendido() As String

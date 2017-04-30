@@ -4,8 +4,8 @@ Public Class AcercaDePage
 
     Shared myself As AcercaDePage
 
-    'Private CAMBIOS_URL As String = "https://github.com/andrescirulo/FileRenamer/raw/master/FileRenamer/Cambios/"
-    Private CAMBIOS_URL As String = "http://127.0.0.1/"
+    Private CAMBIOS_URL As String = "https://github.com/andrescirulo/FileRenamer/raw/master/FileRenamer/Cambios/"
+    'Private CAMBIOS_URL As String = "http://127.0.0.1/"
 
 
     Private Sub CategoriasPage_Initialized(sender As Object, e As EventArgs) Handles Me.Initialized
@@ -24,7 +24,6 @@ Public Class AcercaDePage
 
     Private Sub VerificarActualizaciones()
         versionNueva = ComprobarActualizaciones()
-        versionNueva = "v1.0.1"
         myself.Dispatcher.Invoke(Sub()
                                      progressVersion.Visibility = Visibility.Collapsed
                                      If versionNueva Is Nothing Then

@@ -3,7 +3,7 @@
         HabilitarRadios()
     End Sub
 
-    Private Sub btnGuardar_Click(sender As Object, e As RoutedEventArgs) Handles btnGuardar.Click
+    Private Sub btnGuardar_Click(sender As Object, e As RoutedEventArgs) Handles btnGuardar.InnerButtonClick
         MenuContextualManager.HabilitarMenuContextual(chkHabilitar.IsChecked, radFondo.IsChecked, radExtendido.IsChecked)
     End Sub
 

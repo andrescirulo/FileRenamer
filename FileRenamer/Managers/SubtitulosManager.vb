@@ -131,7 +131,8 @@ Public Class SubtitulosManager
 
     Private Shared Function AplicarFiltrosNombre(nombre As String) As String
         Dim nomTmp As String = nombre.ToLower
-        nomTmp = nomTmp.Replace(".", " ").Replace("_", " ")
+        nomTmp = nomTmp.Replace(".", " ").Replace("_", " ").Replace("'", "").Replace("  ", " ")
+
         Dim partes() As String = nomTmp.Split(" ")
 
         Dim nomFinal As String = ""
