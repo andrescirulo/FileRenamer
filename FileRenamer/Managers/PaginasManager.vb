@@ -7,11 +7,13 @@
     Public Shared PAGINA_ACERCA_DE As String = "AcercaDe"
 
     Private Shared Container As Grid
+    Private Shared Window As MainWindow
     Private Shared Paginas As Dictionary(Of String, UserControl)
     Private Shared Historial As List(Of String)
 
-    Public Shared Sub Init(Container As Grid)
+    Public Shared Sub Init(Window As MainWindow, Container As Grid)
         PaginasManager.Container = Container
+        PaginasManager.Window = Window
         Paginas = New Dictionary(Of String, UserControl)
 
         Paginas.Add(PAGINA_INICIO, New InicioPage)
@@ -24,6 +26,7 @@
     End Sub
 
     Public Shared Sub IrA(pagina As String)
+        Window.Visibility = Visibility.Hidden
         Container.Children.Clear()
         Container.Children.Add(Paginas(pagina))
         Historial.Add(pagina)

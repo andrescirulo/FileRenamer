@@ -5,22 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileRenamer"
         mc:Ignorable="d"
-        Title="FileRenamer" MinHeight="720" MinWidth="795" Height="720" Width="795" Background="#FFD4D0C8" WindowStartupLocation="CenterScreen" Icon="Main.ico">
+        Title="FileRenamer"  Background="#FFD4D0C8" WindowStartupLocation="CenterScreen" Icon="Main.ico" ResizeMode="CanMinimize" SizeToContent="WidthAndHeight">
     <Grid>
-        <!--<TabControl HorizontalAlignment="Stretch" Margin="0" Name="TabControl1" VerticalAlignment="Stretch">
-            <TabItem Header="{x:Static local:Language.tab_renombrar_archivos}" Name="RenombrarTab">
-                <local:RenombrarPage></local:RenombrarPage>
-            </TabItem>
-            <TabItem Header="{x:Static local:Language.tab_renombrar_subtitulos}" Name="RenombrarSubtitulosTab">
-                <local:SubtitulosPage></local:SubtitulosPage>
-            </TabItem>
-            <TabItem Header="{x:Static local:Language.tab_configuracion}" Name="ConfiguracionTab">
-                <local:ConfiguracionPage></local:ConfiguracionPage>
-            </TabItem>
-            <TabItem Header="{x:Static local:Language.tab_acerca_de}" Name="AcercaDeTab">
-                <local:AcercaDePage></local:AcercaDePage>
-            </TabItem>
-        </TabControl>-->
         <Grid Name="PanelPrincipal">
             
         </Grid>

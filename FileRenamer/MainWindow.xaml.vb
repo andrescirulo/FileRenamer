@@ -4,10 +4,11 @@
 
     Private Sub MainWindow_Initialized(sender As Object, e As EventArgs) Handles Me.Initialized
         INSTANCE = Me
-        PaginasManager.Init(PanelPrincipal)
+        PaginasManager.Init(Me, PanelPrincipal)
         Inicializar()
 
         PaginasManager.IrA(PaginasManager.PAGINA_INICIO)
+        Me.Visibility = Visibility.Visible
     End Sub
 
     Private Sub toolbarUpdate_MouseUp(sender As Object, e As MouseButtonEventArgs) Handles toolbarUpdate.MouseUp
@@ -26,4 +27,16 @@
         End If
     End Sub
 
+    Private Sub MainWindow_SizeChanged(sender As Object, e As SizeChangedEventArgs) Handles Me.SizeChanged
+        If (e.PreviousSize = e.NewSize) Then
+            Return
+        End If
+
+        Dim w As Double = SystemParameters.PrimaryScreenWidth
+        Dim h As Double = SystemParameters.PrimaryScreenHeight
+
+        Me.Left = (w - e.NewSize.Width) / 2
+        Me.Top = (h - e.NewSize.Height) / 2
+        Me.Visibility = Visibility.Visible
+    End Sub
 End Class

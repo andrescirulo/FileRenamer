@@ -6,9 +6,9 @@
       xmlns:local="clr-namespace:FileRenamer"
       mc:Ignorable="d" 
       xmlns:fa="clr-namespace:FontAwesome.Net;assembly=FontAwesome.Net"
-      d:DesignHeight="300" d:DesignWidth="450" VerticalAlignment="Center"  HorizontalAlignment="Center">
+      d:DesignHeight="300" d:DesignWidth="480" VerticalAlignment="Center"  HorizontalAlignment="Center">
     <Grid>
-
+        <Border BorderBrush="black" BorderThickness="1" Padding="10">
         <StackPanel HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Center">
             <WrapPanel>
                 <local:FAButton x:Name="btnRenombrar" ButtonText="{x:Static local:Language.tab_renombrar_archivos }" FAIcon="{x:Static fa:FontAwesome.fa_pencil}"
@@ -31,5 +31,6 @@
                 <TextBlock Margin="10,5,0,0" Width="270" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap" Text="Información de la Aplicación y Actualizaciones"  />
             </WrapPanel>
         </StackPanel>
+        </Border>
     </Grid>
 </UserControl>
