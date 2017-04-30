@@ -1,23 +1,23 @@
-﻿Imports System.IO
-Imports FileRenamer
+﻿Imports FileRenamer
 
 Module MainModule
     Sub Main()
-        Dim log As New StreamWriter("D:\Log.txt")
-        If My.Application.CommandLineArgs.Count = 1 Then
-            Try
+        Dim Strategy As IStrategy = New DefaultStrategy
+        Strategy.InitLog()
 
-                Dim srcFolder As String = My.Application.CommandLineArgs(0)
-                log.WriteLine(srcFolder)
+        If Strategy.DeboEjecutar Then
+            Try
+                Dim srcFolder As String = Strategy.ObtenerDirectorio
+                Strategy.WriteLog(srcFolder)
                 Dim videos As List(Of Video) = SubtitulosManager.AnalizarSubtitulos(srcFolder)
-                log.WriteLine(videos.Count & " videos")
+                Strategy.WriteLog(videos.Count & " videos")
                 SubtitulosManager.RenombrarSubtitulos(videos)
             Catch ex As Exception
-                log.WriteLine("ERROR - " & ex.StackTrace.ToString)
+                Strategy.WriteLog("ERROR - " & ex.StackTrace.ToString)
             End Try
         Else
-            log.WriteLine("SIN CARPETA")
+            Strategy.WriteLog("SIN CARPETA")
         End If
-        log.Close()
+        Strategy.CloseLog()
     End Sub
 End Module
