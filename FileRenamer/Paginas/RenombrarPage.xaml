@@ -42,19 +42,19 @@
             <TextBox Height="23" HorizontalAlignment="Left" Margin="10,400,0,0" Name="txt_dest_reemp" VerticalAlignment="Top" Width="120" Grid.Column="1" />
         </WrapPanel>
         <local:FAButton x:Name="btn_agregar" ButtonText="{x:Static local:Language.renombrar_agregar }" FAIcon="{x:Static fa:FontAwesome.fa_plus}"
-            Height="23" HorizontalAlignment="Left" Margin="400,400,0,0" VerticalAlignment="Top" Width="110" Grid.Column="1" />
+            Height="23" HorizontalAlignment="Right" Margin="400,400,10,0" VerticalAlignment="Top" Width="110" Grid.Column="1" />
         
         
-        <ListBox Height="145" HorizontalAlignment="Stretch" Margin="40,440,100,0" Name="lst_reemplazos" VerticalAlignment="Top" Grid.Column="1" />
+        <ListBox Height="145" HorizontalAlignment="Stretch" Margin="40,440,110,0" Name="lst_reemplazos" VerticalAlignment="Top" Grid.Column="1" />
 
         <local:FAButton x:Name="btn_subir" ButtonText="{x:Static local:Language.renombrar_subir }" FAIcon="{x:Static fa:FontAwesome.fa_arrow_up}"
-            Height="23" HorizontalAlignment="Right"  Margin="0,440,10,0" VerticalAlignment="Top" Width="80" Grid.Column="1" />
+            Height="23" HorizontalAlignment="Right"  Margin="0,440,10,0" VerticalAlignment="Top" Width="90" Grid.Column="1" />
         <local:FAButton x:Name="btn_bajar" ButtonText="{x:Static local:Language.renombrar_bajar }" FAIcon="{x:Static fa:FontAwesome.fa_arrow_down}"
-            Height="23" HorizontalAlignment="Right"  Margin="0,470,10,0" VerticalAlignment="Top" Width="80" Grid.Column="1" />
+            Height="23" HorizontalAlignment="Right"  Margin="0,470,10,0" VerticalAlignment="Top" Width="90" Grid.Column="1" />
         <local:FAButton x:Name="btn_quitar" ButtonText="{x:Static local:Language.renombrar_quitar }" FAIcon="{x:Static fa:FontAwesome.fa_times}"
-            Height="23" HorizontalAlignment="Right"  Margin="0,500,10,0" VerticalAlignment="Top" Width="80" Grid.Column="1" />
+            Height="23" HorizontalAlignment="Right"  Margin="0,500,10,0" VerticalAlignment="Top" Width="90" Grid.Column="1" />
 
         <local:FAButton x:Name="btn_renombrar" ButtonText="{x:Static local:Language.renombrar_vista_previa }" FAIcon="{x:Static fa:FontAwesome.fa_search}"
-            Height="40" HorizontalAlignment="Right" Margin="0,0,40,10" VerticalAlignment="Bottom" Width="150" Grid.Column="1" />
+            Height="40" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="130" Grid.Column="1" />
     </Grid>
 </UserControl>

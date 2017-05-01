@@ -103,6 +103,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Languages\Operaciones.en.Designer.vb">
+      <DependentUpon>Operaciones.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Languages\Operaciones.Designer.vb">
       <DependentUpon>Operaciones.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -242,6 +247,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Language.en.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Languages\Operaciones.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Operaciones.en.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Languages\Operaciones.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Operaciones.Designer.vb</LastGenOutput>
@@ -284,6 +293,9 @@
       <Project>{34186C3B-C308-4CAE-B462-DB7B5F5E378C}</Project>
       <Name>Markdown.Xaml</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Instaladores\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

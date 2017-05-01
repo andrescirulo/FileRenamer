@@ -165,6 +165,21 @@
   <data name="config_menu_contextual_habilitar" xml:space="preserve">
     <value>Enable Windows Explorer Context Menu</value>
   </data>
+  <data name="contextual_procesar" xml:space="preserve">
+    <value>Rename Subtitles</value>
+  </data>
+  <data name="inicio_acerca_de" xml:space="preserve">
+    <value>Application information and updates</value>
+  </data>
+  <data name="inicio_configuracion" xml:space="preserve">
+    <value>Adjust the application configuration</value>
+  </data>
+  <data name="inicio_renombrar" xml:space="preserve">
+    <value>Rename files using a set of operations of your choice</value>
+  </data>
+  <data name="inicio_subtitulos" xml:space="preserve">
+    <value>Rename Subtitles files so they have the same name that their correspondig Video file</value>
+  </data>
   <data name="renombrar_agregar" xml:space="preserve">
     <value>Add</value>
   </data>

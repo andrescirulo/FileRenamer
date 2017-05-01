@@ -38,7 +38,7 @@ Public Class MenuContextualManager
             Dim mainKey As RegistryKey = classesRoot.CreateSubKey(usedKey, RegistryKeyPermissionCheck.ReadWriteSubTree)
             Dim cmdKey As RegistryKey = classesRoot.CreateSubKey(cmdKeyName, RegistryKeyPermissionCheck.ReadWriteSubTree)
 
-            mainKey.SetValue("", "Procesar Subtitulos")
+            mainKey.SetValue("", Language.contextual_procesar)
             cmdKey.SetValue("", path)
             If (ModoExtendido) Then
                 mainKey.SetValue("Extended", "")

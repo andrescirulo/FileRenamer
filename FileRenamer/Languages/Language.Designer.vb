@@ -217,6 +217,51 @@ Public Class Language
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Renombrar Subtitulos.
+    '''</summary>
+    Public Shared ReadOnly Property contextual_procesar() As String
+        Get
+            Return ResourceManager.GetString("contextual_procesar", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Información de la Aplicación y Actualizaciones.
+    '''</summary>
+    Public Shared ReadOnly Property inicio_acerca_de() As String
+        Get
+            Return ResourceManager.GetString("inicio_acerca_de", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Configuración de la Aplicación.
+    '''</summary>
+    Public Shared ReadOnly Property inicio_configuracion() As String
+        Get
+            Return ResourceManager.GetString("inicio_configuracion", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Renombra archivos de acuerdo a un conjunto de operaciones que establezcas.
+    '''</summary>
+    Public Shared ReadOnly Property inicio_renombrar() As String
+        Get
+            Return ResourceManager.GetString("inicio_renombrar", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Renombra archivos de Subtitulo para que tengan el mismo nombre que sus archivos de Video.
+    '''</summary>
+    Public Shared ReadOnly Property inicio_subtitulos() As String
+        Get
+            Return ResourceManager.GetString("inicio_subtitulos", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Agregar.
     '''</summary>
     Public Shared ReadOnly Property renombrar_agregar() As String

@@ -163,7 +163,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agrega el caracter especificado la cantidad de veces especificada al inicio del nombre del archivo.
+    '''  Busca una cadena traducida similar a Agrega el caracter especificado al inicio del nombre del archivo hasta que su longitud sea la especificada.
     '''</summary>
     Public Shared ReadOnly Property AgregarPadding_Descripcion() As String
         Get

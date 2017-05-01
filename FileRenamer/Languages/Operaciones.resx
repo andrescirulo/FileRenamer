@@ -205,7 +205,7 @@
     <value>Agrega el texto especificado al inicio del nombre del archivo</value>
   </data>
   <data name="AgregarPadding_Descripcion" xml:space="preserve">
-    <value>Agrega el caracter especificado la cantidad de veces especificada al inicio del nombre del archivo</value>
+    <value>Agrega el caracter especificado al inicio del nombre del archivo hasta que su longitud sea la especificada</value>
   </data>
   <data name="EliminarEntreCaracteres_Descripcion" xml:space="preserve">
     <value>Elimina todo el texto entre los caracteres especificados, inclusive los caracteres límite</value>

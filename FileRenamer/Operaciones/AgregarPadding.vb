@@ -40,7 +40,7 @@
     End Function
 
     Public Overrides Function ToString() As String
-        Dim txt As String = Operaciones.AgregarAlPrincipio_ToString
+        Dim txt As String = Operaciones.AgregarPadding_ToString
         txt = txt.Replace("{1}", caracter)
         txt = txt.Replace("{2}", cantidad)
         Return txt
