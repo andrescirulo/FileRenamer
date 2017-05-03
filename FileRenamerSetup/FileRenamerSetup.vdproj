@@ -4,9 +4,9 @@
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
 "ProjectName" = "8:FileRenamerSetup"
-"LanguageId" = "3:3082"
+"LanguageId" = "3:1033"
 "CodePage" = "3:1252"
-"UILanguageId" = "3:3082"
+"UILanguageId" = "3:1033"
 "SccProjectName" = "8:"
 "SccLocalPath" = "8:"
 "SccAuxPath" = "8:"
@@ -592,7 +592,7 @@
         }
         "MsiBootstrapper"
         {
-        "LangId" = "3:3082"
+        "LangId" = "3:1033"
         "RequiresElevation" = "11:FALSE"
         }
         "Product"
@@ -600,7 +600,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FileRenamer"
         "ProductCode" = "8:{D6CDE4F8-3CB5-46A1-A5B0-736382DC716A}"
-        "PackageCode" = "8:{10CD7A82-8A10-426F-A56B-6D936416C0DB}"
+        "PackageCode" = "8:{5A37BF0B-F881-4795-A3B1-FE24381606ED}"
         "UpgradeCode" = "8:{681E6A67-9FB8-4C66-B0FC-85DB96B8803A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

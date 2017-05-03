@@ -1,2 +1,3 @@
 # **Novedades de la versión 1.0.1**
-* Mejorada comparacion de nombres de videos con nombres de subtitulos
+* Mejora: Comparacion de nombres de videos con nombres de subtitulos
+* Arreglado: Texto de barra de actualización y otras mejoras visuales
