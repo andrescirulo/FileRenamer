@@ -44,7 +44,7 @@ Module ActualizacionesManager
     End Function
     Private Function HayVersionMasNueva(versiones As List(Of String)) As String
         Dim version As Version = My.Application.Info.Version()
-        Dim VersionActual() As Integer = {version.Major, version.Minor, version.Revision, version.Build}
+        Dim VersionActual() As Integer = {version.Major, version.Minor, version.Build, version.Revision}
         Dim VersionMayor() As Integer = VersionActual
         Dim versionesList As New List(Of Integer())
         For Each vers In versiones
@@ -82,7 +82,7 @@ Module ActualizacionesManager
     End Function
 
     Public Sub IniciarDesargaActualizacion(versionNueva As String)
-        Dim fileName As String = "FileRenamer_v[version]_[lang].msi"
+        Dim fileName As String = "FileRenamer_[version]_[lang].msi"
         Dim culture As CultureInfo = CultureInfo.CurrentCulture
         fileName = fileName.Replace("[version]", versionNueva)
         fileName = fileName.Replace("[lang]", culture.TwoLetterISOLanguageName.ToLower)
@@ -129,7 +129,7 @@ Module ActualizacionesManager
 
     Public Function ObtenerVersionString() As String
         Dim version As Version = My.Application.Info.Version()
-        Dim VersionActual() As Integer = {version.Major, version.Minor, version.Revision, version.Build}
+        Dim VersionActual() As Integer = {version.Major, version.Minor, version.Build, version.Revision}
         Dim versionString As String = ""
         Dim agregar As Boolean = False
         For i = 3 To 0 Step -1
