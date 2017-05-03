@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Text.RegularExpressions
+Imports FileRenamer
 
 Public Class SubtitulosManager
 
@@ -131,7 +132,9 @@ Public Class SubtitulosManager
 
     Private Shared Function AplicarFiltrosNombre(nombre As String) As String
         Dim nomTmp As String = nombre.ToLower
-        nomTmp = nomTmp.Replace(".", " ").Replace("_", " ").Replace("'", "").Replace("  ", " ")
+        Dim Reemplazos As List(Of ReemplazoElem) = ObtenerReemplazos()
+        nomTmp = RealizarReemplazos(nomTmp)
+        nomTmp = QuitarEspaciosSobrantes(nomTmp)
 
         Dim partes() As String = nomTmp.Split(" ")
 
@@ -149,6 +152,36 @@ Public Class SubtitulosManager
         Next
         nomFinal = nomFinal.Trim
         Return nomFinal
+    End Function
+
+    Private Shared Function RealizarReemplazos(nomTmp As String) As String
+        Dim tmp As String = nomTmp
+        For Each reem In ObtenerReemplazos()
+            tmp = tmp.Replace(reem.Anterior, reem.Nuevo)
+        Next
+        Return tmp
+    End Function
+
+    Private Shared Function ObtenerReemplazos() As List(Of ReemplazoElem)
+        Dim Reemplazos As New List(Of ReemplazoElem)
+
+        Reemplazos.Add(New ReemplazoElem(".", " "))
+        Reemplazos.Add(New ReemplazoElem("_", " "))
+        Reemplazos.Add(New ReemplazoElem("'", ""))
+        Reemplazos.Add(New ReemplazoElem("(", " "))
+        Reemplazos.Add(New ReemplazoElem(")", " "))
+
+        Return Reemplazos
+    End Function
+
+    Private Shared Function QuitarEspaciosSobrantes(nombre As String) As String
+        Dim tmp As String = nombre
+
+        While tmp.Length <> tmp.Replace("  ", " ").Length
+            tmp = tmp.Replace("  ", " ")
+        End While
+
+        Return tmp
     End Function
 
     Private Shared Function QuitarNoClaves(parte As String) As String

@@ -4,9 +4,9 @@
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
 "ProjectName" = "8:FileRenamerSetup"
-"LanguageId" = "3:1033"
+"LanguageId" = "3:3082"
 "CodePage" = "3:1252"
-"UILanguageId" = "3:1033"
+"UILanguageId" = "3:3082"
 "SccProjectName" = "8:"
 "SccLocalPath" = "8:"
 "SccAuxPath" = "8:"
@@ -226,6 +226,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
     }
@@ -404,7 +412,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:FileRenamer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:FileRenamer, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_6304E37F82BABDE226AE91E4BE1C468F"
@@ -584,22 +592,22 @@
         }
         "MsiBootstrapper"
         {
-        "LangId" = "3:1033"
+        "LangId" = "3:3082"
         "RequiresElevation" = "11:FALSE"
         }
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FileRenamer"
-        "ProductCode" = "8:{C6F2863E-9AED-415E-BBD3-61D6E647F7C8}"
-        "PackageCode" = "8:{D4A83C1C-63B6-4946-A71D-4E721178EA07}"
+        "ProductCode" = "8:{D6CDE4F8-3CB5-46A1-A5B0-736382DC716A}"
+        "PackageCode" = "8:{10CD7A82-8A10-426F-A56B-6D936416C0DB}"
         "UpgradeCode" = "8:{681E6A67-9FB8-4C66-B0FC-85DB96B8803A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:Andres Cirulo"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

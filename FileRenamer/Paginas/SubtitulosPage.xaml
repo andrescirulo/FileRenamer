@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:FileRenamer"
              mc:Ignorable="d"
              xmlns:fa="clr-namespace:FontAwesome.Net;assembly=FontAwesome.Net"
-             d:DesignHeight="300" d:DesignWidth="600" Height="300" Width="600">
+             d:DesignHeight="400" d:DesignWidth="700" Height="400" Width="700">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
