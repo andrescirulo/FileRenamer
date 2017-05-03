@@ -11,7 +11,7 @@
             
         </Grid>
         <ToolBar Name="toolbarUpdate" BorderBrush="DarkGray" BorderThickness="1" Height="35" VerticalAlignment="bottom" Visibility="Collapsed" >
-            <Label Name="lblUpdate">{x:Static local:Language.toolbar_actualizacion}</Label>
+            <Label Name="lblUpdate" Content="{x:Static local:Language.toolbar_actualizacion}"></Label>
         </ToolBar>
     </Grid>
 </Window>

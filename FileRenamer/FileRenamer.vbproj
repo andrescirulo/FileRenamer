@@ -296,8 +296,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Cambios\" />
     <Folder Include="Instaladores\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Cambios\Cambios_v1.0.1.0_en.txt" />
+    <Resource Include="Cambios\Cambios_v1.0.1.0_es.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
