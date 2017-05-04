@@ -11,6 +11,7 @@ Module Funciones
 
     Public Sub Inicializar()
         CargarConfiguracion()
+        WebStatsManager.EnviarEstadisticasUso()
     End Sub
 
     Public Function NombreCorto(ByVal path As String) As String

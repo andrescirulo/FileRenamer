@@ -98,6 +98,7 @@
     <Compile Include="Domain\ResultadoComparacion.vb" />
     <Compile Include="Domain\Subtitulo.vb" />
     <Compile Include="Domain\Video.vb" />
+    <Compile Include="Domain\WebStat.vb" />
     <Compile Include="Funciones.vb" />
     <Compile Include="Languages\Language.en.Designer.vb">
       <DependentUpon>Language.en.resx</DependentUpon>
@@ -124,6 +125,7 @@
     <Compile Include="Managers\MenuContextualManager.vb" />
     <Compile Include="Managers\PaginasManager.vb" />
     <Compile Include="Managers\SubtitulosManager.vb" />
+    <Compile Include="Managers\WebStatsManager.vb" />
     <Compile Include="Operaciones\AgregarAlFinalDelNombre.vb" />
     <Compile Include="Operaciones\AgregarAlFinalDeTodo.vb" />
     <Compile Include="Operaciones\AgregarAlPrincipio.vb" />
