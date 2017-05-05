@@ -6,7 +6,7 @@ Imports Newtonsoft.Json
 Module ActualizacionesManager
 
     Private GITHUB_URL As String = "https://api.github.com/repos/andrescirulo/FileRenamer/releases"
-    Private INSTALADORES_URL As String = "https://github.com/andrescirulo/FileRenamer/raw/master/FileRenamer/Instaladores/"
+    Private INSTALADORES_URL As String = "http://www.andrescirulo.com.ar/instaladores/filerenamer/"
 
     Public Function ComprobarActualizaciones() As String
         Try
