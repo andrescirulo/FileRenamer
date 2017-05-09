@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DebugStrategy.vb" />
+    <Compile Include="DefaultLogStrategy.vb" />
     <Compile Include="DefaultStrategy.vb" />
     <Compile Include="IStrategy.vb" />
     <Compile Include="MainModule.vb" />

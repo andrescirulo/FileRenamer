@@ -1,12 +1,11 @@
 ﻿Imports System.IO
 Imports System.Text.RegularExpressions
-Imports FileRenamer
 
 Public Class SubtitulosManager
 
     Public Shared Function AnalizarSubtitulos(srcFolder As String) As List(Of Video)
         If CONFIG Is Nothing Then
-            Inicializar()
+            InicializarSimple()
         End If
         Dim listaFinal As New List(Of Video)
 

@@ -10,8 +10,12 @@ Module Funciones
     Public CONFIG As Configuracion
 
     Public Sub Inicializar()
-        CargarConfiguracion()
+        InicializarSimple()
         WebStatsManager.EnviarEstadisticasUso()
+    End Sub
+
+    Public Sub InicializarSimple()
+        CargarConfiguracion()
     End Sub
 
     Public Function NombreCorto(ByVal path As String) As String
@@ -112,5 +116,26 @@ Module Funciones
         reader.Close()
 
         Return resultado
+    End Function
+
+
+    Public Function GetSOName() As String
+        Dim os As OperatingSystem = System.Environment.OSVersion
+        Dim version As String = os.Version.Major & "." & os.Version.Minor
+        Dim osName As String
+        Select Case version
+            Case "6.1"
+                osName = "Windows 7"
+            Case "6.2"
+                osName = "Windows 8"
+            Case "6.3"
+                osName = "Windows 8.1"
+            Case "10.0"
+                osName = "Windows 10"
+            Case Else
+                osName = os.VersionString
+        End Select
+
+        Return osName
     End Function
 End Module

@@ -48,6 +48,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Net, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesomeDotNet.1.1.1\lib\FontAwesome.Net.dll</HintPath>
@@ -97,6 +100,7 @@
     <Compile Include="Domain\ReemplazoElem.vb" />
     <Compile Include="Domain\ResultadoComparacion.vb" />
     <Compile Include="Domain\Subtitulo.vb" />
+    <Compile Include="Domain\VersionResponse.vb" />
     <Compile Include="Domain\Video.vb" />
     <Compile Include="Domain\WebStat.vb" />
     <Compile Include="Funciones.vb" />
@@ -267,6 +271,7 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
