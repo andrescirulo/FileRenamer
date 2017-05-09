@@ -35,17 +35,6 @@ Module ActualizacionesManager
         End Try
     End Function
 
-    Private Function ObtenerVersiones(releases As List(Of GitHubRelease)) As List(Of String)
-        Dim versiones As New List(Of String)
-        For Each release In releases
-            If (Not release.PreRelease) Then
-                Dim version As String = release.Tag_Name
-                version = version.Replace("v", "")
-                versiones.Add(version)
-            End If
-        Next
-        Return versiones
-    End Function
     Private Function HayVersionMasNueva(versiones As List(Of String)) As String
         Dim version As Version = My.Application.Info.Version()
         Dim VersionActual() As Integer = {version.Major, version.Minor, version.Build, version.Revision}

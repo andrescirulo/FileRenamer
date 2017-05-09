@@ -96,7 +96,6 @@
     <Compile Include="Domain\Configuracion.vb" />
     <Compile Include="Domain\EstadoMenuContextual.vb" />
     <Compile Include="Domain\FolderCheckElem.vb" />
-    <Compile Include="Domain\GitHubRelease.vb" />
     <Compile Include="Domain\ReemplazoElem.vb" />
     <Compile Include="Domain\ResultadoComparacion.vb" />
     <Compile Include="Domain\Subtitulo.vb" />

@@ -4,9 +4,8 @@ Public Class AcercaDePage
 
     Shared myself As AcercaDePage
 
-    Private CAMBIOS_URL As String = "https://github.com/andrescirulo/FileRenamer/raw/master/FileRenamer/Cambios/"
-    'Private CAMBIOS_URL As String = "http://127.0.0.1/"
-
+    Private MAIN_URL As String = "http://www.andrescirulo.com.ar/"
+    'Dim MAIN_URL As String = "http://localhost/appsStats/"
 
     Private Sub CategoriasPage_Initialized(sender As Object, e As EventArgs) Handles Me.Initialized
         myself = Me
@@ -43,7 +42,7 @@ Public Class AcercaDePage
 
     Private Sub ObtenerDetallesDeVersion(versionNueva As String)
         Dim fileName As String = ObtenerNombreArchivoCambios(versionNueva)
-        Dim URL As String = CAMBIOS_URL & fileName
+        Dim URL As String = MAIN_URL & "cambios/filerenamer/" & fileName
         Dim cambios As String = ""
         Try
             cambios = GetRawByUrl(URL)
