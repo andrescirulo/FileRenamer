@@ -5,15 +5,14 @@ Imports Newtonsoft.Json
 
 Module ActualizacionesManager
 
-    Private GITHUB_URL As String = "https://api.github.com/repos/andrescirulo/FileRenamer/releases"
-    Private INSTALADORES_URL As String = "http://www.andrescirulo.com.ar/instaladores/filerenamer/"
+    'Private MAIN_URL As String = "http://www.andrescirulo.com.ar/"
+    Private MAIN_URL As String = "http://localhost/appsStats/"
+    Private VERSION_URL As String = MAIN_URL & "api/version.php?op=uv&ap=filerenamer"
+    Private INSTALADORES_URL As String = MAIN_URL & "instaladores/filerenamer/"
 
     Public Function ComprobarActualizaciones() As String
         Try
-
-            Dim wrGETURL As HttpWebRequest = WebRequest.Create(GITHUB_URL)
-            wrGETURL.UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"
-            wrGETURL.Accept = "application/vnd.github.v3+json"
+            Dim wrGETURL As HttpWebRequest = WebRequest.Create(VERSION_URL)
 
             Dim response As WebResponse = wrGETURL.GetResponse
             Dim reader As New StreamReader(response.GetResponseStream)
@@ -22,11 +21,16 @@ Module ActualizacionesManager
             Dim serializer As New JsonSerializer
             Dim sr As New StringReader(resultado)
             Dim JsonReader As New JsonTextReader(sr)
-            Dim releases As List(Of GitHubRelease) = serializer.Deserialize(JsonReader, GetType(List(Of GitHubRelease)))
+            Dim version As VersionResponse = serializer.Deserialize(JsonReader, GetType(VersionResponse))
             sr.Close()
-            Dim versiones As List(Of String) = ObtenerVersiones(releases)
-            Return HayVersionMasNueva(versiones)
-        Catch
+            If (version.Resultado = "OK") Then
+                Dim versiones As New List(Of String)
+                versiones.Add(version.Version)
+                Return HayVersionMasNueva(versiones)
+            Else
+                Return False
+            End If
+        Catch ex As Exception
             Return Nothing
         End Try
     End Function
