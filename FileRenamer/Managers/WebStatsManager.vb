@@ -12,7 +12,7 @@ Public Class WebStatsManager
 
     Private Shared stat As WebStat
     Public Shared Sub EnviarEstadisticasUso()
-        stat = ArmarStat("STAT_V1", Nothing)
+        stat = ArmarStat("STAT_V1.1", Nothing)
         EnviarStat()
     End Sub
 
@@ -27,6 +27,7 @@ Public Class WebStatsManager
         stat.operacion = operacion
         stat.version = ActualizacionesManager.ObtenerVersionString
         stat.idioma = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName
+        stat.sistemaOperativo = GetSOName()
         stat.mensaje = mensaje
         Return stat
     End Function
