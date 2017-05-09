@@ -5,8 +5,6 @@ Imports Newtonsoft.Json
 
 Module ActualizacionesManager
 
-    'Private MAIN_URL As String = "http://www.andrescirulo.com.ar/"
-    Private MAIN_URL As String = "http://localhost/appsStats/"
     Private VERSION_URL As String = MAIN_URL & "api/version.php?op=uv&ap=filerenamer"
     Private INSTALADORES_URL As String = MAIN_URL & "instaladores/filerenamer/"
 

@@ -4,9 +4,6 @@ Public Class AcercaDePage
 
     Shared myself As AcercaDePage
 
-    Private MAIN_URL As String = "http://www.andrescirulo.com.ar/"
-    'Dim MAIN_URL As String = "http://localhost/appsStats/"
-
     Private Sub CategoriasPage_Initialized(sender As Object, e As EventArgs) Handles Me.Initialized
         myself = Me
         Dim version As Version = My.Application.Info.Version()

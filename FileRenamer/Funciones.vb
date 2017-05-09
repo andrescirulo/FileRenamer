@@ -5,6 +5,9 @@ Imports Newtonsoft.Json
 
 Module Funciones
 
+    Public MAIN_URL As String = "http://www.andrescirulo.com.ar/"
+    'Public MAIN_URL As String = "http://localhost/appsStats/"
+
     Public CONFIG_DIR As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\FileRenamer\"
     Private CONFIG_FILE As String = CONFIG_DIR & "config.json"
     Public CONFIG As Configuracion
