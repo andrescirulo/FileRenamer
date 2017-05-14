@@ -6,13 +6,12 @@ Imports Newtonsoft.Json
 
 Public Class WebStatsManager
 
-    Private Shared STATS_URL As String = "http://www.andrescirulo.com.ar/api/stats.php"
-    'Private Shared STATS_URL As String = "http://localhost/appsStats/stats.php"
+    Private Shared STATS_URL As String = MAIN_URL & "api/stats.php"
     Private Shared APLICACION As String = "FileRenamer"
 
     Private Shared stat As WebStat
     Public Shared Sub EnviarEstadisticasUso()
-        stat = ArmarStat("STAT_V1.1", Nothing)
+        stat = ArmarStat("STAT_V1.2", Nothing)
         EnviarStat()
     End Sub
 
@@ -28,6 +27,7 @@ Public Class WebStatsManager
         stat.version = ActualizacionesManager.ObtenerVersionString
         stat.idioma = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName
         stat.sistemaOperativo = GetSOName()
+        stat.resolucion = SCREEN_WIDTH & "x" & SCREEN_HEIGHT
         stat.mensaje = mensaje
         Return stat
     End Function

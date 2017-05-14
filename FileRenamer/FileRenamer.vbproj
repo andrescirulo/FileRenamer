@@ -58,6 +58,9 @@
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="policy.2.0.taglib-sharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
+      <HintPath>..\packages\taglib.2.1.0.0\lib\policy.2.0.taglib-sharp.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -67,6 +70,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="taglib-sharp, Version=2.1.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
+      <HintPath>..\packages\taglib.2.1.0.0\lib\taglib-sharp.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -93,6 +99,7 @@
     </Compile>
     <Compile Include="Controles\FoldersTreeViewListener.vb" />
     <Compile Include="Domain\Archivo.vb" />
+    <Compile Include="Domain\CarpetaEspecial.vb" />
     <Compile Include="Domain\Configuracion.vb" />
     <Compile Include="Domain\EstadoMenuContextual.vb" />
     <Compile Include="Domain\FolderCheckElem.vb" />
@@ -103,6 +110,16 @@
     <Compile Include="Domain\Video.vb" />
     <Compile Include="Domain\WebStat.vb" />
     <Compile Include="Funciones.vb" />
+    <Compile Include="Languages\Carpetas.en.Designer.vb">
+      <DependentUpon>Carpetas.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Languages\Carpetas.Designer.vb">
+      <DependentUpon>Carpetas.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Languages\Language.en.Designer.vb">
       <DependentUpon>Language.en.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -149,6 +166,9 @@
     </Compile>
     <Compile Include="Paginas\InicioPage.xaml.vb">
       <DependentUpon>InicioPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Mp3Page.xaml.vb">
+      <DependentUpon>Mp3Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="Paginas\RenombrarPage.xaml.vb">
       <DependentUpon>RenombrarPage.xaml</DependentUpon>
@@ -198,6 +218,10 @@
     <Page Include="Paginas\InicioPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginas\Mp3Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Paginas\RenombrarPage.xaml">
       <SubType>Designer</SubType>
@@ -249,6 +273,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Languages\Carpetas.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Carpetas.en.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\Carpetas.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Carpetas.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Languages\Language.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Language.en.Designer.vb</LastGenOutput>
@@ -284,10 +316,10 @@
     <Resource Include="Main.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="diskdrive.png">
+    <Resource Include="Iconos\diskdrive.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="folder.png">
+    <Resource Include="Iconos\folder.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
@@ -307,6 +339,15 @@
   <ItemGroup>
     <Resource Include="Cambios\Cambios_v1.0.1.0_en.txt" />
     <Resource Include="Cambios\Cambios_v1.0.1.0_es.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Iconos\descargas.png" />
+    <Resource Include="Iconos\documentos.png" />
+    <Resource Include="Iconos\equipo.png" />
+    <Resource Include="Iconos\escritorio.png" />
+    <Resource Include="Iconos\imagenes.png" />
+    <Resource Include="Iconos\musica.png" />
+    <Resource Include="Iconos\videos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

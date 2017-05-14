@@ -5,6 +5,38 @@
 
     Private Sub FoldersTreeView_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
         tree_carpetas.Items.Clear()
+        Dim listaEspeciales As New List(Of CarpetaEspecial)
+        listaEspeciales.Add(New CarpetaEspecial(Carpetas.Escritorio, Environment.GetFolderPath(Environment.SpecialFolder.Desktop)))
+        listaEspeciales.Add(New CarpetaEspecial(Carpetas.Documentos, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)))
+        listaEspeciales.Add(New CarpetaEspecial(Carpetas.Musica, Environment.GetFolderPath(Environment.SpecialFolder.MyMusic)))
+        listaEspeciales.Add(New CarpetaEspecial(Carpetas.Imagenes, Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)))
+        listaEspeciales.Add(New CarpetaEspecial(Carpetas.Videos, Environment.GetFolderPath(Environment.SpecialFolder.MyVideos)))
+        If (My.Computer.FileSystem.DirectoryExists(ObtenerCarpetaDescargas())) Then
+            listaEspeciales.Add(New CarpetaEspecial(Carpetas.Descargas, ObtenerCarpetaDescargas()))
+        End If
+
+        listaEspeciales = listaEspeciales.OrderBy(Of String)(Function(f)
+                                                                 Return f.Nombre
+                                                             End Function).ToList()
+
+
+        For Each elem In listaEspeciales
+            Dim item As New TreeViewItem()
+            item.Header = elem.Nombre
+            item.Tag = elem.Path
+            item.FontWeight = FontWeights.Normal
+            item.Items.Add(dummyNode)
+            AddHandler item.Expanded, AddressOf OnFolderExpanded
+            tree_carpetas.Items.Add(item)
+        Next
+
+        Dim itemMiPc As New TreeViewItem()
+        itemMiPc.Header = Carpetas.Equipo
+        itemMiPc.FontWeight = FontWeights.Normal
+        AddHandler itemMiPc.Expanded, AddressOf OnFolderExpanded
+        tree_carpetas.Items.Add(itemMiPc)
+
+
         For Each drive In ObtenerUnidades()
             Dim item As New TreeViewItem()
             item.Header = drive.RootDirectory.FullName
@@ -15,7 +47,7 @@
             item.FontWeight = FontWeights.Normal
             item.Items.Add(dummyNode)
             AddHandler item.Expanded, AddressOf OnFolderExpanded
-            tree_carpetas.Items.Add(item)
+            itemMiPc.Items.Add(item)
         Next
     End Sub
 

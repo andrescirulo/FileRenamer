@@ -6,14 +6,26 @@ Imports Newtonsoft.Json
 Module Funciones
 
     Public MAIN_URL As String = "http://www.andrescirulo.com.ar/"
-    'Public MAIN_URL As String = "http://localhost/appsStats/"
 
     Public CONFIG_DIR As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\FileRenamer\"
     Private CONFIG_FILE As String = CONFIG_DIR & "config.json"
     Public CONFIG As Configuracion
 
+    Public SCREEN_HEIGHT As Integer
+    Public SCREEN_WIDTH As Integer
+
     Public Sub Inicializar()
         InicializarSimple()
+        SCREEN_WIDTH = System.Windows.SystemParameters.PrimaryScreenWidth
+        SCREEN_HEIGHT = System.Windows.SystemParameters.PrimaryScreenHeight
+
+        Dim DEBUG_URL_FILE As String = CONFIG_DIR & "debug_url.txt"
+        If (My.Computer.FileSystem.FileExists(DEBUG_URL_FILE)) Then
+            Dim sr As New StreamReader(DEBUG_URL_FILE)
+            MAIN_URL = sr.ReadLine()
+            sr.Close()
+        End If
+
         WebStatsManager.EnviarEstadisticasUso()
     End Sub
 
@@ -60,7 +72,7 @@ Module Funciones
         End Try
     End Sub
 
-    Private Function ObtenerCarpetaDescargas() As String
+    Public Function ObtenerCarpetaDescargas() As String
         Dim carpetaInicial As String = Environment.GetFolderPath(Environment.SpecialFolder.Personal)
         carpetaInicial = carpetaInicial.Replace("Mis Documentos", "Descargas")
         carpetaInicial = carpetaInicial.Replace("My Documents", "Downloads")

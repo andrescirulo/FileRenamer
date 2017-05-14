@@ -4,9 +4,9 @@
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
 "ProjectName" = "8:FileRenamerSetup"
-"LanguageId" = "3:1033"
+"LanguageId" = "3:3082"
 "CodePage" = "3:1252"
-"UILanguageId" = "3:1033"
+"UILanguageId" = "3:3082"
 "SccProjectName" = "8:"
 "SccLocalPath" = "8:"
 "SccAuxPath" = "8:"
@@ -94,13 +94,13 @@
         "Entry"
         {
         "MsmKey" = "8:_DA5A9BD2F51811D5ACA04369A3121FD5"
-        "OwnerKey" = "8:_6304E37F82BABDE226AE91E4BE1C468F"
+        "OwnerKey" = "8:_99E6D547FDCE4AECA2AAD1EB2C31F74E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_DA5A9BD2F51811D5ACA04369A3121FD5"
-        "OwnerKey" = "8:_99E6D547FDCE4AECA2AAD1EB2C31F74E"
+        "OwnerKey" = "8:_6304E37F82BABDE226AE91E4BE1C468F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -118,43 +118,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_716CC39F2340FBD2314BE8C72FEAF94B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4EC48D1C7989F9AF348A94C21E62466F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_45BE285CD7BCD6ACAF5E8AAE2244ABFE"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_10665A9DCC592648A5A533830EC93566"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DA5A9BD2F51811D5ACA04369A3121FD5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F26D26E74C3BDFD924850A0F75C70034"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6304E37F82BABDE226AE91E4BE1C468F"
+        "OwnerKey" = "8:_99E6D547FDCE4AECA2AAD1EB2C31F74E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -166,7 +130,43 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_99E6D547FDCE4AECA2AAD1EB2C31F74E"
+        "OwnerKey" = "8:_6304E37F82BABDE226AE91E4BE1C468F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_F26D26E74C3BDFD924850A0F75C70034"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_DA5A9BD2F51811D5ACA04369A3121FD5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_10665A9DCC592648A5A533830EC93566"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_45BE285CD7BCD6ACAF5E8AAE2244ABFE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4EC48D1C7989F9AF348A94C21E62466F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_716CC39F2340FBD2314BE8C72FEAF94B"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -271,6 +271,11 @@
             "AssemblyAsmDisplayName" = "8:FontAwesome.Net, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_10665A9DCC592648A5A533830EC93566"
+                    {
+                    "Name" = "8:FontAwesome.Net.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:FontAwesome.Net.dll"
             "TargetName" = "8:"
@@ -297,6 +302,11 @@
             "AssemblyAsmDisplayName" = "8:Markdown.Xaml, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_1AA370AFB6B01939E3CA69D3EFCBA143"
+                    {
+                    "Name" = "8:Markdown.Xaml.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Markdown.Xaml.dll"
             "TargetName" = "8:"
@@ -323,6 +333,11 @@
             "AssemblyAsmDisplayName" = "8:FastDirectoryEnumerator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_45BE285CD7BCD6ACAF5E8AAE2244ABFE"
+                    {
+                    "Name" = "8:FastDirectoryEnumerator.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:FastDirectoryEnumerator.dll"
             "TargetName" = "8:"
@@ -349,6 +364,11 @@
             "AssemblyAsmDisplayName" = "8:Markdown.Xaml, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_4EC48D1C7989F9AF348A94C21E62466F"
+                    {
+                    "Name" = "8:Markdown.Xaml.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Markdown.Xaml.dll"
             "TargetName" = "8:"
@@ -392,9 +412,14 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:FileRenamer, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:FileRenamer, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_6304E37F82BABDE226AE91E4BE1C468F"
+                    {
+                    "Name" = "8:FileRenamer.exe"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:FileRenamer.exe"
             "TargetName" = "8:"
@@ -421,6 +446,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_716CC39F2340FBD2314BE8C72FEAF94B"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -447,6 +477,11 @@
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_DA5A9BD2F51811D5ACA04369A3121FD5"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:Newtonsoft.Json.dll"
             "TargetName" = "8:"
@@ -473,6 +508,11 @@
             "AssemblyAsmDisplayName" = "8:FastDirectoryEnumerator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_F26D26E74C3BDFD924850A0F75C70034"
+                    {
+                    "Name" = "8:FastDirectoryEnumerator.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:FastDirectoryEnumerator.dll"
             "TargetName" = "8:"
@@ -552,7 +592,7 @@
         }
         "MsiBootstrapper"
         {
-        "LangId" = "3:1033"
+        "LangId" = "3:3082"
         "RequiresElevation" = "11:FALSE"
         }
         "Product"
@@ -560,7 +600,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FileRenamer"
         "ProductCode" = "8:{C0D63CE7-8EB5-4291-8C6D-5B92701F42E2}"
-        "PackageCode" = "8:{C8CD3D24-AD59-49C8-B8A4-A5F8A27CEE7B}"
+        "PackageCode" = "8:{2161B90A-21AA-40CC-824C-8913EFCD8FCD}"
         "UpgradeCode" = "8:{681E6A67-9FB8-4C66-B0FC-85DB96B8803A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
