@@ -1,4 +1,6 @@
-﻿Public Class FoldersTreeView
+﻿Imports Syroot.Windows.IO
+
+Public Class FoldersTreeView
 
     Dim dummyNode As Object = Nothing
     Dim Listeners As New List(Of FoldersTreeViewListener)
@@ -11,9 +13,7 @@
         listaEspeciales.Add(New CarpetaEspecial(Carpetas.Musica, Environment.GetFolderPath(Environment.SpecialFolder.MyMusic)))
         listaEspeciales.Add(New CarpetaEspecial(Carpetas.Imagenes, Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)))
         listaEspeciales.Add(New CarpetaEspecial(Carpetas.Videos, Environment.GetFolderPath(Environment.SpecialFolder.MyVideos)))
-        If (My.Computer.FileSystem.DirectoryExists(ObtenerCarpetaDescargas())) Then
-            listaEspeciales.Add(New CarpetaEspecial(Carpetas.Descargas, ObtenerCarpetaDescargas()))
-        End If
+        listaEspeciales.Add(New CarpetaEspecial(Carpetas.Descargas, KnownFolders.Downloads.ExpandedPath))
 
         listaEspeciales = listaEspeciales.OrderBy(Of String)(Function(f)
                                                                  Return f.Nombre

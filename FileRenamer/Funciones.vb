@@ -2,6 +2,7 @@
 Imports System.Net
 Imports CodeProject
 Imports Newtonsoft.Json
+Imports Syroot.Windows.IO
 
 Module Funciones
 
@@ -46,7 +47,7 @@ Module Funciones
             CONFIG = New Configuracion
             CONFIG.ExtensionesSubtitulos = {"*.srt", "*.sub"}.ToList
             CONFIG.ExtensionesVideos = {"*.avi", "*.mkv", "*.mp4"}.ToList
-            CONFIG.CarpetaInicial = ObtenerCarpetaDescargas()
+            CONFIG.CarpetaInicial = KnownFolders.Downloads.ExpandedPath
             If Not My.Computer.FileSystem.DirectoryExists(CONFIG_DIR) Then
                 My.Computer.FileSystem.CreateDirectory(CONFIG_DIR)
             End If
@@ -71,14 +72,6 @@ Module Funciones
             MsgBox("No se pudo guardar la configuración. " & vbCrLf & "Compruebe que posee permisos suficientes o ejecute la aplicación como Administrador")
         End Try
     End Sub
-
-    Public Function ObtenerCarpetaDescargas() As String
-        Dim carpetaInicial As String = Environment.GetFolderPath(Environment.SpecialFolder.Personal)
-        carpetaInicial = carpetaInicial.Replace("Mis Documentos", "Descargas")
-        carpetaInicial = carpetaInicial.Replace("My Documents", "Downloads")
-
-        Return carpetaInicial
-    End Function
 
     Public Function ObtenerArchivos(Path As String, searchOption As SearchOption, extensiones() As String) As List(Of String)
         Dim lista As New List(Of String)

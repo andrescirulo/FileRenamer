@@ -15,6 +15,18 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_03FAE92F9673AEB999BD4101E9D855A4"
+        "OwnerKey" = "8:_3D35EDCC0F744C6AA736CCE8F950559A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_03FAE92F9673AEB999BD4101E9D855A4"
+        "OwnerKey" = "8:_6304E37F82BABDE226AE91E4BE1C468F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_10665A9DCC592648A5A533830EC93566"
         "OwnerKey" = "8:_3D35EDCC0F744C6AA736CCE8F950559A"
         "MsmSig" = "8:_UNDEFINED"
@@ -93,6 +105,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D891DEAFD55959CE46D975CDCD65033A"
+        "OwnerKey" = "8:_99E6D547FDCE4AECA2AAD1EB2C31F74E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_DA5A9BD2F51811D5ACA04369A3121FD5"
         "OwnerKey" = "8:_3D35EDCC0F744C6AA736CCE8F950559A"
         "MsmSig" = "8:_UNDEFINED"
@@ -136,6 +154,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D891DEAFD55959CE46D975CDCD65033A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_1AA370AFB6B01939E3CA69D3EFCBA143"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -155,6 +179,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_FFBAFDAF3B7AD6A252920C058B569EC5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_03FAE92F9673AEB999BD4101E9D855A4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -282,6 +312,37 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_03FAE92F9673AEB999BD4101E9D855A4"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Syroot.Windows.IO.KnownFolders, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_03FAE92F9673AEB999BD4101E9D855A4"
+                    {
+                    "Name" = "8:Syroot.Windows.IO.KnownFolders.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Syroot.Windows.IO.KnownFolders.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_14E1F260663946E1946779A74D653125"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_10665A9DCC592648A5A533830EC93566"
             {
             "AssemblyRegister" = "3:1"
@@ -438,7 +499,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -524,6 +585,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D891DEAFD55959CE46D975CDCD65033A"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Syroot.Windows.IO.KnownFolders, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_D891DEAFD55959CE46D975CDCD65033A"
+                    {
+                    "Name" = "8:Syroot.Windows.IO.KnownFolders.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Syroot.Windows.IO.KnownFolders.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_14E1F260663946E1946779A74D653125"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DA5A9BD2F51811D5ACA04369A3121FD5"
             {
             "AssemblyRegister" = "3:1"
@@ -582,7 +674,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -685,7 +777,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FileRenamer"
         "ProductCode" = "8:{189F4E5E-B52B-4CD5-A82A-46F6FC91516C}"
-        "PackageCode" = "8:{4C89071F-7629-456B-8FE3-28D69D5D7480}"
+        "PackageCode" = "8:{877058CA-A03B-4965-A296-154E3E8F679F}"
         "UpgradeCode" = "8:{681E6A67-9FB8-4C66-B0FC-85DB96B8803A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

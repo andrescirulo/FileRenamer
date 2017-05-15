@@ -27,6 +27,10 @@ Public Class SubtitulosPage
     Public Sub OnSelectedItemChanged(FilePath As String) Implements FoldersTreeViewListener.OnSelectedItemChanged
         lbl_carpeta.Content = FilePath
 
+        If lbl_carpeta.Content Is Nothing Then
+            Return
+        End If
+
         If Not (lbl_carpeta.Content.EndsWith("\")) Then
             lbl_carpeta.Content = lbl_carpeta.Content & "\"
         End If
