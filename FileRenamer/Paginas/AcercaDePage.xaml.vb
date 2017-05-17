@@ -8,7 +8,7 @@ Public Class AcercaDePage
         myself = Me
         Dim version As Version = My.Application.Info.Version()
         Dim versionString As String = "v" & version.Major & "." & version.Minor & "." & version.Build & "." & version.Revision
-        txtTitulo.Text = "FileRenamer " & versionString
+        txtTitulo.Text = "AC FileRenamer " & versionString
         txtVersion.Text = ""
         txtContacto.Text = FileRenamer.Language.acerca_de_contacto
 
