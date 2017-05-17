@@ -11,10 +11,10 @@ Imports System.Windows
 
 ' Revisar los valores de los atributos del ensamblado
 
-<Assembly: AssemblyTitle("FileRenamer")>
+<Assembly: AssemblyTitle("AC FileRenamer")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("FileRenamer")>
+<Assembly: AssemblyProduct("AC FileRenamer")>
 <Assembly: AssemblyCopyright("Copyright ©  2017")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: ComVisible(false)>
@@ -55,5 +55,5 @@ Imports System.Windows
 ' mediante el carácter '*', como se muestra a continuación:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.3.0")>
-<Assembly: AssemblyFileVersion("1.0.3.0")>
+<Assembly: AssemblyVersion("1.0.4.0")>
+<Assembly: AssemblyFileVersion("1.0.4.0")>

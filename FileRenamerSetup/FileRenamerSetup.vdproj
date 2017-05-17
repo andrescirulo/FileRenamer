@@ -118,13 +118,13 @@
         "Entry"
         {
         "MsmKey" = "8:_DA5A9BD2F51811D5ACA04369A3121FD5"
-        "OwnerKey" = "8:_99E6D547FDCE4AECA2AAD1EB2C31F74E"
+        "OwnerKey" = "8:_6304E37F82BABDE226AE91E4BE1C468F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_DA5A9BD2F51811D5ACA04369A3121FD5"
-        "OwnerKey" = "8:_6304E37F82BABDE226AE91E4BE1C468F"
+        "OwnerKey" = "8:_99E6D547FDCE4AECA2AAD1EB2C31F74E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -148,61 +148,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_99E6D547FDCE4AECA2AAD1EB2C31F74E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D891DEAFD55959CE46D975CDCD65033A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1AA370AFB6B01939E3CA69D3EFCBA143"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6304E37F82BABDE226AE91E4BE1C468F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F26D26E74C3BDFD924850A0F75C70034"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FFBAFDAF3B7AD6A252920C058B569EC5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_03FAE92F9673AEB999BD4101E9D855A4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DA5A9BD2F51811D5ACA04369A3121FD5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_10665A9DCC592648A5A533830EC93566"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_45BE285CD7BCD6ACAF5E8AAE2244ABFE"
+        "OwnerKey" = "8:_716CC39F2340FBD2314BE8C72FEAF94B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -214,7 +160,61 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_716CC39F2340FBD2314BE8C72FEAF94B"
+        "OwnerKey" = "8:_45BE285CD7BCD6ACAF5E8AAE2244ABFE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_10665A9DCC592648A5A533830EC93566"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_DA5A9BD2F51811D5ACA04369A3121FD5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_03FAE92F9673AEB999BD4101E9D855A4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FFBAFDAF3B7AD6A252920C058B569EC5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_F26D26E74C3BDFD924850A0F75C70034"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6304E37F82BABDE226AE91E4BE1C468F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_1AA370AFB6B01939E3CA69D3EFCBA143"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D891DEAFD55959CE46D975CDCD65033A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_99E6D547FDCE4AECA2AAD1EB2C31F74E"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -225,7 +225,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\FileRenamerSetup.msi"
+        "OutputFilename" = "8:Debug\\AC FileRenamerSetup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -257,11 +257,11 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\FileRenamerSetup.msi"
+        "OutputFilename" = "8:Release\\AC FileRenamerSetup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
-        "Compression" = "3:2"
+        "Compression" = "3:3"
         "SignOutput" = "11:FALSE"
         "CertificateFile" = "8:"
         "PrivateKeyFile" = "8:"
@@ -319,11 +319,6 @@
             "AssemblyAsmDisplayName" = "8:Syroot.Windows.IO.KnownFolders, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_03FAE92F9673AEB999BD4101E9D855A4"
-                    {
-                    "Name" = "8:Syroot.Windows.IO.KnownFolders.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Syroot.Windows.IO.KnownFolders.dll"
             "TargetName" = "8:"
@@ -350,11 +345,6 @@
             "AssemblyAsmDisplayName" = "8:FontAwesome.Net, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_10665A9DCC592648A5A533830EC93566"
-                    {
-                    "Name" = "8:FontAwesome.Net.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:FontAwesome.Net.dll"
             "TargetName" = "8:"
@@ -381,11 +371,6 @@
             "AssemblyAsmDisplayName" = "8:Markdown.Xaml, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1AA370AFB6B01939E3CA69D3EFCBA143"
-                    {
-                    "Name" = "8:Markdown.Xaml.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Markdown.Xaml.dll"
             "TargetName" = "8:"
@@ -412,16 +397,6 @@
             "AssemblyAsmDisplayName" = "8:policy.2.0.taglib-sharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_29F11884C19BC7E47D107BF2C8960A44"
-                    {
-                    "Name" = "8:policy.2.0.taglib-sharp.dll"
-                    "Attributes" = "3:512"
-                    }
-                    "_79C3F8F0191A65DE767A446713689970"
-                    {
-                    "Name" = "8:policy.2.0.taglib-sharp.config"
-                    "Attributes" = "3:1"
-                    }
                 }
             "SourcePath" = "8:policy.2.0.taglib-sharp.dll"
             "TargetName" = "8:"
@@ -448,11 +423,6 @@
             "AssemblyAsmDisplayName" = "8:FastDirectoryEnumerator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_45BE285CD7BCD6ACAF5E8AAE2244ABFE"
-                    {
-                    "Name" = "8:FastDirectoryEnumerator.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:FastDirectoryEnumerator.dll"
             "TargetName" = "8:"
@@ -479,11 +449,6 @@
             "AssemblyAsmDisplayName" = "8:Markdown.Xaml, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_4EC48D1C7989F9AF348A94C21E62466F"
-                    {
-                    "Name" = "8:Markdown.Xaml.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Markdown.Xaml.dll"
             "TargetName" = "8:"
@@ -499,7 +464,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:TRUE"
+            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -530,11 +495,6 @@
             "AssemblyAsmDisplayName" = "8:FileRenamer, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6304E37F82BABDE226AE91E4BE1C468F"
-                    {
-                    "Name" = "8:FileRenamer.exe"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:FileRenamer.exe"
             "TargetName" = "8:"
@@ -561,11 +521,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_716CC39F2340FBD2314BE8C72FEAF94B"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -592,11 +547,6 @@
             "AssemblyAsmDisplayName" = "8:Syroot.Windows.IO.KnownFolders, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D891DEAFD55959CE46D975CDCD65033A"
-                    {
-                    "Name" = "8:Syroot.Windows.IO.KnownFolders.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Syroot.Windows.IO.KnownFolders.dll"
             "TargetName" = "8:"
@@ -612,7 +562,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:TRUE"
+            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -623,11 +573,6 @@
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_DA5A9BD2F51811D5ACA04369A3121FD5"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Newtonsoft.Json.dll"
             "TargetName" = "8:"
@@ -654,11 +599,6 @@
             "AssemblyAsmDisplayName" = "8:FastDirectoryEnumerator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F26D26E74C3BDFD924850A0F75C70034"
-                    {
-                    "Name" = "8:FastDirectoryEnumerator.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:FastDirectoryEnumerator.dll"
             "TargetName" = "8:"
@@ -674,7 +614,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:TRUE"
+            "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -685,11 +625,6 @@
             "AssemblyAsmDisplayName" = "8:taglib-sharp, Version=2.1.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_FFBAFDAF3B7AD6A252920C058B569EC5"
-                    {
-                    "Name" = "8:taglib-sharp.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:taglib-sharp.dll"
             "TargetName" = "8:"
@@ -775,20 +710,20 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:FileRenamer"
-        "ProductCode" = "8:{189F4E5E-B52B-4CD5-A82A-46F6FC91516C}"
-        "PackageCode" = "8:{877058CA-A03B-4965-A296-154E3E8F679F}"
+        "ProductName" = "8:AC FileRenamer"
+        "ProductCode" = "8:{5C8AD137-48A6-42B7-9E91-67DA8240F87D}"
+        "PackageCode" = "8:{33FB6C1A-9EB5-48D4-82B9-754BE405FED0}"
         "UpgradeCode" = "8:{681E6A67-9FB8-4C66-B0FC-85DB96B8803A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.3"
+        "ProductVersion" = "8:1.0.4"
         "Manufacturer" = "8:Andres Cirulo"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:FileRenamer"
+        "Title" = "8:AC FileRenamer"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Andres Cirulo"
         "Keywords" = "8:"
@@ -1326,7 +1261,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3D35EDCC0F744C6AA736CCE8F950559A"
             {
-            "SourcePath" = "8:..\\FileRenamer\\obj\\Debug\\FileRenamer.exe"
+            "SourcePath" = "8:..\\FileRenamer\\obj\\Release\\AC FileRenamer.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_14E1F260663946E1946779A74D653125"
@@ -1382,7 +1317,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_99E6D547FDCE4AECA2AAD1EB2C31F74E"
             {
-            "SourcePath" = "8:..\\SubtituloContextApp\\obj\\Debug\\SubtituloContextApp.exe"
+            "SourcePath" = "8:..\\SubtituloContextApp\\obj\\Release\\SubtituloContextApp.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_14E1F260663946E1946779A74D653125"

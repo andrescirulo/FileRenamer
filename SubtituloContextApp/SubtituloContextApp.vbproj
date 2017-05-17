@@ -115,9 +115,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FileRenamer\FileRenamer.vbproj">
+    <ProjectReference Include="..\FileRenamer\AC FileRenamer.vbproj">
       <Project>{fdea3e0a-4683-448f-a50a-ff031198e162}</Project>
-      <Name>FileRenamer</Name>
+      <Name>AC FileRenamer</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
