@@ -34,9 +34,9 @@
 
     Public Shared Sub Volver()
         If (Historial.Count > 1) Then
-            Historial.Remove(Historial.Last)
+            Historial.RemoveAt(Historial.Count - 1)
             Dim anterior As String = Historial.Last
-            Historial.Remove(Historial.Last)
+            Historial.RemoveAt(Historial.Count - 1)
 
             IrA(anterior)
         End If
