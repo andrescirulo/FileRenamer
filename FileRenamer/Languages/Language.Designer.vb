@@ -64,7 +64,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Hay una versión nueva disponible.
+    '''  Busca una cadena traducida similar a There is a new version available.
     '''</summary>
     Public Shared ReadOnly Property acerca_de_actualizaciones() As String
         Get
@@ -73,7 +73,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a No se pudieron obtener los cambios de la nueva version.
+    '''  Busca una cadena traducida similar a Could not load the version changes.
     '''</summary>
     Public Shared ReadOnly Property acerca_de_cambios_error() As String
         Get
@@ -82,7 +82,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Por cualquier duda, sugerencia o error que desees reportar, escribe a andres.cirulo@gmail.com.
+    '''  Busca una cadena traducida similar a For any doubt, suggestion or error you want to report send a mail to andres.cirulo@gmail.com.
     '''</summary>
     Public Shared ReadOnly Property acerca_de_contacto() As String
         Get
@@ -91,7 +91,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Descargando....
+    '''  Busca una cadena traducida similar a Downloading....
     '''</summary>
     Public Shared ReadOnly Property acerca_de_descargando() As String
         Get
@@ -100,7 +100,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Detalles de la versión.
+    '''  Busca una cadena traducida similar a Version Details.
     '''</summary>
     Public Shared ReadOnly Property acerca_de_detalles() As String
         Get
@@ -109,7 +109,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Instalar.
+    '''  Busca una cadena traducida similar a Install.
     '''</summary>
     Public Shared ReadOnly Property acerca_de_instalar() As String
         Get
@@ -118,7 +118,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Tienes la versión más reciente.
+    '''  Busca una cadena traducida similar a You have the most recent version.
     '''</summary>
     Public Shared ReadOnly Property acerca_de_no_actualizaciones() As String
         Get
@@ -127,7 +127,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Atras.
+    '''  Busca una cadena traducida similar a Back.
     '''</summary>
     Public Shared ReadOnly Property btn_atras() As String
         Get
@@ -136,7 +136,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Al hacer click derecho mientras se presiona la tecla Mayúsculas.
+    '''  Busca una cadena traducida similar a Right Click while pressing Shift key.
     '''</summary>
     Public Shared ReadOnly Property config_cuando_extendido() As String
         Get
@@ -145,7 +145,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Al hacer click derecho.
+    '''  Busca una cadena traducida similar a Right Click.
     '''</summary>
     Public Shared ReadOnly Property config_cuando_normal() As String
         Get
@@ -154,7 +154,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Cuando Aparecer.
+    '''  Busca una cadena traducida similar a Show When.
     '''</summary>
     Public Shared ReadOnly Property config_cuando_titulo() As String
         Get
@@ -163,7 +163,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Al hacer click derecho sobre el nombre de una carpeta.
+    '''  Busca una cadena traducida similar a Folder Name Right Click.
     '''</summary>
     Public Shared ReadOnly Property config_donde_carpeta() As String
         Get
@@ -172,7 +172,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Al hacer click derecho en el fondo de una carpeta.
+    '''  Busca una cadena traducida similar a Folder Background Right Click.
     '''</summary>
     Public Shared ReadOnly Property config_donde_fondo() As String
         Get
@@ -181,7 +181,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Donde Aparecer.
+    '''  Busca una cadena traducida similar a Show At.
     '''</summary>
     Public Shared ReadOnly Property config_donde_titulo() As String
         Get
@@ -190,7 +190,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Guardar.
+    '''  Busca una cadena traducida similar a Save.
     '''</summary>
     Public Shared ReadOnly Property config_guardar() As String
         Get
@@ -199,7 +199,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Menu Contextual de Subtitulos.
+    '''  Busca una cadena traducida similar a Subtitles Context Menu.
     '''</summary>
     Public Shared ReadOnly Property config_menu_contextual() As String
         Get
@@ -208,7 +208,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Habilitar menu contextual en el explorador de Windows.
+    '''  Busca una cadena traducida similar a Enable Windows Explorer Context Menu.
     '''</summary>
     Public Shared ReadOnly Property config_menu_contextual_habilitar() As String
         Get
@@ -217,7 +217,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Renombrar Subtitulos.
+    '''  Busca una cadena traducida similar a Rename Subtitles.
     '''</summary>
     Public Shared ReadOnly Property contextual_procesar() As String
         Get
@@ -226,7 +226,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Información de la Aplicación y Actualizaciones.
+    '''  Busca una cadena traducida similar a Application information and updates.
     '''</summary>
     Public Shared ReadOnly Property inicio_acerca_de() As String
         Get
@@ -235,7 +235,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Configuración de la Aplicación.
+    '''  Busca una cadena traducida similar a Adjust the application configuration.
     '''</summary>
     Public Shared ReadOnly Property inicio_configuracion() As String
         Get
@@ -244,7 +244,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Renombra archivos de acuerdo a un conjunto de operaciones que establezcas.
+    '''  Busca una cadena traducida similar a Rename files using a set of operations of your choice.
     '''</summary>
     Public Shared ReadOnly Property inicio_renombrar() As String
         Get
@@ -253,7 +253,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Renombra archivos de Subtitulo para que tengan el mismo nombre que sus archivos de Video.
+    '''  Busca una cadena traducida similar a Rename Subtitles files so they have the same name that their correspondig Video file.
     '''</summary>
     Public Shared ReadOnly Property inicio_subtitulos() As String
         Get
@@ -262,7 +262,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agregar.
+    '''  Busca una cadena traducida similar a Add.
     '''</summary>
     Public Shared ReadOnly Property renombrar_agregar() As String
         Get
@@ -271,7 +271,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Bajar.
+    '''  Busca una cadena traducida similar a Down.
     '''</summary>
     Public Shared ReadOnly Property renombrar_bajar() As String
         Get
@@ -280,7 +280,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Debes elegir al menos un archivo.
+    '''  Busca una cadena traducida similar a You must choose at least one file.
     '''</summary>
     Public Shared ReadOnly Property renombrar_error_archivos() As String
         Get
@@ -289,7 +289,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Debes agregar al menos una operación.
+    '''  Busca una cadena traducida similar a You must choose at least one operation.
     '''</summary>
     Public Shared ReadOnly Property renombrar_error_operaciones() As String
         Get
@@ -298,7 +298,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Incluir subcarpetas.
+    '''  Busca una cadena traducida similar a Include Subfolders.
     '''</summary>
     Public Shared ReadOnly Property renombrar_incluir_subcarpetas() As String
         Get
@@ -307,7 +307,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Operacion.
+    '''  Busca una cadena traducida similar a Operation.
     '''</summary>
     Public Shared ReadOnly Property renombrar_operacion() As String
         Get
@@ -316,7 +316,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a por.
+    '''  Busca una cadena traducida similar a for.
     '''</summary>
     Public Shared ReadOnly Property renombrar_por() As String
         Get
@@ -325,7 +325,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Quitar.
+    '''  Busca una cadena traducida similar a Remove.
     '''</summary>
     Public Shared ReadOnly Property renombrar_quitar() As String
         Get
@@ -334,7 +334,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Reemplazar.
+    '''  Busca una cadena traducida similar a Replace.
     '''</summary>
     Public Shared ReadOnly Property renombrar_reemplazar() As String
         Get
@@ -343,7 +343,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Carpeta No Seleccionada.
+    '''  Busca una cadena traducida similar a No Folder Selected.
     '''</summary>
     Public Shared ReadOnly Property renombrar_sin_seleccionar() As String
         Get
@@ -352,7 +352,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Subir.
+    '''  Busca una cadena traducida similar a Up.
     '''</summary>
     Public Shared ReadOnly Property renombrar_subir() As String
         Get
@@ -361,7 +361,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Vista Previa.
+    '''  Busca una cadena traducida similar a Preview.
     '''</summary>
     Public Shared ReadOnly Property renombrar_vista_previa() As String
         Get
@@ -370,7 +370,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Renombrar.
+    '''  Busca una cadena traducida similar a Rename.
     '''</summary>
     Public Shared ReadOnly Property resultado_renombrar() As String
         Get
@@ -379,7 +379,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a FileRenamer - Vista Previa.
+    '''  Busca una cadena traducida similar a FileRenamer - Preview.
     '''</summary>
     Public Shared ReadOnly Property resultado_titulo() As String
         Get
@@ -388,7 +388,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Vista previa del resultado.
+    '''  Busca una cadena traducida similar a Result preview.
     '''</summary>
     Public Shared ReadOnly Property resultado_vista_previa() As String
         Get
@@ -397,7 +397,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Desmarcar Todos.
+    '''  Busca una cadena traducida similar a Unselect All.
     '''</summary>
     Public Shared ReadOnly Property subtitulos_desmarcar_todos() As String
         Get
@@ -406,7 +406,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Debes elegir al menos un archivo.
+    '''  Busca una cadena traducida similar a You must choose at least one file.
     '''</summary>
     Public Shared ReadOnly Property subtitulos_error_archivos() As String
         Get
@@ -415,7 +415,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Marcar Todos.
+    '''  Busca una cadena traducida similar a Select All.
     '''</summary>
     Public Shared ReadOnly Property subtitulos_marcar_todos() As String
         Get
@@ -424,7 +424,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Renombrar Seleccionados.
+    '''  Busca una cadena traducida similar a Rename Selected.
     '''</summary>
     Public Shared ReadOnly Property subtitulos_renombrar() As String
         Get
@@ -433,7 +433,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Carpeta No Seleccionada.
+    '''  Busca una cadena traducida similar a No Folder Selected.
     '''</summary>
     Public Shared ReadOnly Property subtitulos_sin_seleccionar() As String
         Get
@@ -442,7 +442,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Acerca de.
+    '''  Busca una cadena traducida similar a About.
     '''</summary>
     Public Shared ReadOnly Property tab_acerca_de() As String
         Get
@@ -451,7 +451,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Configuración.
+    '''  Busca una cadena traducida similar a Configuration.
     '''</summary>
     Public Shared ReadOnly Property tab_configuracion() As String
         Get
@@ -460,7 +460,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Renombrar Archivos.
+    '''  Busca una cadena traducida similar a Rename Files.
     '''</summary>
     Public Shared ReadOnly Property tab_renombrar_archivos() As String
         Get
@@ -469,7 +469,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Renombrar Subtitulos.
+    '''  Busca una cadena traducida similar a Rename Subtitles.
     '''</summary>
     Public Shared ReadOnly Property tab_renombrar_subtitulos() As String
         Get
@@ -478,7 +478,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Hay una nueva actualización disponible, haz click aquí.
+    '''  Busca una cadena traducida similar a There is a new version available, click here.
     '''</summary>
     Public Shared ReadOnly Property toolbar_actualizacion() As String
         Get

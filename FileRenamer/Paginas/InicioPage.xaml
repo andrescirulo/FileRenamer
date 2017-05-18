@@ -10,6 +10,11 @@
     <Grid>
         <Border BorderBrush="black" BorderThickness="1" Padding="10">
         <StackPanel HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Center">
+            <TextBlock Background="Beige" x:Name="txtLanguage" Visibility="Collapsed"  Width="440" TextWrapping="WrapWithOverflow"  Margin="5" Padding="5" VerticalAlignment="Center" >
+                Your default language is not supported. ¿Would help us translate our app? Please contact me to 
+                andres.cirulo@gmail.com
+                <Button x:Name="btnMail" Content="Copy Address" HorizontalAlignment="Center" Margin="0" FontSize="8pt" VerticalAlignment="Top" Width="80" Padding="2"/>
+            </TextBlock>
             <WrapPanel>
                 <local:FAButton x:Name="btnRenombrar" ButtonText="{x:Static local:Language.tab_renombrar_archivos }" FAIcon="{x:Static fa:FontAwesome.fa_pencil}"
                                 HorizontalAlignment="Left"  Margin="0,0,0,0" VerticalAlignment="Top" Width="170" Height="40"/>

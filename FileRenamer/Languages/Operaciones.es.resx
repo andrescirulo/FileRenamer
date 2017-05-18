@@ -117,142 +117,115 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="acerca_de_actualizaciones" xml:space="preserve">
-    <value>There is a new version available</value>
+  <data name="AgregarAlFinalDelNombre_Nombre" xml:space="preserve">
+    <value>Agregar al final del nombre</value>
   </data>
-  <data name="acerca_de_contacto" xml:space="preserve">
-    <value>For any doubt, suggestion or error you want to report send a mail to andres.cirulo@gmail.com</value>
+  <data name="AgregarAlFinalDelNombre_ToString" xml:space="preserve">
+    <value>Agregar "{1}" al final del nombre</value>
   </data>
-  <data name="acerca_de_descargando" xml:space="preserve">
-    <value>Downloading...</value>
+  <data name="AgregarAlFinalDeTodo_Nombre" xml:space="preserve">
+    <value>Agregar al final de todo</value>
   </data>
-  <data name="acerca_de_detalles" xml:space="preserve">
-    <value>Version Details</value>
+  <data name="AgregarAlFinalDeTodo_ToString" xml:space="preserve">
+    <value>Agregar "{1}" al final de todo</value>
   </data>
-  <data name="acerca_de_instalar" xml:space="preserve">
-    <value>Install</value>
+  <data name="AgregarAlPrincipio_Nombre" xml:space="preserve">
+    <value>Agregar al principio del nombre</value>
   </data>
-  <data name="acerca_de_no_actualizaciones" xml:space="preserve">
-    <value>You have the most recent version</value>
+  <data name="AgregarAlPrincipio_ToString" xml:space="preserve">
+    <value>Agregar "{1}" al principio del nombre</value>
   </data>
-  <data name="btn_atras" xml:space="preserve">
-    <value>Back</value>
+  <data name="AgregarPadding_Cantidad" xml:space="preserve">
+    <value>Cant.:</value>
   </data>
-  <data name="config_cuando_extendido" xml:space="preserve">
-    <value>Right Click while pressing Shift key</value>
+  <data name="AgregarPadding_Caracter" xml:space="preserve">
+    <value>Caracter:</value>
   </data>
-  <data name="config_cuando_normal" xml:space="preserve">
-    <value>Right Click</value>
+  <data name="AgregarPadding_Nombre" xml:space="preserve">
+    <value>Agregar padding</value>
   </data>
-  <data name="config_cuando_titulo" xml:space="preserve">
-    <value>Show When</value>
+  <data name="AgregarPadding_ToString" xml:space="preserve">
+    <value>Agregar "{1}" hasta llegar a {2} caracteres</value>
   </data>
-  <data name="config_donde_carpeta" xml:space="preserve">
-    <value>Folder Name Right Click</value>
+  <data name="EliminarEntreCaracteres_Nombre" xml:space="preserve">
+    <value>Eliminar entre caracteres (sin incluir la extension)</value>
   </data>
-  <data name="config_donde_fondo" xml:space="preserve">
-    <value>Folder Background Right Click</value>
+  <data name="EliminarEntreCaracteres_ToString" xml:space="preserve">
+    <value>Eliminar texto entre "{1}" y "{2}"</value>
   </data>
-  <data name="config_donde_titulo" xml:space="preserve">
-    <value>Show At</value>
+  <data name="Operacion_Entre" xml:space="preserve">
+    <value>Entre</value>
   </data>
-  <data name="config_guardar" xml:space="preserve">
-    <value>Save</value>
+  <data name="Operacion_Y" xml:space="preserve">
+    <value>y</value>
   </data>
-  <data name="config_menu_contextual" xml:space="preserve">
-    <value>Subtitles Context Menu</value>
+  <data name="ReemplazoEnNombre_Nombre" xml:space="preserve">
+    <value>Reemplazar (sin incluir la extension)</value>
   </data>
-  <data name="config_menu_contextual_habilitar" xml:space="preserve">
-    <value>Enable Windows Explorer Context Menu</value>
+  <data name="ReemplazoEnNombre_ToString" xml:space="preserve">
+    <value>Reemplazar "{1}" por "{2}"</value>
   </data>
-  <data name="contextual_procesar" xml:space="preserve">
-    <value>Rename Subtitles</value>
+  <data name="Reemplazo_Nombre" xml:space="preserve">
+    <value>Reemplazar (inclusive en la extension)</value>
   </data>
-  <data name="inicio_acerca_de" xml:space="preserve">
-    <value>Application information and updates</value>
+  <data name="Reemplazo_ToString" xml:space="preserve">
+    <value>Reemplazar "{1}" por "{2}"</value>
   </data>
-  <data name="inicio_configuracion" xml:space="preserve">
-    <value>Adjust the application configuration</value>
+  <data name="SoloEntreCaracteres_Nombre" xml:space="preserve">
+    <value>Solo entre caracteres (sin incluir la extension)</value>
   </data>
-  <data name="inicio_renombrar" xml:space="preserve">
-    <value>Rename files using a set of operations of your choice</value>
+  <data name="SoloEntreCaracteres_ToString" xml:space="preserve">
+    <value>Solo texto entre "{1}" y "{2}"</value>
   </data>
-  <data name="inicio_subtitulos" xml:space="preserve">
-    <value>Rename Subtitles files so they have the same name that their correspondig Video file</value>
+  <data name="MayusculasYMinusculas_Nombre" xml:space="preserve">
+    <value>Mayúsculas y Minúsculas</value>
   </data>
-  <data name="renombrar_agregar" xml:space="preserve">
-    <value>Add</value>
+  <data name="MayusculasYMinusculas_ToString" xml:space="preserve">
+    <value>Colocar Mayúsculas y Minúsculas</value>
   </data>
-  <data name="renombrar_bajar" xml:space="preserve">
-    <value>Down</value>
+  <data name="TodoAMayusculas_Nombre" xml:space="preserve">
+    <value>Convertir todo a Mayúsculas</value>
   </data>
-  <data name="renombrar_error_archivos" xml:space="preserve">
-    <value>You must choose at least one file</value>
+  <data name="TodoAMayusculas_ToString" xml:space="preserve">
+    <value>Convertir todo a Mayúsculas</value>
   </data>
-  <data name="renombrar_error_operaciones" xml:space="preserve">
-    <value>You must choose at least one operation</value>
+  <data name="TodoAMinusculas_Nombre" xml:space="preserve">
+    <value>Convertir todo a Minúsculas</value>
   </data>
-  <data name="renombrar_incluir_subcarpetas" xml:space="preserve">
-    <value>Include Subfolders</value>
+  <data name="TodoAMinusculas_ToString" xml:space="preserve">
+    <value>Convertir todo a Minúsculas</value>
   </data>
-  <data name="renombrar_operacion" xml:space="preserve">
-    <value>Operation</value>
+  <data name="AgregarAlFinalDelNombre_Descripcion" xml:space="preserve">
+    <value>Agrega el texto especificado al final del nombre del archivo, antes de su extensión</value>
   </data>
-  <data name="renombrar_por" xml:space="preserve">
-    <value>for</value>
+  <data name="AgregarAlFinalDeTodo_Descripcion" xml:space="preserve">
+    <value>Agrega el texto especificado al final del nombre del archivo, luego de su extensión</value>
   </data>
-  <data name="renombrar_quitar" xml:space="preserve">
-    <value>Remove</value>
+  <data name="AgregarAlPrincipio_Descripcion" xml:space="preserve">
+    <value>Agrega el texto especificado al inicio del nombre del archivo</value>
   </data>
-  <data name="renombrar_reemplazar" xml:space="preserve">
-    <value>Replace</value>
+  <data name="AgregarPadding_Descripcion" xml:space="preserve">
+    <value>Agrega el caracter especificado al inicio del nombre del archivo hasta que su longitud sea la especificada</value>
   </data>
-  <data name="renombrar_sin_seleccionar" xml:space="preserve">
-    <value>No Folder Selected</value>
+  <data name="EliminarEntreCaracteres_Descripcion" xml:space="preserve">
+    <value>Elimina todo el texto entre los caracteres especificados, inclusive los caracteres límite</value>
   </data>
-  <data name="renombrar_subir" xml:space="preserve">
-    <value>Up</value>
+  <data name="MayusculasYMinusculas_Descripcion" xml:space="preserve">
+    <value>Convierte el texto a mayúsculas y minúsculas separando por palabra</value>
   </data>
-  <data name="renombrar_vista_previa" xml:space="preserve">
-    <value>Preview</value>
+  <data name="ReemplazoEnNombre_Descripcion" xml:space="preserve">
+    <value>Reemplaza un texto por otro en el nombre del archivo, sin incluír la extension</value>
   </data>
-  <data name="resultado_renombrar" xml:space="preserve">
-    <value>Rename</value>
+  <data name="Reemplazo_Descripcion" xml:space="preserve">
+    <value>Reemplaza un texto por otro en el nombre del archivo, incluyendo la extension</value>
   </data>
-  <data name="resultado_titulo" xml:space="preserve">
-    <value>FileRenamer - Preview</value>
+  <data name="SoloEntreCaracteres_Descripcion" xml:space="preserve">
+    <value>Conserva solo el texto entre los caracteres especificados, sin incluír los caracteres límite</value>
   </data>
-  <data name="resultado_vista_previa" xml:space="preserve">
-    <value>Result preview</value>
+  <data name="TodoAMayusculas_Descripcion" xml:space="preserve">
+    <value>Convierte todo el nombre del archivo a mayúsculas</value>
   </data>
-  <data name="subtitulos_desmarcar_todos" xml:space="preserve">
-    <value>Unselect All</value>
-  </data>
-  <data name="subtitulos_error_archivos" xml:space="preserve">
-    <value>You must choose at least one file</value>
-  </data>
-  <data name="subtitulos_marcar_todos" xml:space="preserve">
-    <value>Select All</value>
-  </data>
-  <data name="subtitulos_renombrar" xml:space="preserve">
-    <value>Rename Selected</value>
-  </data>
-  <data name="subtitulos_sin_seleccionar" xml:space="preserve">
-    <value>No Folder Selected</value>
-  </data>
-  <data name="tab_acerca_de" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="tab_configuracion" xml:space="preserve">
-    <value>Configuration</value>
-  </data>
-  <data name="tab_renombrar_archivos" xml:space="preserve">
-    <value>Rename Files</value>
-  </data>
-  <data name="tab_renombrar_subtitulos" xml:space="preserve">
-    <value>Rename Subtitles</value>
-  </data>
-  <data name="toolbar_actualizacion" xml:space="preserve">
-    <value>There is a new version available, click here</value>
+  <data name="TodoAMinusculas_Descripcion" xml:space="preserve">
+    <value>Convierte todo el nombre del archivo a minúsculas</value>
   </data>
 </root>

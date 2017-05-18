@@ -64,7 +64,7 @@ Public Class Carpetas
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Descargas.
+    '''  Busca una cadena traducida similar a Downloads.
     '''</summary>
     Public Shared ReadOnly Property Descargas() As String
         Get
@@ -73,7 +73,7 @@ Public Class Carpetas
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Documentos.
+    '''  Busca una cadena traducida similar a Documents.
     '''</summary>
     Public Shared ReadOnly Property Documentos() As String
         Get
@@ -82,7 +82,7 @@ Public Class Carpetas
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Este Equipo.
+    '''  Busca una cadena traducida similar a This Pc.
     '''</summary>
     Public Shared ReadOnly Property Equipo() As String
         Get
@@ -91,7 +91,7 @@ Public Class Carpetas
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Escritorio.
+    '''  Busca una cadena traducida similar a Desktop.
     '''</summary>
     Public Shared ReadOnly Property Escritorio() As String
         Get
@@ -100,7 +100,7 @@ Public Class Carpetas
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Imágenes.
+    '''  Busca una cadena traducida similar a Pictures.
     '''</summary>
     Public Shared ReadOnly Property Imagenes() As String
         Get
@@ -109,7 +109,7 @@ Public Class Carpetas
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Música.
+    '''  Busca una cadena traducida similar a Music.
     '''</summary>
     Public Shared ReadOnly Property Musica() As String
         Get

@@ -118,114 +118,114 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AgregarAlFinalDelNombre_Nombre" xml:space="preserve">
-    <value>Agregar al final del nombre</value>
+    <value>Add at the end of the filename</value>
   </data>
   <data name="AgregarAlFinalDelNombre_ToString" xml:space="preserve">
-    <value>Agregar "{1}" al final del nombre</value>
+    <value>Add "{1}" at the end of the filename</value>
   </data>
   <data name="AgregarAlFinalDeTodo_Nombre" xml:space="preserve">
-    <value>Agregar al final de todo</value>
+    <value>Add at the end of the filename (after the extension)</value>
   </data>
   <data name="AgregarAlFinalDeTodo_ToString" xml:space="preserve">
-    <value>Agregar "{1}" al final de todo</value>
+    <value>Add "{1}" after the extension of the filename</value>
   </data>
   <data name="AgregarAlPrincipio_Nombre" xml:space="preserve">
-    <value>Agregar al principio del nombre</value>
+    <value>Add at the begining of the filename</value>
   </data>
   <data name="AgregarAlPrincipio_ToString" xml:space="preserve">
-    <value>Agregar "{1}" al principio del nombre</value>
+    <value>Add "{1}" at the begining of the filename</value>
   </data>
   <data name="AgregarPadding_Cantidad" xml:space="preserve">
-    <value>Cant.:</value>
+    <value>Repetitions.:</value>
   </data>
   <data name="AgregarPadding_Caracter" xml:space="preserve">
-    <value>Caracter:</value>
+    <value>Character:</value>
   </data>
   <data name="AgregarPadding_Nombre" xml:space="preserve">
-    <value>Agregar padding</value>
+    <value>Add padding</value>
   </data>
   <data name="AgregarPadding_ToString" xml:space="preserve">
-    <value>Agregar "{1}" hasta llegar a {2} caracteres</value>
+    <value>Add "{1}" until reaching {2} characters</value>
   </data>
   <data name="EliminarEntreCaracteres_Nombre" xml:space="preserve">
-    <value>Eliminar entre caracteres (sin incluir la extension)</value>
+    <value>Remove between characters (without including the extension)</value>
   </data>
   <data name="EliminarEntreCaracteres_ToString" xml:space="preserve">
-    <value>Eliminar texto entre "{1}" y "{2}"</value>
+    <value>Remove text between "{1}" and "{2}"</value>
   </data>
   <data name="Operacion_Entre" xml:space="preserve">
-    <value>Entre</value>
+    <value>Between</value>
   </data>
   <data name="Operacion_Y" xml:space="preserve">
-    <value>y</value>
+    <value>and</value>
   </data>
   <data name="ReemplazoEnNombre_Nombre" xml:space="preserve">
-    <value>Reemplazar (sin incluir la extension)</value>
+    <value>Replace (without including the extension)</value>
   </data>
   <data name="ReemplazoEnNombre_ToString" xml:space="preserve">
-    <value>Reemplazar "{1}" por "{2}"</value>
+    <value>Replace "{1}" for "{2}" (without including the extension)</value>
   </data>
   <data name="Reemplazo_Nombre" xml:space="preserve">
-    <value>Reemplazar (inclusive en la extension)</value>
+    <value>Replace (including the extension)</value>
   </data>
   <data name="Reemplazo_ToString" xml:space="preserve">
-    <value>Reemplazar "{1}" por "{2}"</value>
+    <value>Replace "{1}" for "{2}" (including the extension)</value>
   </data>
   <data name="SoloEntreCaracteres_Nombre" xml:space="preserve">
-    <value>Solo entre caracteres (sin incluir la extension)</value>
+    <value>Only between characters (without including the extension)</value>
   </data>
   <data name="SoloEntreCaracteres_ToString" xml:space="preserve">
-    <value>Solo texto entre "{1}" y "{2}"</value>
+    <value>Only text between "{1}" and "{2}"</value>
   </data>
   <data name="MayusculasYMinusculas_Nombre" xml:space="preserve">
-    <value>Mayúsculas y Minúsculas</value>
+    <value>Uppercase and LowerCase</value>
   </data>
   <data name="MayusculasYMinusculas_ToString" xml:space="preserve">
-    <value>Colocar Mayúsculas y Minúsculas</value>
+    <value>Convert Uppercase and Lowercase</value>
   </data>
   <data name="TodoAMayusculas_Nombre" xml:space="preserve">
-    <value>Convertir todo a Mayúsculas</value>
+    <value>Convert filename to Uppercase</value>
   </data>
   <data name="TodoAMayusculas_ToString" xml:space="preserve">
-    <value>Convertir todo a Mayúsculas</value>
+    <value>Convert filename to Uppercase</value>
   </data>
   <data name="TodoAMinusculas_Nombre" xml:space="preserve">
-    <value>Convertir todo a Minúsculas</value>
+    <value>Convert filename to Lowercase</value>
   </data>
   <data name="TodoAMinusculas_ToString" xml:space="preserve">
-    <value>Convertir todo a Minúsculas</value>
+    <value>Convert filename to Lowercase</value>
   </data>
   <data name="AgregarAlFinalDelNombre_Descripcion" xml:space="preserve">
-    <value>Agrega el texto especificado al final del nombre del archivo, antes de su extensión</value>
+    <value>Adds the specified text at the end of the filename, before the extension</value>
   </data>
   <data name="AgregarAlFinalDeTodo_Descripcion" xml:space="preserve">
-    <value>Agrega el texto especificado al final del nombre del archivo, luego de su extensión</value>
+    <value>Adds the specified text at the end of the filename, after the extension</value>
   </data>
   <data name="AgregarAlPrincipio_Descripcion" xml:space="preserve">
-    <value>Agrega el texto especificado al inicio del nombre del archivo</value>
+    <value>Adds the specified text at the begining of the filename</value>
   </data>
   <data name="AgregarPadding_Descripcion" xml:space="preserve">
-    <value>Agrega el caracter especificado al inicio del nombre del archivo hasta que su longitud sea la especificada</value>
+    <value>Adds the specified character at the begining of the filename until it's length is the specified</value>
   </data>
   <data name="EliminarEntreCaracteres_Descripcion" xml:space="preserve">
-    <value>Elimina todo el texto entre los caracteres especificados, inclusive los caracteres límite</value>
+    <value>Removes the text between the specified characters, including the boundary characters</value>
   </data>
   <data name="MayusculasYMinusculas_Descripcion" xml:space="preserve">
-    <value>Convierte el texto a mayúsculas y minúsculas separando por palabra</value>
+    <value>Converts the text to lowercase and uppercase separating by word</value>
   </data>
   <data name="ReemplazoEnNombre_Descripcion" xml:space="preserve">
-    <value>Reemplaza un texto por otro en el nombre del archivo, sin incluír la extension</value>
+    <value>Replace one text for another in the filename, without including the extension</value>
   </data>
   <data name="Reemplazo_Descripcion" xml:space="preserve">
-    <value>Reemplaza un texto por otro en el nombre del archivo, incluyendo la extension</value>
+    <value>Replace one text for another in the filename, including the extension</value>
   </data>
   <data name="SoloEntreCaracteres_Descripcion" xml:space="preserve">
-    <value>Conserva solo el texto entre los caracteres especificados, sin incluír los caracteres límite</value>
+    <value>Keeps only the text between the specified characters without including the boundary characters</value>
   </data>
   <data name="TodoAMayusculas_Descripcion" xml:space="preserve">
-    <value>Convierte todo el nombre del archivo a mayúsculas</value>
+    <value>Converts all the filename to Uppercase</value>
   </data>
   <data name="TodoAMinusculas_Descripcion" xml:space="preserve">
-    <value>Convierte todo el nombre del archivo a minúsculas</value>
+    <value>Converts all the filename to Lowercase</value>
   </data>
 </root>

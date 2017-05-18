@@ -117,25 +117,145 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Descargas" xml:space="preserve">
-    <value>Downloads</value>
+  <data name="acerca_de_actualizaciones" xml:space="preserve">
+    <value>Hay una versión nueva disponible</value>
   </data>
-  <data name="Documentos" xml:space="preserve">
-    <value>Documents</value>
+  <data name="acerca_de_cambios_error" xml:space="preserve">
+    <value>No se pudieron obtener los cambios de la nueva version</value>
   </data>
-  <data name="Equipo" xml:space="preserve">
-    <value>This Pc</value>
+  <data name="acerca_de_contacto" xml:space="preserve">
+    <value>Por cualquier duda, sugerencia o error que desees reportar, escribe a andres.cirulo@gmail.com</value>
   </data>
-  <data name="Escritorio" xml:space="preserve">
-    <value>Desktop</value>
+  <data name="acerca_de_descargando" xml:space="preserve">
+    <value>Descargando...</value>
   </data>
-  <data name="Imagenes" xml:space="preserve">
-    <value>Pictures</value>
+  <data name="acerca_de_detalles" xml:space="preserve">
+    <value>Detalles de la versión</value>
   </data>
-  <data name="Musica" xml:space="preserve">
-    <value>Music</value>
+  <data name="acerca_de_instalar" xml:space="preserve">
+    <value>Instalar</value>
   </data>
-  <data name="Videos" xml:space="preserve">
-    <value>Videos</value>
+  <data name="acerca_de_no_actualizaciones" xml:space="preserve">
+    <value>Tienes la versión más reciente</value>
+  </data>
+  <data name="btn_atras" xml:space="preserve">
+    <value>Atras</value>
+  </data>
+  <data name="config_cuando_extendido" xml:space="preserve">
+    <value>Al hacer click derecho mientras se presiona la tecla Mayúsculas</value>
+  </data>
+  <data name="config_cuando_normal" xml:space="preserve">
+    <value>Al hacer click derecho</value>
+  </data>
+  <data name="config_cuando_titulo" xml:space="preserve">
+    <value>Cuando Aparecer</value>
+  </data>
+  <data name="config_donde_carpeta" xml:space="preserve">
+    <value>Al hacer click derecho sobre el nombre de una carpeta</value>
+  </data>
+  <data name="config_donde_fondo" xml:space="preserve">
+    <value>Al hacer click derecho en el fondo de una carpeta</value>
+  </data>
+  <data name="config_donde_titulo" xml:space="preserve">
+    <value>Donde Aparecer</value>
+  </data>
+  <data name="config_guardar" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="config_menu_contextual" xml:space="preserve">
+    <value>Menu Contextual de Subtitulos</value>
+  </data>
+  <data name="config_menu_contextual_habilitar" xml:space="preserve">
+    <value>Habilitar menu contextual en el explorador de Windows</value>
+  </data>
+  <data name="contextual_procesar" xml:space="preserve">
+    <value>Renombrar Subtitulos</value>
+  </data>
+  <data name="inicio_acerca_de" xml:space="preserve">
+    <value>Información de la Aplicación y Actualizaciones</value>
+  </data>
+  <data name="inicio_configuracion" xml:space="preserve">
+    <value>Configuración de la Aplicación</value>
+  </data>
+  <data name="inicio_renombrar" xml:space="preserve">
+    <value>Renombra archivos de acuerdo a un conjunto de operaciones que establezcas</value>
+  </data>
+  <data name="inicio_subtitulos" xml:space="preserve">
+    <value>Renombra archivos de Subtitulo para que tengan el mismo nombre que sus archivos de Video</value>
+  </data>
+  <data name="renombrar_agregar" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="renombrar_bajar" xml:space="preserve">
+    <value>Bajar</value>
+  </data>
+  <data name="renombrar_error_archivos" xml:space="preserve">
+    <value>Debes elegir al menos un archivo</value>
+  </data>
+  <data name="renombrar_error_operaciones" xml:space="preserve">
+    <value>Debes agregar al menos una operación</value>
+  </data>
+  <data name="renombrar_incluir_subcarpetas" xml:space="preserve">
+    <value>Incluir subcarpetas</value>
+  </data>
+  <data name="renombrar_operacion" xml:space="preserve">
+    <value>Operacion</value>
+  </data>
+  <data name="renombrar_por" xml:space="preserve">
+    <value>por</value>
+  </data>
+  <data name="renombrar_quitar" xml:space="preserve">
+    <value>Quitar</value>
+  </data>
+  <data name="renombrar_reemplazar" xml:space="preserve">
+    <value>Reemplazar</value>
+  </data>
+  <data name="renombrar_sin_seleccionar" xml:space="preserve">
+    <value>Carpeta No Seleccionada</value>
+  </data>
+  <data name="renombrar_subir" xml:space="preserve">
+    <value>Subir</value>
+  </data>
+  <data name="renombrar_vista_previa" xml:space="preserve">
+    <value>Vista Previa</value>
+  </data>
+  <data name="resultado_renombrar" xml:space="preserve">
+    <value>Renombrar</value>
+  </data>
+  <data name="resultado_titulo" xml:space="preserve">
+    <value>FileRenamer - Vista Previa</value>
+  </data>
+  <data name="resultado_vista_previa" xml:space="preserve">
+    <value>Vista previa del resultado</value>
+  </data>
+  <data name="subtitulos_desmarcar_todos" xml:space="preserve">
+    <value>Desmarcar Todos</value>
+  </data>
+  <data name="subtitulos_error_archivos" xml:space="preserve">
+    <value>Debes elegir al menos un archivo</value>
+  </data>
+  <data name="subtitulos_marcar_todos" xml:space="preserve">
+    <value>Marcar Todos</value>
+  </data>
+  <data name="subtitulos_renombrar" xml:space="preserve">
+    <value>Renombrar Seleccionados</value>
+  </data>
+  <data name="subtitulos_sin_seleccionar" xml:space="preserve">
+    <value>Carpeta No Seleccionada</value>
+  </data>
+  <data name="tab_acerca_de" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
+  <data name="tab_configuracion" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="tab_renombrar_archivos" xml:space="preserve">
+    <value>Renombrar Archivos</value>
+  </data>
+  <data name="tab_renombrar_subtitulos" xml:space="preserve">
+    <value>Renombrar Subtitulos</value>
+  </data>
+  <data name="toolbar_actualizacion" xml:space="preserve">
+    <value>Hay una nueva actualización disponible, haz click aquí</value>
   </data>
 </root>

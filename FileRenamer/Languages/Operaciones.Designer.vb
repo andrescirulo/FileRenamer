@@ -64,7 +64,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agrega el texto especificado al final del nombre del archivo, antes de su extensión.
+    '''  Busca una cadena traducida similar a Adds the specified text at the end of the filename, before the extension.
     '''</summary>
     Public Shared ReadOnly Property AgregarAlFinalDelNombre_Descripcion() As String
         Get
@@ -73,7 +73,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agregar al final del nombre.
+    '''  Busca una cadena traducida similar a Add at the end of the filename.
     '''</summary>
     Public Shared ReadOnly Property AgregarAlFinalDelNombre_Nombre() As String
         Get
@@ -82,7 +82,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agregar &quot;{1}&quot; al final del nombre.
+    '''  Busca una cadena traducida similar a Add &quot;{1}&quot; at the end of the filename.
     '''</summary>
     Public Shared ReadOnly Property AgregarAlFinalDelNombre_ToString() As String
         Get
@@ -91,7 +91,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agrega el texto especificado al final del nombre del archivo, luego de su extensión.
+    '''  Busca una cadena traducida similar a Adds the specified text at the end of the filename, after the extension.
     '''</summary>
     Public Shared ReadOnly Property AgregarAlFinalDeTodo_Descripcion() As String
         Get
@@ -100,7 +100,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agregar al final de todo.
+    '''  Busca una cadena traducida similar a Add at the end of the filename (after the extension).
     '''</summary>
     Public Shared ReadOnly Property AgregarAlFinalDeTodo_Nombre() As String
         Get
@@ -109,7 +109,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agregar &quot;{1}&quot; al final de todo.
+    '''  Busca una cadena traducida similar a Add &quot;{1}&quot; after the extension of the filename.
     '''</summary>
     Public Shared ReadOnly Property AgregarAlFinalDeTodo_ToString() As String
         Get
@@ -118,7 +118,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agrega el texto especificado al inicio del nombre del archivo.
+    '''  Busca una cadena traducida similar a Adds the specified text at the begining of the filename.
     '''</summary>
     Public Shared ReadOnly Property AgregarAlPrincipio_Descripcion() As String
         Get
@@ -127,7 +127,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agregar al principio del nombre.
+    '''  Busca una cadena traducida similar a Add at the begining of the filename.
     '''</summary>
     Public Shared ReadOnly Property AgregarAlPrincipio_Nombre() As String
         Get
@@ -136,7 +136,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agregar &quot;{1}&quot; al principio del nombre.
+    '''  Busca una cadena traducida similar a Add &quot;{1}&quot; at the begining of the filename.
     '''</summary>
     Public Shared ReadOnly Property AgregarAlPrincipio_ToString() As String
         Get
@@ -145,7 +145,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Cant.:.
+    '''  Busca una cadena traducida similar a Repetitions.:.
     '''</summary>
     Public Shared ReadOnly Property AgregarPadding_Cantidad() As String
         Get
@@ -154,7 +154,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Caracter:.
+    '''  Busca una cadena traducida similar a Character:.
     '''</summary>
     Public Shared ReadOnly Property AgregarPadding_Caracter() As String
         Get
@@ -163,7 +163,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agrega el caracter especificado al inicio del nombre del archivo hasta que su longitud sea la especificada.
+    '''  Busca una cadena traducida similar a Adds the specified character at the begining of the filename until it&apos;s length is the specified.
     '''</summary>
     Public Shared ReadOnly Property AgregarPadding_Descripcion() As String
         Get
@@ -172,7 +172,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agregar padding.
+    '''  Busca una cadena traducida similar a Add padding.
     '''</summary>
     Public Shared ReadOnly Property AgregarPadding_Nombre() As String
         Get
@@ -181,7 +181,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Agregar &quot;{1}&quot; hasta llegar a {2} caracteres.
+    '''  Busca una cadena traducida similar a Add &quot;{1}&quot; until reaching {2} characters.
     '''</summary>
     Public Shared ReadOnly Property AgregarPadding_ToString() As String
         Get
@@ -190,7 +190,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Elimina todo el texto entre los caracteres especificados, inclusive los caracteres límite.
+    '''  Busca una cadena traducida similar a Removes the text between the specified characters, including the boundary characters.
     '''</summary>
     Public Shared ReadOnly Property EliminarEntreCaracteres_Descripcion() As String
         Get
@@ -199,7 +199,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Eliminar entre caracteres (sin incluir la extension).
+    '''  Busca una cadena traducida similar a Remove between characters (without including the extension).
     '''</summary>
     Public Shared ReadOnly Property EliminarEntreCaracteres_Nombre() As String
         Get
@@ -208,7 +208,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Eliminar texto entre &quot;{1}&quot; y &quot;{2}&quot;.
+    '''  Busca una cadena traducida similar a Remove text between &quot;{1}&quot; and &quot;{2}&quot;.
     '''</summary>
     Public Shared ReadOnly Property EliminarEntreCaracteres_ToString() As String
         Get
@@ -217,7 +217,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Convierte el texto a mayúsculas y minúsculas separando por palabra.
+    '''  Busca una cadena traducida similar a Converts the text to lowercase and uppercase separating by word.
     '''</summary>
     Public Shared ReadOnly Property MayusculasYMinusculas_Descripcion() As String
         Get
@@ -226,7 +226,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Mayúsculas y Minúsculas.
+    '''  Busca una cadena traducida similar a Uppercase and LowerCase.
     '''</summary>
     Public Shared ReadOnly Property MayusculasYMinusculas_Nombre() As String
         Get
@@ -235,7 +235,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Colocar Mayúsculas y Minúsculas.
+    '''  Busca una cadena traducida similar a Convert Uppercase and Lowercase.
     '''</summary>
     Public Shared ReadOnly Property MayusculasYMinusculas_ToString() As String
         Get
@@ -244,7 +244,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Entre.
+    '''  Busca una cadena traducida similar a Between.
     '''</summary>
     Public Shared ReadOnly Property Operacion_Entre() As String
         Get
@@ -253,7 +253,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a y.
+    '''  Busca una cadena traducida similar a and.
     '''</summary>
     Public Shared ReadOnly Property Operacion_Y() As String
         Get
@@ -262,7 +262,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Reemplaza un texto por otro en el nombre del archivo, incluyendo la extension.
+    '''  Busca una cadena traducida similar a Replace one text for another in the filename, including the extension.
     '''</summary>
     Public Shared ReadOnly Property Reemplazo_Descripcion() As String
         Get
@@ -271,7 +271,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Reemplazar (inclusive en la extension).
+    '''  Busca una cadena traducida similar a Replace (including the extension).
     '''</summary>
     Public Shared ReadOnly Property Reemplazo_Nombre() As String
         Get
@@ -280,7 +280,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Reemplazar &quot;{1}&quot; por &quot;{2}&quot;.
+    '''  Busca una cadena traducida similar a Replace &quot;{1}&quot; for &quot;{2}&quot; (including the extension).
     '''</summary>
     Public Shared ReadOnly Property Reemplazo_ToString() As String
         Get
@@ -289,7 +289,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Reemplaza un texto por otro en el nombre del archivo, sin incluír la extension.
+    '''  Busca una cadena traducida similar a Replace one text for another in the filename, without including the extension.
     '''</summary>
     Public Shared ReadOnly Property ReemplazoEnNombre_Descripcion() As String
         Get
@@ -298,7 +298,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Reemplazar (sin incluir la extension).
+    '''  Busca una cadena traducida similar a Replace (without including the extension).
     '''</summary>
     Public Shared ReadOnly Property ReemplazoEnNombre_Nombre() As String
         Get
@@ -307,7 +307,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Reemplazar &quot;{1}&quot; por &quot;{2}&quot;.
+    '''  Busca una cadena traducida similar a Replace &quot;{1}&quot; for &quot;{2}&quot; (without including the extension).
     '''</summary>
     Public Shared ReadOnly Property ReemplazoEnNombre_ToString() As String
         Get
@@ -316,7 +316,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Conserva solo el texto entre los caracteres especificados, sin incluír los caracteres límite.
+    '''  Busca una cadena traducida similar a Keeps only the text between the specified characters without including the boundary characters.
     '''</summary>
     Public Shared ReadOnly Property SoloEntreCaracteres_Descripcion() As String
         Get
@@ -325,7 +325,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Solo entre caracteres (sin incluir la extension).
+    '''  Busca una cadena traducida similar a Only between characters (without including the extension).
     '''</summary>
     Public Shared ReadOnly Property SoloEntreCaracteres_Nombre() As String
         Get
@@ -334,7 +334,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Solo texto entre &quot;{1}&quot; y &quot;{2}&quot;.
+    '''  Busca una cadena traducida similar a Only text between &quot;{1}&quot; and &quot;{2}&quot;.
     '''</summary>
     Public Shared ReadOnly Property SoloEntreCaracteres_ToString() As String
         Get
@@ -343,7 +343,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Convierte todo el nombre del archivo a mayúsculas.
+    '''  Busca una cadena traducida similar a Converts all the filename to Uppercase.
     '''</summary>
     Public Shared ReadOnly Property TodoAMayusculas_Descripcion() As String
         Get
@@ -352,7 +352,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Convertir todo a Mayúsculas.
+    '''  Busca una cadena traducida similar a Convert filename to Uppercase.
     '''</summary>
     Public Shared ReadOnly Property TodoAMayusculas_Nombre() As String
         Get
@@ -361,7 +361,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Convertir todo a Mayúsculas.
+    '''  Busca una cadena traducida similar a Convert filename to Uppercase.
     '''</summary>
     Public Shared ReadOnly Property TodoAMayusculas_ToString() As String
         Get
@@ -370,7 +370,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Convierte todo el nombre del archivo a minúsculas.
+    '''  Busca una cadena traducida similar a Converts all the filename to Lowercase.
     '''</summary>
     Public Shared ReadOnly Property TodoAMinusculas_Descripcion() As String
         Get
@@ -379,7 +379,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Convertir todo a Minúsculas.
+    '''  Busca una cadena traducida similar a Convert filename to Lowercase.
     '''</summary>
     Public Shared ReadOnly Property TodoAMinusculas_Nombre() As String
         Get
@@ -388,7 +388,7 @@ Public Class Operaciones
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a Convertir todo a Minúsculas.
+    '''  Busca una cadena traducida similar a Convert filename to Lowercase.
     '''</summary>
     Public Shared ReadOnly Property TodoAMinusculas_ToString() As String
         Get

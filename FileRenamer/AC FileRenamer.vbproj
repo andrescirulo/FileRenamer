@@ -113,23 +113,18 @@
     <Compile Include="Domain\Video.vb" />
     <Compile Include="Domain\WebStat.vb" />
     <Compile Include="Funciones.vb" />
-    <Compile Include="Languages\Carpetas.en.Designer.vb">
-      <DependentUpon>Carpetas.en.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Languages\Carpetas.Designer.vb">
       <DependentUpon>Carpetas.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Languages\Language.en.Designer.vb">
-      <DependentUpon>Language.en.resx</DependentUpon>
+    <Compile Include="Languages\Carpetas.es.Designer.vb">
+      <DependentUpon>Carpetas.es.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Languages\Operaciones.en.Designer.vb">
-      <DependentUpon>Operaciones.en.resx</DependentUpon>
+    <Compile Include="Languages\Language.Designer.vb">
+      <DependentUpon>Language.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -138,10 +133,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Languages\Language.Designer.vb">
+    <Compile Include="Languages\Operaciones.es.Designer.vb">
+      <DependentUpon>Operaciones.es.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Language.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Languages\Language.es.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.es.resx</DependentUpon>
     </Compile>
     <Compile Include="Managers\ActualizacionesManager.vb" />
     <Compile Include="Managers\HeaderToImageConverter.vb" />
@@ -276,29 +276,29 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Languages\Carpetas.en.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Carpetas.en.Designer.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Languages\Carpetas.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Carpetas.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Languages\Language.en.resx">
+    <EmbeddedResource Include="Languages\Carpetas.es.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Language.en.Designer.vb</LastGenOutput>
+      <LastGenOutput>Carpetas.es.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Languages\Operaciones.en.resx">
+    <EmbeddedResource Include="Languages\Language.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Operaciones.en.Designer.vb</LastGenOutput>
+      <LastGenOutput>Language.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Languages\Operaciones.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Operaciones.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Languages\Language.resx">
+    <EmbeddedResource Include="Languages\Operaciones.es.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Language.Designer.vb</LastGenOutput>
+      <LastGenOutput>Operaciones.es.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\Language.es.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.es.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

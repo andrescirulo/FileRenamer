@@ -5,6 +5,7 @@
 
     Private Sub btnGuardar_Click(sender As Object, e As RoutedEventArgs) Handles btnGuardar.InnerButtonClick
         MenuContextualManager.HabilitarMenuContextual(chkHabilitar.IsChecked, radFondo.IsChecked, radExtendido.IsChecked)
+        PaginasManager.IrA(PaginasManager.PAGINA_INICIO)
     End Sub
 
     Private Sub ConfiguracionPage_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
