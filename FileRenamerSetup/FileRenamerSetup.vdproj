@@ -39,6 +39,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_27DE9891F9EC428AB3AD8C14DC1F2998"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3D35EDCC0F744C6AA736CCE8F950559A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -143,6 +149,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_3D35EDCC0F744C6AA736CCE8F950559A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_27DE9891F9EC428AB3AD8C14DC1F2998"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -289,6 +301,48 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_AFBAD4FB189F43B28B3B8C806B0BE755"
+            {
+            "Name" = "8:Resultado principal from InstallerActions (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_27DE9891F9EC428AB3AD8C14DC1F2998"
+            "FileType" = "3:1"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_AF30D52F_5D8B_49CB_8E9F_64EA46729680"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_D6CFCC877CC74E57AA2ED99B85302844"
+            {
+            "Name" = "8:Resultado principal from InstallerActions (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_27DE9891F9EC428AB3AD8C14DC1F2998"
+            "FileType" = "3:1"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_7719BE0C_CEA9_4DE9_A740_651244B25CB1"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_F9770CC7970F4BF9BD9088D6220C54D1"
+            {
+            "Name" = "8:Resultado principal from InstallerActions (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_27DE9891F9EC428AB3AD8C14DC1F2998"
+            "FileType" = "3:1"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_324D9EB5_956E_4952_9454_9F2A9DD903B7"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
@@ -401,7 +455,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -432,7 +486,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -643,7 +697,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -777,7 +831,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AC FileRenamer"
         "ProductCode" = "8:{5C8AD137-48A6-42B7-9E91-67DA8240F87D}"
-        "PackageCode" = "8:{33FB6C1A-9EB5-48D4-82B9-754BE405FED0}"
+        "PackageCode" = "8:{84044AC1-7C8C-4060-AE9A-E547C4E01A16}"
         "UpgradeCode" = "8:{681E6A67-9FB8-4C66-B0FC-85DB96B8803A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -899,7 +953,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_62F8D0F700484DFF881E3F850A0B44EC"
             {
-            "Name" = "8:FileRenamer"
+            "Name" = "8:AC FileRenamer"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -1324,6 +1378,34 @@
         }
         "ProjectOutput"
         {
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_27DE9891F9EC428AB3AD8C14DC1F2998"
+            {
+            "SourcePath" = "8:..\\InstallerActions\\obj\\Debug\\InstallerActions.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_14E1F260663946E1946779A74D653125"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{2A5663EA-FAA1-4AC6-81E1-D781BEC2B38E}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3D35EDCC0F744C6AA736CCE8F950559A"
             {
             "SourcePath" = "8:..\\FileRenamer\\obj\\Debug\\AC FileRenamer.exe"
