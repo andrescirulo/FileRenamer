@@ -177,17 +177,35 @@
   <data name="inicio_configuracion" xml:space="preserve">
     <value>Configuración de la Aplicación</value>
   </data>
+  <data name="inicio_mp3" xml:space="preserve">
+    <value>Renombra archivos Mp3 de acuerdo a sus etiquetas ID3</value>
+  </data>
   <data name="inicio_renombrar" xml:space="preserve">
     <value>Renombra archivos de acuerdo a un conjunto de operaciones que establezcas</value>
   </data>
   <data name="inicio_subtitulos" xml:space="preserve">
     <value>Renombra archivos de Subtitulo para que tengan el mismo nombre que sus archivos de Video</value>
   </data>
+  <data name="mp3_correcto" xml:space="preserve">
+    <value>¡¡Archivos renombrados correctamente!!</value>
+  </data>
+  <data name="mp3_falta_archivo" xml:space="preserve">
+    <value>Debes elegir al menos un archivo</value>
+  </data>
+  <data name="mp3_falta_formula" xml:space="preserve">
+    <value>Debes agregar algo a la formula</value>
+  </data>
+  <data name="mp3_repetidos" xml:space="preserve">
+    <value>El resultado producido contiene nombres repetidos, revisalo</value>
+  </data>
   <data name="renombrar_agregar" xml:space="preserve">
     <value>Agregar</value>
   </data>
   <data name="renombrar_bajar" xml:space="preserve">
     <value>Bajar</value>
+  </data>
+  <data name="renombrar_correcto" xml:space="preserve">
+    <value>¡¡Archivos renombrados correctamente!!</value>
   </data>
   <data name="renombrar_error_archivos" xml:space="preserve">
     <value>Debes elegir al menos un archivo</value>
@@ -200,6 +218,12 @@
   </data>
   <data name="renombrar_operacion" xml:space="preserve">
     <value>Operacion</value>
+  </data>
+  <data name="renombrar_operaciones" xml:space="preserve">
+    <value>Operaciones Disponibles</value>
+  </data>
+  <data name="renombrar_operaciones_elegidas" xml:space="preserve">
+    <value>Operaciones a Realizar</value>
   </data>
   <data name="renombrar_por" xml:space="preserve">
     <value>por</value>
@@ -223,7 +247,7 @@
     <value>Renombrar</value>
   </data>
   <data name="resultado_titulo" xml:space="preserve">
-    <value>FileRenamer - Vista Previa</value>
+    <value>AC FileRenamer - Vista Previa</value>
   </data>
   <data name="resultado_vista_previa" xml:space="preserve">
     <value>Vista previa del resultado</value>
@@ -251,6 +275,9 @@
   </data>
   <data name="tab_renombrar_archivos" xml:space="preserve">
     <value>Renombrar Archivos</value>
+  </data>
+  <data name="tab_renombrar_mp3" xml:space="preserve">
+    <value>Renombrar Mp3</value>
   </data>
   <data name="tab_renombrar_subtitulos" xml:space="preserve">
     <value>Renombrar Subtitulos</value>

@@ -1,29 +1,17 @@
 ﻿Imports System.IO
 
 Class Mp3Page
-    Implements FoldersTreeViewListener
-
-    Dim OPERACIONES As List(Of Operacion)
-
-    Private Function GetOperaciones() As List(Of Operacion)
-        If OPERACIONES Is Nothing Then
-            OPERACIONES = New List(Of Operacion)
-            OPERACIONES.Add(New ReemplazoEnNombre)
-            OPERACIONES.Add(New Reemplazo)
-            OPERACIONES.Add(New AgregarAlFinalDelNombre)
-            OPERACIONES.Add(New AgregarAlFinalDeTodo)
-            OPERACIONES.Add(New AgregarAlPrincipio)
-            OPERACIONES.Add(New EliminarEntreCaracteres)
-            OPERACIONES.Add(New SoloEntreCaracteres)
-            OPERACIONES.Add(New AgregarPadding)
-            OPERACIONES.Add(New TodoAMayusculas)
-            OPERACIONES.Add(New TodoAMinusculas)
-            OPERACIONES.Add(New MayusculasYMinusculas)
-        End If
-        Return OPERACIONES
-    End Function
+    Implements FoldersTreeViewListener, TagResultadoListener
 
     Dim dummyNode As Object = Nothing
+
+    Public Sub New()
+
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+        txtResultado.AllowDrop = True
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+    End Sub
 
     Private Sub RenombrarPage_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
 
@@ -35,23 +23,26 @@ Class Mp3Page
             carpetaInicial = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
         End If
 
-        cmb_operacion.Items.Clear()
-        For Each oper In GetOperaciones()
-            cmb_operacion.Items.Add(oper)
-        Next
-        cmb_operacion.SelectedIndex = 0
-
         lbl_carpeta.Content = FileRenamer.Language.renombrar_sin_seleccionar
         lst_files.Items.Clear()
-        lst_reemplazos.Items.Clear()
-        txt_dest_reemp.Text = ""
-        txt_src_reemp.Text = ""
 
 
         tree_carpetas.AddListener(Me)
         tree_carpetas.NavegarA(carpetaInicial)
+        TagsManager.Inicializar(TagsSrc, Nothing, Me)
+        TagsManager.AddToContainer(New TagDefaultItem(LangMp3.tag_titulo_nombre, LangMp3.tag_titulo_valor), TagsSrc)
+        TagsManager.AddToContainer(New TagDefaultItem(LangMp3.tag_artista_nombre, LangMp3.tag_artista_valor), TagsSrc)
+        TagsManager.AddToContainer(New TagDefaultItem(LangMp3.tag_genero_nombre, LangMp3.tag_genero_valor), TagsSrc)
+        TagsManager.AddToContainer(New TagDefaultItem(LangMp3.tag_album_nombre, LangMp3.tag_album_valor), TagsSrc)
+        TagsManager.AddToContainer(New TagDefaultItem(LangMp3.tag_pista_nombre, LangMp3.tag_pista_valor), TagsSrc)
+        TagsManager.AddToContainer(New TagDefaultItem(LangMp3.tag_total_pistas_nombre, LangMp3.tag_total_pistas_valor), TagsSrc)
+        TagsManager.AddToContainer(New TagDefaultItem(LangMp3.tag_anio_nombre, LangMp3.tag_anio_valor), TagsSrc)
+        TagsManager.AddToContainer(New TagDefaultItem(LangMp3.tag_disco_nombre, LangMp3.tag_disco_valor), TagsSrc)
+        TagsManager.AddToContainer(New TagDefaultItem(LangMp3.tag_total_discos_nombre, LangMp3.tag_total_discos_valor), TagsSrc)
 
     End Sub
+
+
 
     Public Sub OnSelectedItemChanged(FilePath As String) Implements FoldersTreeViewListener.OnSelectedItemChanged
         Try
@@ -62,123 +53,144 @@ Class Mp3Page
 
             lst_files.Items.Clear()
             Dim archs As List(Of String)
-            archs = ObtenerArchivos(lbl_carpeta.Content, SearchOption.TopDirectoryOnly, "*")
+            archs = ObtenerArchivos(lbl_carpeta.Content, SearchOption.TopDirectoryOnly, {"*.mp3", "*.m4a"})
 
             For Each arch In archs
-                Dim elem As String = arch.Replace(lbl_carpeta.Content, "")
-                Dim fcheck As New FolderCheckElem
-                fcheck.Name = elem
-                lst_files.Items.Add(fcheck)
+                Dim TagsElem As TagLib.Tag = ObtenerTags(arch)
+
+                Dim mp3 As New Mp3File(arch, TagsElem)
+                lst_files.Items.Add(mp3)
             Next
+            RefrescarEjemplo()
         Catch ex As IOException
 
         End Try
     End Sub
 
-    Private Sub btn_agregar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_agregar.InnerButtonClick
-
-        Dim op As Operacion = cmb_operacion.SelectedItem.GetNewInstance()
-        'op.Armar(Me)
-
-        lst_reemplazos.Items.Add(op)
-
-        txt_src_reemp.Text = ""
-        txt_dest_reemp.Text = ""
-    End Sub
-
     Private Sub btn_renombrar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_renombrar.InnerButtonClick
-        Dim elegidos As New List(Of String)
-        Dim elem As FolderCheckElem
+        Dim elem As Mp3File
+        Dim elegidos As New List(Of Mp3File)
         For Each elem In lst_files.Items
-            If (elem.IsChecked) Then
-                elegidos.Add(elem.Name)
+            If elem.IsChecked Then
+                elegidos.Add(elem)
             End If
         Next
 
-        'HAGO VALIDACIONES
         If (elegidos.Count = 0) Then
-            MsgBox(FileRenamer.Language.renombrar_error_archivos)
-            Return
-        End If
-        If (lst_reemplazos.Items.Count = 0) Then
-            MsgBox(FileRenamer.Language.renombrar_error_operaciones)
+            MsgBox(FileRenamer.Language.mp3_falta_archivo)
             Return
         End If
 
-        Dim op As Operacion
+        If (txtResultado.Text.Trim.Length = 0) Then
+            MsgBox(FileRenamer.Language.mp3_falta_formula)
+            Return
+        End If
+
         Dim formRes As New ResultadoWindow
-
         formRes.lst_vista_previa.Items.Clear()
 
-        For Each arch In elegidos
-            Dim res As String = NombreCorto(arch)
+        Dim ListaResultados As New List(Of RenombrarPreview)
+        Dim setArchivos As New HashSet(Of String)
 
-            For Each op In lst_reemplazos.Items
-                res = op.Operar(res)
-            Next
-            formRes.lst_vista_previa.Items.Add(res)
+        For Each arch In elegidos
+            Dim nuevoNombre As String = ArmarNuevoNombre(arch)
+            Dim preview As New RenombrarPreview(arch.Path, arch.Nombre, nuevoNombre)
+            setArchivos.Add(nuevoNombre.ToLower.Trim)
+            ListaResultados.Add(preview)
+        Next
+
+        'HAY ALGUN NOMBRE REPETIDO
+        If setArchivos.Count < ListaResultados.Count Then
+            MsgBox(FileRenamer.Language.mp3_repetidos)
+            Return
+        End If
+        For Each elemDst In ListaResultados
+            formRes.lst_vista_previa.Items.Add(elemDst)
         Next
 
         If (formRes.ShowDialog()) Then
-            For Each arch In elegidos
-                Dim nombreInicial = NombreCorto(arch)
-                Dim res As String = NombreCorto(arch)
-
-                For Each op In lst_reemplazos.Items
-                    res = op.Operar(res)
-                Next
-
-                Dim archInicial As String = lbl_carpeta.Content & arch
-                Dim archFinal As String = GetDirectorio(archInicial) & res
+            For Each elemDst In ListaResultados
+                Dim archInicial As String = elemDst.PathCompleto
+                Dim archFinal As String = GetDirectorio(archInicial) & elemDst.NombreNuevo
                 If (archInicial <> archFinal) Then
-                    My.Computer.FileSystem.RenameFile(archInicial, res)
+                    My.Computer.FileSystem.RenameFile(archInicial, elemDst.NombreNuevo)
                 End If
             Next
-
-            lbl_carpeta.Content = FileRenamer.Language.renombrar_sin_seleccionar
-            lst_files.Items.Clear()
-            lst_reemplazos.Items.Clear()
-            MsgBox("Archivos Renombrados Correctamente!!")
+            OnSelectedItemChanged(lbl_carpeta.Content)
+            txtResultado.Text = ""
+            RefrescarEjemplo()
+            MsgBox(FileRenamer.Language.mp3_correcto)
         End If
 
     End Sub
 
-    Private Sub cmb_operacion_SelectionChanged(ByVal sender As System.Object, ByVal e As System.Windows.Controls.SelectionChangedEventArgs) Handles cmb_operacion.SelectionChanged
-        If (cmb_operacion.SelectedIndex >= 0) Then
-            cmb_operacion.SelectedItem.AcomodarFormulario(Me)
-            lblDescripcion.Text = cmb_operacion.SelectedItem.GetDescripcion()
-        End If
-    End Sub
+    Private Function ArmarNuevoNombre(arch As Mp3File) As String
+        Dim nuevoNombre As String = txtResultado.Text
+        nuevoNombre = ReemplazarTags(nuevoNombre, arch)
+        nuevoNombre = nuevoNombre & ObtenerExtension(arch.Nombre)
+        Return nuevoNombre
+    End Function
 
-    Private Sub btn_quitar_Click(ByVal sender As System.Object, ByVal e As System.Windows.RoutedEventArgs) Handles btn_quitar.InnerButtonClick
-        If (lst_reemplazos.SelectedIndex >= 0) Then
-            lst_reemplazos.Items.Remove(lst_reemplazos.SelectedItem)
-        End If
-    End Sub
+    Private Function ReemplazarTags(nuevoNombre As String, arch As Mp3File) As String
+        Dim res As String = nuevoNombre
+        res = res.Replace(LangMp3.tag_titulo_valor, arch.Titulo)
+        res = res.Replace(LangMp3.tag_artista_valor, arch.Artista)
+        res = res.Replace(LangMp3.tag_genero_valor, arch.Genero)
+        res = res.Replace(LangMp3.tag_album_valor, arch.Album)
+        Dim pistaTmp As String = arch.Pista
+        pistaTmp = pistaTmp.PadLeft(2, "0")
+        res = res.Replace(LangMp3.tag_pista_valor, pistaTmp)
+        res = res.Replace(LangMp3.tag_total_pistas_valor, arch.TotalPistas)
+        res = res.Replace(LangMp3.tag_anio_valor, arch.Anio)
+        res = res.Replace(LangMp3.tag_disco_valor, arch.Disco)
+        res = res.Replace(LangMp3.tag_total_discos_valor, arch.TotalDiscos)
 
-    Private Sub btn_subir_Click(sender As Object, e As RoutedEventArgs) Handles btn_subir.InnerButtonClick
-        If (lst_reemplazos.SelectedIndex >= 1) Then
-            Dim idx = lst_reemplazos.SelectedIndex
-            Dim tmp = lst_reemplazos.Items(idx - 1)
-            lst_reemplazos.Items.RemoveAt(idx - 1)
-            lst_reemplazos.Items.Insert(idx, tmp)
-            lst_reemplazos.SelectedIndex = idx - 1
-        End If
-    End Sub
-
-    Private Sub btn_bajar_Click(sender As Object, e As RoutedEventArgs) Handles btn_bajar.InnerButtonClick
-        If (lst_reemplazos.SelectedIndex >= 0 And lst_reemplazos.SelectedIndex < (lst_reemplazos.Items.Count - 1)) Then
-            Dim idx = lst_reemplazos.SelectedIndex
-            Dim tmp = lst_reemplazos.Items(idx)
-            lst_reemplazos.Items.RemoveAt(idx)
-            lst_reemplazos.Items.Insert(idx + 1, tmp)
-            lst_reemplazos.SelectedIndex = idx + 1
-        End If
-    End Sub
-
+        Return res
+    End Function
 
     Private Function quitarExtension(arch As String) As String
         Return arch.Substring(0, arch.LastIndexOf("."))
     End Function
 
+    Public Sub OnResultadoChange(resultado As String) Implements TagResultadoListener.OnResultadoChange
+        Dim texto As String = txtResultado.Text
+        Dim pos As Integer = txtResultado.SelectionStart
+        txtResultado.Text = texto.Substring(0, txtResultado.SelectionStart) & resultado & texto.Substring(txtResultado.SelectionStart)
+        txtResultado.SelectionStart = pos + (resultado.Length)
+        RefrescarEjemplo()
+    End Sub
+
+    Private Sub RefrescarEjemplo()
+        Dim elem As Mp3File
+        Dim elemEjemplo As Mp3File = Nothing
+        For Each elem In lst_files.Items
+            If elem.IsChecked Then
+                elemEjemplo = elem
+                Exit For
+            End If
+        Next
+        If Not elemEjemplo Is Nothing And txtResultado.Text <> "" Then
+            Dim nuevoNombre As String = ArmarNuevoNombre(elemEjemplo)
+            txtEjemplo.Text = LangMp3.ejemplo & " " & nuevoNombre
+        Else
+            txtEjemplo.Text = ""
+        End If
+    End Sub
+
+    Private Sub txtResultado_TextChanged(sender As Object, e As TextChangedEventArgs) Handles txtResultado.TextChanged
+        RefrescarEjemplo()
+    End Sub
+
+    Private Sub txtResultado_Drop(sender As Object, e As DragEventArgs) Handles txtResultado.Drop
+        Dim tagItem = DirectCast(e.Data.GetData("Object"), TagDefaultItem)
+
+        If tagItem IsNot Nothing Then
+            TagsManager.EnviarADestino(tagItem)
+            tagItem.CloseDragWindow()
+        End If
+    End Sub
+
+    Private Sub txtResultado_PreviewDragOver(sender As Object, e As DragEventArgs) Handles txtResultado.PreviewDragOver
+        e.Handled = True
+    End Sub
 End Class

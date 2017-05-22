@@ -244,6 +244,15 @@ Public Class Language
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Rename Mp3 files based on their ID3 tags.
+    '''</summary>
+    Public Shared ReadOnly Property inicio_mp3() As String
+        Get
+            Return ResourceManager.GetString("inicio_mp3", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Rename files using a set of operations of your choice.
     '''</summary>
     Public Shared ReadOnly Property inicio_renombrar() As String
@@ -262,6 +271,42 @@ Public Class Language
     End Property
     
     '''<summary>
+    '''  Busca una cadena traducida similar a Files Renamed!!.
+    '''</summary>
+    Public Shared ReadOnly Property mp3_correcto() As String
+        Get
+            Return ResourceManager.GetString("mp3_correcto", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a You have to select at least one file.
+    '''</summary>
+    Public Shared ReadOnly Property mp3_falta_archivo() As String
+        Get
+            Return ResourceManager.GetString("mp3_falta_archivo", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a You have to add something to the formula.
+    '''</summary>
+    Public Shared ReadOnly Property mp3_falta_formula() As String
+        Get
+            Return ResourceManager.GetString("mp3_falta_formula", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a The result contains repeated names, fix it.
+    '''</summary>
+    Public Shared ReadOnly Property mp3_repetidos() As String
+        Get
+            Return ResourceManager.GetString("mp3_repetidos", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
     '''  Busca una cadena traducida similar a Add.
     '''</summary>
     Public Shared ReadOnly Property renombrar_agregar() As String
@@ -276,6 +321,15 @@ Public Class Language
     Public Shared ReadOnly Property renombrar_bajar() As String
         Get
             Return ResourceManager.GetString("renombrar_bajar", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Files Renamed!!.
+    '''</summary>
+    Public Shared ReadOnly Property renombrar_correcto() As String
+        Get
+            Return ResourceManager.GetString("renombrar_correcto", resourceCulture)
         End Get
     End Property
     
@@ -312,6 +366,24 @@ Public Class Language
     Public Shared ReadOnly Property renombrar_operacion() As String
         Get
             Return ResourceManager.GetString("renombrar_operacion", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Operations Available.
+    '''</summary>
+    Public Shared ReadOnly Property renombrar_operaciones() As String
+        Get
+            Return ResourceManager.GetString("renombrar_operaciones", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Operations Selected.
+    '''</summary>
+    Public Shared ReadOnly Property renombrar_operaciones_elegidas() As String
+        Get
+            Return ResourceManager.GetString("renombrar_operaciones_elegidas", resourceCulture)
         End Get
     End Property
     
@@ -379,7 +451,7 @@ Public Class Language
     End Property
     
     '''<summary>
-    '''  Busca una cadena traducida similar a FileRenamer - Preview.
+    '''  Busca una cadena traducida similar a AC FileRenamer - Preview.
     '''</summary>
     Public Shared ReadOnly Property resultado_titulo() As String
         Get
@@ -465,6 +537,15 @@ Public Class Language
     Public Shared ReadOnly Property tab_renombrar_archivos() As String
         Get
             Return ResourceManager.GetString("tab_renombrar_archivos", resourceCulture)
+        End Get
+    End Property
+    
+    '''<summary>
+    '''  Busca una cadena traducida similar a Rename Mp3.
+    '''</summary>
+    Public Shared ReadOnly Property tab_renombrar_mp3() As String
+        Get
+            Return ResourceManager.GetString("tab_renombrar_mp3", resourceCulture)
         End Get
     End Property
     

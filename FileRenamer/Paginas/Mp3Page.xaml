@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:FileRenamer"  
       mc:Ignorable="d" 
       xmlns:fa="clr-namespace:FontAwesome.Net;assembly=FontAwesome.Net"
-      d:DesignHeight="670" d:DesignWidth="775" Height="670" Width="775">
+      d:DesignHeight="670" d:DesignWidth="775" Height="670" Width="775"
+             DataContext="{Binding RelativeSource={RelativeSource Self}}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
@@ -16,43 +17,45 @@
         <local:FoldersTreeView x:Name="tree_carpetas" Grid.Column="0" Margin="10,50,10,10"></local:FoldersTreeView>
 
         <Label Content="{x:Static local:Language.renombrar_sin_seleccionar}" Height="27" HorizontalAlignment="Left" Margin="6,30,0,0" Name="lbl_carpeta" VerticalAlignment="Top" Width="481" Grid.Column="1"  />
-        <ListBox Height="200" HorizontalAlignment="Stretch" Margin="10,70,10,0" Name="lst_files" VerticalAlignment="Top" SelectionMode="Single" Grid.Column="1" >
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <CheckBox IsChecked="{Binding IsChecked}" Content="{Binding Path=Name}" />
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-
-        <Label Content="{x:Static local:Language.renombrar_operacion}" Height="27" HorizontalAlignment="Left" Margin="10,329,0,0" Name="Label3" VerticalAlignment="Top" Width="72" Grid.Column="1" />
-        <ComboBox Height="23" HorizontalAlignment="Left" Margin="90,333,0,0" Name="cmb_operacion" VerticalAlignment="Top" Width="290" Grid.Column="1"  >
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Path=Nombre}" />
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
+        <ListView Height="200" HorizontalAlignment="Stretch" Margin="10,70,10,0" Name="lst_files" VerticalAlignment="Top" SelectionMode="Single" Grid.Column="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="{x:Static local:LangMp3.header_archivo}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding IsChecked}" Content="{Binding Nombre}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="{x:Static local:LangMp3.header_pista}" DisplayMemberBinding="{Binding Path=Pista}" />
+                    <GridViewColumn Header="{x:Static local:LangMp3.header_titulo}" DisplayMemberBinding="{Binding Path=Titulo}" />
+                    <GridViewColumn Header="{x:Static local:LangMp3.header_artista}" DisplayMemberBinding="{Binding Path=Artista}" />
+                    <GridViewColumn Header="{x:Static local:LangMp3.header_album}" DisplayMemberBinding="{Binding Path=Album}" />
+                    <GridViewColumn Header="{x:Static local:LangMp3.header_anio}" DisplayMemberBinding="{Binding Path=Anio}" />
+                    <GridViewColumn Header="{x:Static local:LangMp3.header_genero}" DisplayMemberBinding="{Binding Path=Genero}" />
+                    <GridViewColumn Header="{x:Static local:LangMp3.header_total_pistas}" DisplayMemberBinding="{Binding Path=TotalPistas}" />
+                    <GridViewColumn Header="{x:Static local:LangMp3.header_disco}" DisplayMemberBinding="{Binding Path=Disco}" />
+                    <GridViewColumn Header="{x:Static local:LangMp3.header_total_discos}" DisplayMemberBinding="{Binding Path=TotalDiscos}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
         
-        <TextBlock x:Name="lblDescripcion" VerticalAlignment="Top" Grid.Column="1" Margin="95,360,150,0" TextWrapping="Wrap"  ></TextBlock>
-        <WrapPanel Grid.Column="1">
-            <Label Content="{x:Static local:Language.renombrar_reemplazar}" Height="27" HorizontalAlignment="Left" Margin="10,400,0,0" Name="lbl_op1" VerticalAlignment="Top" Grid.Column="1" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="10,400,0,0" Name="txt_src_reemp" VerticalAlignment="Top" Width="120" Grid.Column="1"  />
-            <Label Content="{x:Static local:Language.renombrar_por}" Height="27" HorizontalAlignment="Left" Margin="10,400,0,0" Name="lbl_op2" VerticalAlignment="Top" Grid.Column="1" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="10,400,0,0" Name="txt_dest_reemp" VerticalAlignment="Top" Width="120" Grid.Column="1" />
-        </WrapPanel>
-        <local:FAButton x:Name="btn_agregar" ButtonText="{x:Static local:Language.renombrar_agregar }" FAIcon="{x:Static fa:FontAwesome.fa_plus}"
-            Height="23" HorizontalAlignment="Right" Margin="400,400,10,0" VerticalAlignment="Top" Width="110" Grid.Column="1" />
+        <Line VerticalAlignment="Top" HorizontalAlignment="Stretch" Grid.Column="1" Margin="5,290,10,0" X1="50" X2="470" Stroke="#FFF" StrokeThickness="1"></Line>
         
-        
-        <ListBox Height="145" HorizontalAlignment="Stretch" Margin="40,440,110,0" Name="lst_reemplazos" VerticalAlignment="Top" Grid.Column="1" />
+        <StackPanel VerticalAlignment="Top" Grid.Column="1" Margin="5,310,10,0">
+            <TextBlock TextWrapping="Wrap" Text="{x:Static local:LangMp3.formula_explicacion}" HorizontalAlignment="Stretch"  Margin="5,0,10,0" Name="lbl_formula"  VerticalAlignment="Top" />
+            <TextBlock TextWrapping="Wrap" Text="{x:Static local:LangMp3.etiquetas_explicacion}" HorizontalAlignment="Stretch"  Margin="5,0,10,0" Name="lbl_etiquetas"  VerticalAlignment="Top" />
+            <GroupBox Grid.Column="1" Header="{x:Static local:LangMp3.etiquetas_disponibles}" Margin="10,10,20,0" VerticalAlignment="Top" Height="150" Background="#BBB">
+                <local:TagsContainer x:Name="TagsSrc" >
 
-        <local:FAButton x:Name="btn_subir" ButtonText="{x:Static local:Language.renombrar_subir }" FAIcon="{x:Static fa:FontAwesome.fa_arrow_up}"
-            Height="23" HorizontalAlignment="Right"  Margin="0,440,10,0" VerticalAlignment="Top" Width="90" Grid.Column="1" />
-        <local:FAButton x:Name="btn_bajar" ButtonText="{x:Static local:Language.renombrar_bajar }" FAIcon="{x:Static fa:FontAwesome.fa_arrow_down}"
-            Height="23" HorizontalAlignment="Right"  Margin="0,470,10,0" VerticalAlignment="Top" Width="90" Grid.Column="1" />
-        <local:FAButton x:Name="btn_quitar" ButtonText="{x:Static local:Language.renombrar_quitar }" FAIcon="{x:Static fa:FontAwesome.fa_times}"
-            Height="23" HorizontalAlignment="Right"  Margin="0,500,10,0" VerticalAlignment="Top" Width="90" Grid.Column="1" />
-
+                </local:TagsContainer>
+            </GroupBox>
+            <WrapPanel Grid.Column="1" VerticalAlignment="Top" Margin="30,10,20,0">
+                <TextBlock VerticalAlignment="Top" Text="{x:Static local:LangMp3.formula}"></TextBlock>
+                <TextBox Name="txtResultado" Margin="10,0,10,0" Padding="2" HorizontalAlignment="Stretch" MinWidth="350"  VerticalAlignment="Top"></TextBox>
+            </WrapPanel>
+            <TextBlock Name="txtEjemplo" Grid.Column="1" VerticalAlignment="Top" Margin="50,10,20,0" ></TextBlock>
+        </StackPanel>
         <local:FAButton x:Name="btn_renombrar" ButtonText="{x:Static local:Language.renombrar_vista_previa }" FAIcon="{x:Static fa:FontAwesome.fa_search}"
             Height="40" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="130" Grid.Column="1" />
     </Grid>

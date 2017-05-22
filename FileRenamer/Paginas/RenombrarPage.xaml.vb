@@ -125,7 +125,8 @@ Class RenombrarPage
             For Each op In lst_reemplazos.Items
                 res = op.Operar(res)
             Next
-            formRes.lst_vista_previa.Items.Add(res)
+            Dim preview As New RenombrarPreview(arch, NombreCorto(arch), res)
+            formRes.lst_vista_previa.Items.Add(preview)
         Next
 
         If (formRes.ShowDialog()) Then
@@ -147,7 +148,7 @@ Class RenombrarPage
             lbl_carpeta.Content = FileRenamer.Language.renombrar_sin_seleccionar
             lst_files.Items.Clear()
             lst_reemplazos.Items.Clear()
-            MsgBox("Archivos Renombrados Correctamente!!")
+            MsgBox(FileRenamer.Language.renombrar_correcto)
         End If
 
     End Sub

@@ -117,172 +117,103 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="acerca_de_actualizaciones" xml:space="preserve">
-    <value>There is a new version available</value>
+  <data name="ejemplo" xml:space="preserve">
+    <value>Ejemplo:</value>
   </data>
-  <data name="acerca_de_cambios_error" xml:space="preserve">
-    <value>Could not load the version changes</value>
+  <data name="etiquetas_disponibles" xml:space="preserve">
+    <value>Etiquetas Disponibles</value>
   </data>
-  <data name="acerca_de_contacto" xml:space="preserve">
-    <value>For any doubt, suggestion or error you want to report send a mail to andres.cirulo@gmail.com</value>
+  <data name="etiquetas_explicacion" xml:space="preserve">
+    <value>Arrastra una etiqueta o haz click en el + para agregarla a la fórmula.</value>
   </data>
-  <data name="acerca_de_descargando" xml:space="preserve">
-    <value>Downloading...</value>
+  <data name="formula" xml:space="preserve">
+    <value>Formula: </value>
   </data>
-  <data name="acerca_de_detalles" xml:space="preserve">
-    <value>Version Details</value>
+  <data name="formula_explicacion" xml:space="preserve">
+    <value>Construye una Fórmula para renombrar los archivos utilizando las Etiquetas Disponibles o editándola tu mismo. Debajo podrás ver un ejemplo del resultado.</value>
   </data>
-  <data name="acerca_de_instalar" xml:space="preserve">
-    <value>Install</value>
+  <data name="header_album" xml:space="preserve">
+    <value>Album</value>
   </data>
-  <data name="acerca_de_no_actualizaciones" xml:space="preserve">
-    <value>You have the most recent version</value>
+  <data name="header_anio" xml:space="preserve">
+    <value>Año</value>
   </data>
-  <data name="btn_atras" xml:space="preserve">
-    <value>Back</value>
+  <data name="header_archivo" xml:space="preserve">
+    <value>Archivo</value>
   </data>
-  <data name="config_cuando_extendido" xml:space="preserve">
-    <value>Right Click while pressing Shift key</value>
+  <data name="header_artista" xml:space="preserve">
+    <value>Artista</value>
   </data>
-  <data name="config_cuando_normal" xml:space="preserve">
-    <value>Right Click</value>
+  <data name="header_disco" xml:space="preserve">
+    <value>Disco</value>
   </data>
-  <data name="config_cuando_titulo" xml:space="preserve">
-    <value>Show When</value>
+  <data name="header_genero" xml:space="preserve">
+    <value>Género</value>
   </data>
-  <data name="config_donde_carpeta" xml:space="preserve">
-    <value>Folder Name Right Click</value>
+  <data name="header_pista" xml:space="preserve">
+    <value>Pista</value>
   </data>
-  <data name="config_donde_fondo" xml:space="preserve">
-    <value>Folder Background Right Click</value>
+  <data name="header_titulo" xml:space="preserve">
+    <value>Título</value>
   </data>
-  <data name="config_donde_titulo" xml:space="preserve">
-    <value>Show At</value>
+  <data name="header_total_discos" xml:space="preserve">
+    <value>Total Discos</value>
   </data>
-  <data name="config_guardar" xml:space="preserve">
-    <value>Save</value>
+  <data name="header_total_pistas" xml:space="preserve">
+    <value>Total Pistas</value>
   </data>
-  <data name="config_menu_contextual" xml:space="preserve">
-    <value>Subtitles Context Menu</value>
+  <data name="tag_album_nombre" xml:space="preserve">
+    <value>Album</value>
   </data>
-  <data name="config_menu_contextual_habilitar" xml:space="preserve">
-    <value>Enable Windows Explorer Context Menu</value>
+  <data name="tag_album_valor" xml:space="preserve">
+    <value>&lt;Album&gt;</value>
   </data>
-  <data name="contextual_procesar" xml:space="preserve">
-    <value>Rename Subtitles</value>
+  <data name="tag_anio_nombre" xml:space="preserve">
+    <value>Año</value>
   </data>
-  <data name="inicio_acerca_de" xml:space="preserve">
-    <value>Application information and updates</value>
+  <data name="tag_anio_valor" xml:space="preserve">
+    <value>&lt;Año&gt;</value>
   </data>
-  <data name="inicio_configuracion" xml:space="preserve">
-    <value>Adjust the application configuration</value>
+  <data name="tag_artista_nombre" xml:space="preserve">
+    <value>Artista</value>
   </data>
-  <data name="inicio_mp3" xml:space="preserve">
-    <value>Rename Mp3 files based on their ID3 tags</value>
+  <data name="tag_artista_valor" xml:space="preserve">
+    <value>&lt;Artista&gt;</value>
   </data>
-  <data name="inicio_renombrar" xml:space="preserve">
-    <value>Rename files using a set of operations of your choice</value>
+  <data name="tag_disco_nombre" xml:space="preserve">
+    <value>Disco</value>
   </data>
-  <data name="inicio_subtitulos" xml:space="preserve">
-    <value>Rename Subtitles files so they have the same name that their correspondig Video file</value>
+  <data name="tag_disco_valor" xml:space="preserve">
+    <value>&lt;Disco&gt;</value>
   </data>
-  <data name="mp3_correcto" xml:space="preserve">
-    <value>Files Renamed!!</value>
+  <data name="tag_genero_nombre" xml:space="preserve">
+    <value>Género</value>
   </data>
-  <data name="mp3_falta_archivo" xml:space="preserve">
-    <value>You have to select at least one file</value>
+  <data name="tag_genero_valor" xml:space="preserve">
+    <value>&lt;Género&gt;</value>
   </data>
-  <data name="mp3_falta_formula" xml:space="preserve">
-    <value>You have to add something to the formula</value>
+  <data name="tag_pista_nombre" xml:space="preserve">
+    <value>Pista</value>
   </data>
-  <data name="mp3_repetidos" xml:space="preserve">
-    <value>The result contains repeated names, fix it</value>
+  <data name="tag_pista_valor" xml:space="preserve">
+    <value>&lt;Pista&gt;</value>
   </data>
-  <data name="renombrar_agregar" xml:space="preserve">
-    <value>Add</value>
+  <data name="tag_titulo_nombre" xml:space="preserve">
+    <value>Titulo</value>
   </data>
-  <data name="renombrar_bajar" xml:space="preserve">
-    <value>Down</value>
+  <data name="tag_titulo_valor" xml:space="preserve">
+    <value>&lt;Titulo&gt;</value>
   </data>
-  <data name="renombrar_correcto" xml:space="preserve">
-    <value>Files Renamed!!</value>
+  <data name="tag_total_discos_nombre" xml:space="preserve">
+    <value>TotalDiscos</value>
   </data>
-  <data name="renombrar_error_archivos" xml:space="preserve">
-    <value>You must choose at least one file</value>
+  <data name="tag_total_discos_valor" xml:space="preserve">
+    <value>&lt;TotalDiscos&gt;</value>
   </data>
-  <data name="renombrar_error_operaciones" xml:space="preserve">
-    <value>You must choose at least one operation</value>
+  <data name="tag_total_pistas_nombre" xml:space="preserve">
+    <value>TotalPistas</value>
   </data>
-  <data name="renombrar_incluir_subcarpetas" xml:space="preserve">
-    <value>Include Subfolders</value>
-  </data>
-  <data name="renombrar_operacion" xml:space="preserve">
-    <value>Operation</value>
-  </data>
-  <data name="renombrar_operaciones" xml:space="preserve">
-    <value>Operations Available</value>
-  </data>
-  <data name="renombrar_operaciones_elegidas" xml:space="preserve">
-    <value>Operations Selected</value>
-  </data>
-  <data name="renombrar_por" xml:space="preserve">
-    <value>for</value>
-  </data>
-  <data name="renombrar_quitar" xml:space="preserve">
-    <value>Remove</value>
-  </data>
-  <data name="renombrar_reemplazar" xml:space="preserve">
-    <value>Replace</value>
-  </data>
-  <data name="renombrar_sin_seleccionar" xml:space="preserve">
-    <value>No Folder Selected</value>
-  </data>
-  <data name="renombrar_subir" xml:space="preserve">
-    <value>Up</value>
-  </data>
-  <data name="renombrar_vista_previa" xml:space="preserve">
-    <value>Preview</value>
-  </data>
-  <data name="resultado_renombrar" xml:space="preserve">
-    <value>Rename</value>
-  </data>
-  <data name="resultado_titulo" xml:space="preserve">
-    <value>AC FileRenamer - Preview</value>
-  </data>
-  <data name="resultado_vista_previa" xml:space="preserve">
-    <value>Result preview</value>
-  </data>
-  <data name="subtitulos_desmarcar_todos" xml:space="preserve">
-    <value>Unselect All</value>
-  </data>
-  <data name="subtitulos_error_archivos" xml:space="preserve">
-    <value>You must choose at least one file</value>
-  </data>
-  <data name="subtitulos_marcar_todos" xml:space="preserve">
-    <value>Select All</value>
-  </data>
-  <data name="subtitulos_renombrar" xml:space="preserve">
-    <value>Rename Selected</value>
-  </data>
-  <data name="subtitulos_sin_seleccionar" xml:space="preserve">
-    <value>No Folder Selected</value>
-  </data>
-  <data name="tab_acerca_de" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="tab_configuracion" xml:space="preserve">
-    <value>Configuration</value>
-  </data>
-  <data name="tab_renombrar_archivos" xml:space="preserve">
-    <value>Rename Files</value>
-  </data>
-  <data name="tab_renombrar_mp3" xml:space="preserve">
-    <value>Rename Mp3</value>
-  </data>
-  <data name="tab_renombrar_subtitulos" xml:space="preserve">
-    <value>Rename Subtitles</value>
-  </data>
-  <data name="toolbar_actualizacion" xml:space="preserve">
-    <value>There is a new version available, click here</value>
+  <data name="tag_total_pistas_valor" xml:space="preserve">
+    <value>&lt;TotalPistas&gt;</value>
   </data>
 </root>

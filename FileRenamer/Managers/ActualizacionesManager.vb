@@ -5,8 +5,6 @@ Imports Newtonsoft.Json
 
 Module ActualizacionesManager
 
-    Private VERSION_URL As String = MAIN_URL & "api/version.php?op=uv&ap=filerenamer"
-    Private INSTALADORES_URL As String = MAIN_URL & "instaladores/filerenamer/"
 
     Public Function ComprobarActualizaciones() As String
         Try

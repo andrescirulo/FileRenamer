@@ -3,6 +3,7 @@
     Public Shared PAGINA_INICIO As String = "Inicio"
     Public Shared PAGINA_RENOMBRAR As String = "Renombrar"
     Public Shared PAGINA_SUBTITULOS As String = "Subtitulos"
+    Public Shared PAGINA_MP3 As String = "Mp3"
     Public Shared PAGINA_CONFIGURACION As String = "Configuracion"
     Public Shared PAGINA_ACERCA_DE As String = "AcercaDe"
 
@@ -19,6 +20,7 @@
         Paginas.Add(PAGINA_INICIO, New InicioPage)
         Paginas.Add(PAGINA_RENOMBRAR, New RenombrarPage)
         Paginas.Add(PAGINA_SUBTITULOS, New SubtitulosPage)
+        Paginas.Add(PAGINA_MP3, New Mp3Page)
         Paginas.Add(PAGINA_CONFIGURACION, New ConfiguracionPage)
         Paginas.Add(PAGINA_ACERCA_DE, New AcercaDePage)
 

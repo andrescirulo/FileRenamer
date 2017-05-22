@@ -10,6 +10,10 @@ Class InicioPage
         PaginasManager.IrA(PaginasManager.PAGINA_SUBTITULOS)
     End Sub
 
+    Private Sub btnMp3_Click(sender As Object, e As RoutedEventArgs) Handles btnMp3.InnerButtonClick
+        PaginasManager.IrA(PaginasManager.PAGINA_MP3)
+    End Sub
+
     Private Sub btnConfiguracion_Click(sender As Object, e As RoutedEventArgs) Handles btnConfiguracion.InnerButtonClick
         PaginasManager.IrA(PaginasManager.PAGINA_CONFIGURACION)
     End Sub
@@ -48,4 +52,5 @@ Class InicioPage
         Catch ex As Exception
         End Try
     End Sub
+
 End Class

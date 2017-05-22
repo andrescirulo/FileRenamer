@@ -101,20 +101,40 @@
       <DependentUpon>FoldersTreeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controles\FoldersTreeViewListener.vb" />
+    <Compile Include="Controles\TagDefaultItem.xaml.vb">
+      <DependentUpon>TagDefaultItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\TagsContainer.xaml.vb">
+      <DependentUpon>TagsContainer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Domain\Archivo.vb" />
     <Compile Include="Domain\CarpetaEspecial.vb" />
     <Compile Include="Domain\Configuracion.vb" />
+    <Compile Include="Domain\Mp3File.vb" />
+    <Compile Include="Domain\RenombrarPreview.vb" />
+    <Compile Include="Domain\TagDragInfo.vb" />
     <Compile Include="Domain\EstadoMenuContextual.vb" />
     <Compile Include="Domain\FolderCheckElem.vb" />
     <Compile Include="Domain\ReemplazoElem.vb" />
     <Compile Include="Domain\ResultadoComparacion.vb" />
     <Compile Include="Domain\Subtitulo.vb" />
+    <Compile Include="Domain\TagResultadoListener.vb" />
     <Compile Include="Domain\VersionResponse.vb" />
     <Compile Include="Domain\Video.vb" />
     <Compile Include="Domain\WebStat.vb" />
     <Compile Include="Funciones.vb" />
     <Compile Include="Languages\Carpetas.Designer.vb">
       <DependentUpon>Carpetas.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Languages\LangMp3.Designer.vb">
+      <DependentUpon>LangMp3.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Languages\LangMp3.es.Designer.vb">
+      <DependentUpon>LangMp3.es.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -148,6 +168,8 @@
     <Compile Include="Managers\MenuContextualManager.vb" />
     <Compile Include="Managers\PaginasManager.vb" />
     <Compile Include="Managers\SubtitulosManager.vb" />
+    <Compile Include="Managers\TagsManager.vb" />
+    <Compile Include="Managers\UrlsManager.vb" />
     <Compile Include="Managers\WebStatsManager.vb" />
     <Compile Include="Operaciones\AgregarAlFinalDelNombre.vb" />
     <Compile Include="Operaciones\AgregarAlFinalDeTodo.vb" />
@@ -195,6 +217,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controles\FoldersTreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\TagDefaultItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\TagsContainer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -276,6 +306,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Languages\LangMp3.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LangMp3.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Languages\LangMp3.es.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LangMp3.es.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Languages\Carpetas.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Carpetas.Designer.vb</LastGenOutput>
@@ -351,6 +389,14 @@
     <Resource Include="Iconos\imagenes.png" />
     <Resource Include="Iconos\musica.png" />
     <Resource Include="Iconos\videos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Iconos\cursor-open.cur">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Iconos\cursor-open-sml.cur" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

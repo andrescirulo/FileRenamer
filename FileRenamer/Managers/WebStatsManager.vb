@@ -6,7 +6,6 @@ Imports Newtonsoft.Json
 
 Public Class WebStatsManager
 
-    Private Shared STATS_URL As String = MAIN_URL & "api/stats.php"
     Private Shared APLICACION As String = "FileRenamer"
 
     Private Shared stat As WebStat
