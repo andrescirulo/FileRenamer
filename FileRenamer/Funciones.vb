@@ -6,8 +6,6 @@ Imports Syroot.Windows.IO
 
 Module Funciones
 
-    Public MAIN_URL As String = "http://www.andrescirulo.com.ar/"
-
     Public CONFIG_DIR As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\FileRenamer\"
     Private CONFIG_FILE As String = CONFIG_DIR & "config.json"
     Public CONFIG As Configuracion
@@ -25,6 +23,7 @@ Module Funciones
             Dim sr As New StreamReader(DEBUG_URL_FILE)
             MAIN_URL = sr.ReadLine()
             sr.Close()
+            RefrescarURLs()
         End If
 
         WebStatsManager.EnviarEstadisticasUso()
@@ -40,6 +39,10 @@ Module Funciones
 
     Public Function GetDirectorio(ByVal path As String) As String
         Return path.Substring(0, path.LastIndexOf("\") + 1)
+    End Function
+
+    Public Function ObtenerExtension(archivo As String) As String
+        Return archivo.Substring(archivo.LastIndexOf("."))
     End Function
 
     Private Sub CargarConfiguracion()
@@ -145,5 +148,27 @@ Module Funciones
         End Select
 
         Return osName
+    End Function
+
+    Public Function ObtenerTags(filePath As String) As TagLib.Tag
+        Dim file As TagLib.File = TagLib.File.Create(filePath)
+
+        Dim TagsElem As TagLib.Tag = file.GetTag(TagLib.TagTypes.Id3v2, False)
+        If Not TagsElem Is Nothing Then
+            Return TagsElem
+        End If
+
+        TagsElem = file.GetTag(TagLib.TagTypes.Id3v1, False)
+        If Not TagsElem Is Nothing Then
+            Return TagsElem
+        End If
+
+        For Each tagType In System.Enum.GetValues(GetType(TagLib.TagTypes))
+            TagsElem = file.GetTag(tagType, False)
+            If Not TagsElem Is Nothing Then
+                Return TagsElem
+            End If
+        Next
+        Return Nothing
     End Function
 End Module
